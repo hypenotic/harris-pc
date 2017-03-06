@@ -8,17 +8,13 @@
 <?php wp_head(); ?>
 </head>
 <body>
-  <nav class="blue-bg">
-    <div class="nav-wrapper blue-bg">
-      <a href="#" class="brand-logo">PulseCheck</a>
-      <menu>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="">Item 1</a></li>
-          <li><a href="">Item 2</a></li>
-          <li><a href="">Item 3</a></li>
-          <li><a href="">Item 4</a></li>
-          <li><a href="">Item 5</a></li>
-        </ul>
-      </menu>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav class="blue-bg">
+      <div class="nav-wrapper blue-bg">
+        <a href="#" class="brand-logo">PulseCheck</a>
+        <menu>
+          <?php wp_nav_menu(); ?>
+        </menu>
+      </div>
+    </nav>
+  </div>

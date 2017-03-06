@@ -1,4 +1,24 @@
+nav {
+
+}
+
+menu {
+	margin: 0;
+	display: inline-block;
+	float: right;
+	> div {
+		display: inline-block;
+		ul {
+			display: inline-block;
+		}
+	}
+}
+
 nav.blue-bg {
-	// background-color: $blue !important;
 	padding: 0 20px;
+	box-shadow: none;
+}
+
+.filler {
+	height: 300vh;
 }
