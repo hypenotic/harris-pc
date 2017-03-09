@@ -1,6 +1,9 @@
 .product-header {
 	text-align: center;
 	padding: 10% 0 20%;
+	@media #{$large-and-up} {
+		padding: 5%;
+	}
 	h1 {
 		font-size: 4vw;
 		line-height: 6vw;
@@ -19,10 +22,69 @@
 
 .neg-left-image {
 	margin-left: -40%;
+	@media #{$medium-and-up} {
+		margin-left: 0;
+	}
 }
 
 .product-alliances {
 	ul {
 		text-align: center;
+	}
+}
+
+.product-who {
+	.carousel.carousel-slider {
+		height: 400px;
+	}
+}
+
+.product-case-studies {
+	padding: 50px 0;
+	h3 {
+		padding: 0 20px;
+	}
+	.container {
+		@media #{$small-and-down} {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}
+
+.container .case-study-container.row {
+	margin: 0;
+}
+
+.case-study-container__single {
+	padding: 20px;
+	&:hover {
+		background: $l-blue;
+	}	
+}
+
+.case-study-container__single__icon {
+	width: 12%;
+	vertical-align: top;
+	svg {
+		width: 100%;
+		height: auto;
+		padding-right: 20px;
+	}
+}
+.case-study-container__single__content {
+	width: 85%;
+	h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 8vw;
+		line-height: 9vw;
+		@media #{$large-and-up} {
+			font-size: 2vw;
+			line-height: 3vw;
+		}
+	}
+	p {
+		margin-top: 5px;
 	}
 }

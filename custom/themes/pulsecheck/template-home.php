@@ -80,14 +80,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="col s6">
                 <h4>ED Pulsecheck</h4>
                 <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
-                <a href="#" class="btn pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline">Tell me more</a>
+                <a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+                <a href="#" class="underline display-block">Tell me more</a>
             </div>
             <div class="col s6">
                 <h4>Urgent Care Works</h4>
                 <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
-                <a href="#" class="btn pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline">Tell me more</a>
+                <a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+                <a href="#" class="underline display-block">Tell me more</a>
             </div>
         </div>
     </div>
