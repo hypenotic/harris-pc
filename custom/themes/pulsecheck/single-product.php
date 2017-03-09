@@ -9,17 +9,29 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
 
 	$heading         = rwmb_meta( 'rw_p_banner_heading' );
 	$subhead         = rwmb_meta( 'rw_p_banner_subheading' );
+
+	if ( is_singular( 'product' ) && $post->post_parent ) {
+	    $is_child = true;
+	} else {
+		$is_child = false;
+	}
 ?>
-<section class="product-header" id="skip-to-content">
+<section class="product-header <?php if ($is_child == true) { ?>product-child<?php } ?>" id="skip-to-content" style="background-image: url(<?php if ($is_child == true) { ?><?php echo get_template_directory_uri().'/src/images/background_default.svg'?><?php } ?>);background-size:cover;">
 	<div class="container">
 		<h1><?php the_title();?></h1>
 		<h2><?php echo $heading;?></h2>
+		<?php if ($subhead) { ?>
 		<h3><?php echo $subhead;?></h3>
+		<?php } ?>
 		<a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+		<?php if ($is_child == false) { ?>
 		<a href="#" class="underline display-block">Need training courses & user guides?</a>
+		<?php } ?>
 	</div>
 </section>
 
+
+<?php if ($is_child == false) { ?>
 <section class="product-why why-section">
     <div class="container">
     	<ul class="row">
@@ -30,7 +42,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
     	</ul>
     </div>
 </section>
+<?php } ?>
 
+<?php if ($is_child == false) { ?>
 <section class="product-alliances lblue-bg base-padding">
     <div class="container">
         <h3>Industry Alliances</h3>
@@ -77,6 +91,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
         </ul>
     </div>
 </section>
+<?php } ?>
 
 <section class="product-overview base-padding">
 	<div class="container">
