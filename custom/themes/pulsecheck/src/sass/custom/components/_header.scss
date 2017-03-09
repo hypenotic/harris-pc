@@ -22,3 +22,13 @@
 		}
 	}
 }
+
+.about-header {
+	min-height: 60vh;
+	padding: 20% 0;
+	background-size: cover;
+	background-position: center center;
+	@media #{$large-and-up} {
+		min-height: 50vh;
+	}
+}

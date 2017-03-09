@@ -1,0 +1,28 @@
+.product-header {
+	text-align: center;
+	padding: 10% 0 20%;
+	h1 {
+		font-size: 4vw;
+		line-height: 6vw;
+		@media #{$large-and-up} {
+			font-size: 2vw;
+			line-height: 3vw;
+		}
+	}
+	h3 {
+		font-weight: 300;
+	}
+	.btn {
+		margin: 20px 0 30px;
+	}
+}
+
+.neg-left-image {
+	margin-left: -40%;
+}
+
+.product-alliances {
+	ul {
+		text-align: center;
+	}
+}

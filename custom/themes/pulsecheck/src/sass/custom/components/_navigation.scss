@@ -73,6 +73,9 @@ menu {
 			a {
 				color: $blue;
 				font-weight: 700;
+				&:hover {
+					background: $white;
+				}
 			}
 		}
 	}
@@ -136,9 +139,6 @@ a.brand-logo {
           	padding: 10px 30px;
           	border-bottom: 1px solid rgba(255,255,255,0.3);
           	color: $white;
-      		@media #{$large-and-up} {
-        	border-bottom: 1px solid grey;
-      		}
         	}
       	}
     }

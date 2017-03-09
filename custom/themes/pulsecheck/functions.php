@@ -6,4 +6,5 @@ require_once('includes/functions/add-menu-support.php');
 
 // Load MetaBox.io files
 require_once('includes/metabox/cpt-page.php');
+require_once('includes/metabox/cpt-product.php');
 ?>

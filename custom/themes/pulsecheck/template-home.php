@@ -15,7 +15,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	</div>
 </section>
 
-<section class="home-why">
+<section class="home-why why-section">
     <div class="container">
     	<ul class="row">
     		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Chart Faster</li>
@@ -81,13 +81,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <h4>ED Pulsecheck</h4>
                 <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
                 <a href="#" class="btn pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline display-block">Tell me more</a>
+                <a href="#" class="underline">Tell me more</a>
             </div>
             <div class="col s6">
                 <h4>Urgent Care Works</h4>
                 <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
                 <a href="#" class="btn pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline display-block">Tell me more</a>
+                <a href="#" class="underline">Tell me more</a>
             </div>
         </div>
     </div>
@@ -102,6 +102,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 </section>
 
 <?php get_template_part('template-part-newsletter'); ?>
+
 
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
