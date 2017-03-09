@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+/**
+* Template Name: Contact
+*/
+get_header(); ?>
 <?php // Loop starts
 if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 	$heading         = rwmb_meta( 'rw_banner_heading' );

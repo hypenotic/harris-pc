@@ -1,0 +1,24 @@
+.hero-header {
+	text-align: center;
+	min-height: 60vh;
+	padding: 20% 0;
+	@media #{$large-and-up} {
+		min-height: 50vh;
+	}
+	h1 {
+		font-size: 8vw;
+		font-weight: bold;
+		@media #{$large-and-up} {
+			font-size: 5vw;
+		}
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 5vw;
+		line-height: 7vw;
+		@media #{$large-and-up} {
+			font-size: 2vw;
+			line-height: 3vw;
+		}
+	}
+}
