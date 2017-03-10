@@ -78,6 +78,11 @@ menu {
 				}
 			}
 		}
+    li.current-menu-item {
+      a {
+        background: lighten($blue, 30);
+      }
+    }
 	}
 }
 

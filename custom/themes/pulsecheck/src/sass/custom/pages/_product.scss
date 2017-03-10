@@ -12,6 +12,11 @@
 }
 
 .product-who {
+	h3 {
+		@media #{$small-and-down} {
+			padding: 0 30px;
+		}
+	}
 	.carousel.carousel-slider {
 		height: 400px;
 	}

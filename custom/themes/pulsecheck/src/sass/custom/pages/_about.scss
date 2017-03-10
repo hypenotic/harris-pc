@@ -1,4 +1,4 @@
-.about-timeline {
+.about-timeline, .about-team {
 	.container .row {
 		@media #{$small-and-down} {
 			margin: 0;
@@ -6,11 +6,20 @@
 		}
 	}
 }
-
 .about-TL__single--left{
 	width: 20%;
 	vertical-align: top;
 }
 .about-TL__single--right {
 	width: 78%;
+}
+
+.team__single__icon {
+	margin-right: 20px;
+}
+
+.team__single__content {
+	p {
+		margin: 0;
+	}
 }
