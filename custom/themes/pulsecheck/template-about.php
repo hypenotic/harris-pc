@@ -7,6 +7,9 @@ get_header(); ?>
 if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 	$heading         = rwmb_meta( 'rw_banner_heading' );
 	$subhead         = rwmb_meta( 'rw_banner_subheading' );
+
+    // Timeline
+    $tl_heading         = rwmb_meta( 'rw_timeline_heading' );
 ?>
 <section class="about-header llblue-bg" id="skip-to-content" style="background-image: url(<?php echo get_template_directory_uri().'/src/images/background_default.svg'?>);">
 	<div class="container">
@@ -23,8 +26,34 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <section class="about-story base-padding">
     <div class="container">
-        <h3>Our Story</h3>
+        <h3>Our Story Subhead</h3>
         <p>Overview story here. consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum condimentum. consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum condimentum.</p>
+    </div>
+</section>
+
+<section class="about-timeline base-padding">
+    <div class="container">
+        <h3><?php echo $tl_heading;?></h3>
+        <div class="row">
+        <?php 
+        // Group is cloneable
+        $points = rwmb_meta( 'rw_TL_points' );
+        if ( ! empty( $points ) ) {
+          foreach ( $points as $point ) {
+            $date  = $point['rw_TL_date'];
+            $desc     = $point['rw_TL_desc'];
+            ?>
+            <div class="about-TL__single">
+              <div class="about-TL__single--left display-inblock">
+                  <h4><?php echo $date;?></h4>
+              </div>
+              <div class="about-TL__single--right display-inblock">
+                  <p><?php echo $desc;?></p>
+              </div>
+            </div>
+          <?php  }
+        }?>
+        </div>
     </div>
 </section>
 
@@ -32,14 +61,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <div class="container">
         <h3>Our Team</h3>
         <p>Overview statement here. Multi-disciplinary care. Examples?consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum condimentum. consectetur adipiscing elit.  Mauris cursus tortor sit amet justo rutrum condimentum.</p>
-        <h3>Growing, adapting, improving</h3>
-        <ul>
-        	<li></li>
-        	<li></li>
-        	<li></li>
-        	<li></li>
-        </ul>
-        
     </div>
 </section>
 

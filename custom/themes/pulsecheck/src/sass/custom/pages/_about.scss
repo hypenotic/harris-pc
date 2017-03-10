@@ -1,0 +1,16 @@
+.about-timeline {
+	.container .row {
+		@media #{$small-and-down} {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}
+
+.about-TL__single--left{
+	width: 20%;
+	vertical-align: top;
+}
+.about-TL__single--right {
+	width: 78%;
+}
