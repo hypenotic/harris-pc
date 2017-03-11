@@ -1,3 +1,20 @@
+.single-product-feature {
+	margin-bottom: 50px;
+	i {
+		margin-right: 15px;
+	}
+	ul {
+		margin-left: 30px;
+		li {
+			padding: 3px 0;
+		}
+	}
+}
+
+.single-product-feature + .single-product-feature {
+	margin-bottom: 0;
+}
+
 .neg-left-image {
 	margin-left: -40%;
 	@media #{$medium-and-up} {

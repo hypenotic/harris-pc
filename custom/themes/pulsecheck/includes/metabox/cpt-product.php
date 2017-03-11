@@ -18,6 +18,77 @@ function pc_register_product( $meta_boxes ) {
             ),
         ),
     );
+    $meta_boxes[] = array(
+        'title'      => __( 'Features List', 'textdomain' ),
+        'post_types' => array( 'product'),
+        'fields' => array(
+            // Group
+            array(
+                'name' => 'Single Feature', // Optional
+                'id' => $prefix . 'feature_list',
+                'type' => 'group',
+                // Clone whole group?
+                'clone'  => true,
+                // Drag and drop clones to reorder them?
+                'sort_clone' => true,
+                // List of sub-fields
+                'fields' => array(
+                    array(
+                        'name' => 'Heading',
+                        'id' => $prefix . 'feature_heading',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Description',
+                        'id' => $prefix . 'feature_desc',
+                        'type' => 'textarea',
+                    ),
+                    array(
+                        'name' => 'Points',
+                        'id' => $prefix . 'feature_points',
+                        'type' => 'text',
+                        // Clone whole group?
+                        'clone'  => true,
+                        // Drag and drop clones to reorder them?
+                        'sort_clone' => true,
+                    ),
+                    array(
+                        'name' => 'Image',
+                        'id' => $prefix . 'feature_image',
+                        'type' => 'file_input',
+                    ),
+                ),
+            ),
+        )
+    );
+    $meta_boxes[] = array(
+        'title'      => __( 'Recognitions', 'textdomain' ),
+        'post_types' => array( 'product'),
+        'fields' => array(
+            // Group
+            array(
+                'id' => $prefix . 'recognition_list',
+                'type' => 'group',
+                // Clone whole group?
+                'clone'  => true,
+                // Drag and drop clones to reorder them?
+                'sort_clone' => true,
+                // List of sub-fields
+                'fields' => array(
+                    array(
+                        'name' => 'Award Name',
+                        'id' => $prefix . 'recog_name',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Image',
+                        'id' => $prefix . 'recog_image',
+                        'type' => 'file_input',
+                    ),
+                ),
+            ),
+        )
+    );
     return $meta_boxes;
 }
 ?>
