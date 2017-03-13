@@ -9,4 +9,5 @@ require_once('includes/metabox/cpt-page.php');
 require_once('includes/metabox/cpt-product.php');
 require_once('includes/metabox/cpt-case-study.php');
 require_once('includes/metabox/cpt-team-members.php');
+require_once('includes/metabox/cpt-client-partner.php');
 ?>

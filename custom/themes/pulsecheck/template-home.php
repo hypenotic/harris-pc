@@ -26,7 +26,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </section>
 
-<?php get_template_part('template-part-clients-partners'); ?>
+<?php get_template_part('template-part-alliance-partner'); ?>
 
 <section class="home-products base-padding">
     <div class="container">
