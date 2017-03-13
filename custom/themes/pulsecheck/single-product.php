@@ -45,7 +45,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
 <?php } ?>
 
 <?php if ($is_child == false) { ?>
-<?php get_template_part('template-part-clients-partners'); ?>
+<?php get_template_part('template-part-clients'); ?>
 <?php } ?>
 
 <section class="product-overview base-padding">

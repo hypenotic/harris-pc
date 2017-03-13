@@ -41,6 +41,20 @@ function pc_register_clientpartner( $meta_boxes ) {
                 'type'  => 'text',
                 'clone' => false,
             ),
+            array(
+                'name'  => __( 'Website', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'cp_website',
+                'type'  => 'text',
+                'clone' => false,
+            ),
+            array(
+                'name'  => __( 'Logo', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'cp_logo',
+                'type'  => 'file_input',
+                'clone' => false,
+            ),
         )
     );
     return $meta_boxes;
