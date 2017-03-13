@@ -14,9 +14,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 </section>
 
 <section id="skip-to-content">
-    
+	<div class="container">
+		<?php gravity_form( 1, false, false, false, '', false );?>
+	</div>
 </section>
-
 
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

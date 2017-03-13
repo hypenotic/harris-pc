@@ -1,14 +1,25 @@
 .blog-posts {
+}
+
+.single-post-card {
+	@media #{$large-and-up} {
+		background: $blue;
+		color: $white;
+		height: 300px;
+		margin-right: 2%; 
+	}
 	h2 {
 		font-size: 5vw;
 		line-height: 5vw;
 		margin-bottom: 0;
 		@media #{$large-and-up} {
+			color: $white;
 			font-size: 2vw;
-			line-height: 3vw;
+			line-height: 2.5vw;
 		}
 	}
 	p {
 		margin-top: 0;
+
 	}
 }
