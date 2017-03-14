@@ -4,7 +4,8 @@
 */
 get_header(); ?>
 <?php // Loop starts
-if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+	global $post;
     $post_slug=$post->post_name;
 
 	$heading         = rwmb_meta( 'rw_p_banner_heading' );

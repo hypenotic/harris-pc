@@ -32,18 +32,30 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <div class="container">
         <h3>PulseCheck Products</h3>
         <div class="row">
-            <div class="col s6">
-                <h4>ED Pulsecheck</h4>
-                <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
-                <a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline display-block">Tell me more</a>
-            </div>
-            <div class="col s6">
-                <h4>Urgent Care Works</h4>
-                <p>Overview sentence about this product. List and link to the hospital types that can use this. </p>
-                <a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
-                <a href="#" class="underline display-block">Tell me more</a>
-            </div>
+            <?php
+             // Check if there are any Parent Products
+            $args = array(
+                'post_type' => 'product',
+                'post_parent' => 0,
+                'posts_per_page'=> '10',
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            );
+
+            $loop = new WP_Query( $args );
+            if ($loop->have_posts()){
+            ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); 
+                    $subheading         = rwmb_meta( 'rw_p_banner_subheading' );
+                ?>
+                <div class="col s6">
+                    <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                    <p><?php echo $subheading;?></p>
+                    <a href="#" id="request-demo-trigger" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+                    <a href="<?php the_permalink();?>" class="underline display-block tell-me-more">Tell me more</a>
+                </div>
+                <?php endwhile; wp_reset_postdata(); ?>
+            <?php } ?>
         </div>
     </div>
 </section>
