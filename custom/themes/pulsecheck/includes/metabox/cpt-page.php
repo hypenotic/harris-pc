@@ -21,6 +21,30 @@ function pc_register_default( $meta_boxes ) {
     );
     // ABOUT PAGE
     $meta_boxes[] = array(
+        'title'      => __( 'Our Story Content', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'show'   => array(
+            // List of page templates (used for page only). Array. Optional.
+            'template'    => array( 'template-about.php' )
+        ),
+        'fields' => array(
+            array(
+                'name'  => __( 'Our Story Heading', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_os_heading',
+                'type'  => 'text',
+                'clone' => false,
+            ),
+            array(
+                'name'  => __( 'Our Story Overview', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_os_overview',
+                'type'  => 'wysiwyg',
+                'clone' => false,
+            ),
+        )
+    );
+    $meta_boxes[] = array(
         'title'      => __( 'Timeline', 'textdomain' ),
         'post_types' => array( 'page'),
         'show'   => array(
@@ -57,6 +81,78 @@ function pc_register_default( $meta_boxes ) {
                         'type' => 'textarea',
                     ),
                 ),
+            ),
+        )
+    );
+    $meta_boxes[] = array(
+        'title'      => __( 'Team Content', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'show'   => array(
+            // List of page templates (used for page only). Array. Optional.
+            'template'    => array( 'template-about.php' )
+        ),
+        'fields' => array(
+            array(
+                'name'  => __( 'Team Section Heading', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_team_heading',
+                'type'  => 'text',
+                'clone' => false,
+            ),
+            array(
+                'name'  => __( 'Team Section Overview', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_team_overview',
+                'type'  => 'wysiwyg',
+                'clone' => false,
+            ),
+        )
+    );
+    $meta_boxes[] = array(
+        'title'      => __( 'Client Content', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'show'   => array(
+            // List of page templates (used for page only). Array. Optional.
+            'template'    => array( 'template-about.php' )
+        ),
+        'fields' => array(
+            array(
+                'name'  => __( 'Client Section Heading', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_client_heading',
+                'type'  => 'text',
+                'clone' => false,
+            ),
+            array(
+                'name'  => __( 'Client Section Overview', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_client_overview',
+                'type'  => 'wysiwyg',
+                'clone' => false,
+            ),
+        )
+    );
+    $meta_boxes[] = array(
+        'title'      => __( 'Alliance & Partner Content', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'show'   => array(
+            // List of page templates (used for page only). Array. Optional.
+            'template'    => array( 'template-about.php' )
+        ),
+        'fields' => array(
+            array(
+                'name'  => __( 'A&P Section Heading', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_ap_heading',
+                'type'  => 'text',
+                'clone' => false,
+            ),
+            array(
+                'name'  => __( 'A&P Section Overview', 'textdomain' ),
+                'desc'  => '',
+                'id'    => $prefix . 'about_ap_overview',
+                'type'  => 'wysiwyg',
+                'clone' => false,
             ),
         )
     );

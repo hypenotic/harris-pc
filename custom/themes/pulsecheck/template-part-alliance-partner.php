@@ -1,3 +1,6 @@
+<?php if ( is_page_template( 'template-about.php' ) ) { ?>
+    // about.php is used
+<?php } else { ?>
 <section class="home-alliances product-alliances lblue-bg base-padding">
     <div class="container">
         <h3>Industry Alliances</h3>
@@ -44,3 +47,4 @@
         </ul>
     </div>
 </section>
+<?php } ?>
