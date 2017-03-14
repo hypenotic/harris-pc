@@ -35,17 +35,24 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
 <section class="product-why why-section">
     <div class="container">
     	<ul class="row">
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Chart Faster</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Keep your workflow</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Capture ALL billing</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Sympathetic support</li>
+    		<?php 
+    		// Group is cloneable
+    		$features = rwmb_meta( 'rw_feature_list' );
+    		if ( ! empty( $features ) ) {
+    			$count = 1;
+    		  foreach ( $features as $feature ) {
+    		    $heading  	= $feature['rw_feature_heading'];
+    		    ?>
+    		    <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> <?php echo $heading;?></li>
+    		  <?php }
+    		}?>
     	</ul>
     </div>
 </section>
 <?php } ?>
 
 <?php if ($is_child == false) { ?>
-<?php get_template_part('template-part-clients'); ?>
+<?php get_template_part('template-part-alliance-partner'); ?>
 <?php } ?>
 
 <section class="product-overview base-padding">
@@ -93,7 +100,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();global $post;
 			    // print_r($points);
 			    // $img  		= $feature['rw_feature_image'];
 			    ?>
-			    <div class="col s12 m6 single-product-feature">
+			    <div class="col s12 m12 single-product-feature">
 			    	<svg class="neg-left-image" width="463px" height="248px" viewBox="-124 122 463 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    	    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 			    	    <desc>Created with Sketch.</desc>

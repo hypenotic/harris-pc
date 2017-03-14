@@ -41,7 +41,7 @@ function pc_register_product( $meta_boxes ) {
                     array(
                         'name' => 'Description',
                         'id' => $prefix . 'feature_desc',
-                        'type' => 'textarea',
+                        'type' => 'wysiwyg',
                     ),
                     array(
                         'name' => 'Points',

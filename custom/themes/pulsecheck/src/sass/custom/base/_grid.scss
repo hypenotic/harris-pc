@@ -1,0 +1,19 @@
+// Media Queries
+$large-display-width: 1300px;
+// $desktop-width: 1024px;
+
+// @mixin tablet {
+//   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+//     @content;
+//   }
+// }
+
+@mixin xlarge {
+  @media (min-width: #{$large-display-width}) {
+    @content;
+  }
+}
+
+@include xlarge {
+  
+}
