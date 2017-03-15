@@ -18,6 +18,12 @@
 	}
 }
 
+.base-padding.no-lr-padding {
+	@media #{$small-and-down} {
+		padding: 30px 0px;
+	}
+}
+
 .base-padding.no-top-padding {
 	padding: 0 10px 30px;
 	@media #{$large-and-up} {

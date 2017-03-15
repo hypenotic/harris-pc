@@ -101,7 +101,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 			    ?>
 			    <div class="col s12 m12 single-product-feature">
 			    	<div class="feature__left">
-			    		<svg class="neg-left-image" width="463px" height="248px" viewBox="-124 122 463 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    		<svg class="neg-left-image" viewBox="-124 122 463 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    		    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 			    		    <desc>Created with Sketch.</desc>
 			    		    <defs></defs>
@@ -146,15 +146,24 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 			}?>
 </section>
 
-<section class="product-who why-section">
+<section class="product-who why-section base-padding no-lr-padding">
     <div class="container">
-        <h3>Designed by physicians using real workflows.<br/>Ideal for:</h3>
+    	<?php 
+    		$sheading       = rwmb_meta( 'rw_slider_heading' );
+    		$slides 		= rwmb_meta( 'rw_slider_single' );
+    	?>
+        <h3><?php echo $sheading; ?></h3>
         <div class="">
         	<ul class="row">
-        		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Free standing ED</li>
-        		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Urgent Care</li>
-        		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Canadian Hospitals</li>
-        		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Hospital ED</li>
+        		<?php 
+        		// Group is cloneable
+        		if ( ! empty( $slides ) ) {
+        		  foreach ( $slides as $slide ) {
+        		    $stitle  	= $slide['rw_slide_heading'];
+        		    ?>
+        		    <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> <?php echo $stitle;?></li>
+        		  <?php }
+        		}?>
         	</ul>
         </div>
 
@@ -163,12 +172,21 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                	<a class="btn waves-effect pc-blue no-shadow">Convince your team</a>
-                </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
+                <?php 
+                $slides = rwmb_meta( 'rw_slider_single' );
+                // Group is cloneable
+                if ( ! empty( $slides ) ) {
+                	$count = 1;
+                  foreach ( $slides as $slide ) {
+                    $stitle  	= $slide['rw_slide_heading'];
+                    ?>
+                    <div class="swiper-slide">
+                    	<div class="swiper-content">
+                    		SLIDE CONTENT
+                    	</div>
+                    </div>
+                  <?php }
+                }?>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
