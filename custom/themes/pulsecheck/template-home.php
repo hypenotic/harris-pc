@@ -18,10 +18,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 <section class="home-why why-section">
     <div class="container">
     	<ul class="row">
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Chart Faster</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Keep your workflow</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Capture ALL billing</li>
-    		<li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> Sympathetic support</li>
+            <?php
+            $features = rwmb_meta( 'rw_home_points' );
+            if ( ! empty( $features ) ) {
+              foreach ( $features as $feature ) {
+                ?>
+                <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i><?php echo $feature;?></li>
+              <?php }
+            }?>
     	</ul>
     </div>
 </section>

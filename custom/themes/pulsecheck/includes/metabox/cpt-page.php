@@ -29,6 +29,26 @@ function pc_register_default( $meta_boxes ) {
             ),
         ),
     );
+    // HOME PAGE
+    $meta_boxes[] = array(
+        'title'      => __( 'Feature Buckets', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'show'   => array(
+            // List of page templates (used for page only). Array. Optional.
+            'template'    => array( 'template-home.php' )
+        ),
+        'fields' => array(
+            array(
+                'name' => 'Points',
+                'id' => $prefix . 'home_points',
+                'type' => 'text',
+                // Clone whole group?
+                'clone'  => true,
+                // Drag and drop clones to reorder them?
+                'sort_clone' => true,
+            ),
+        )
+    );
     // ABOUT PAGE
     $meta_boxes[] = array(
         'title'      => __( 'Our Story Content', 'textdomain' ),
