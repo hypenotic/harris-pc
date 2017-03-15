@@ -174,8 +174,8 @@ a.brand-logo {
   transition: .5s ease-in-out;
   cursor: pointer;
   @media #{$medium-and-down} {
-    top: auto;
-    bottom: 0;
+    top: 2px;
+    bottom: auto;
     right: 0;
   }
   @media #{$small-and-down} {
@@ -192,6 +192,10 @@ a.brand-logo {
 	left: 20%;
 	font-weight: bold;
 	font-size: 80%;
+  @media #{$medium-and-up} {
+    left:0%;
+    top: 25%;
+  }
 }
 
 #nav-icon span {
