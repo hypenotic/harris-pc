@@ -1,4 +1,18 @@
 <?php
+/*
+* CPT: Product
+* Slug: product
+* Dependancies:
+* - MetaBox.io (https://metabox.io/) 
+* - MB Custom Post Type (https://metabox.io/plugins/custom-post-type/) -> also makes custom taxonimies
+* - MB Show Hide (https://metabox.io/plugins/meta-box-show-hide/)
+* - MB Group (https://metabox.io/plugins/meta-box-group/)
+* Details:
+* This files constructs the fields for a 'product' CPT,
+* in this case created by the Metabox.io plugin.
+* If your CPT needs custom meta fields, you will need:
+* - MB Term Meta (https://metabox.io/plugins/mb-term-meta/)
+*/
 add_filter( 'rwmb_meta_boxes', 'pc_register_product' );
 function pc_register_product( $meta_boxes ) {
     $prefix = 'rw_';
@@ -65,6 +79,11 @@ function pc_register_product( $meta_boxes ) {
         'title'      => __( 'Slider', 'textdomain' ),
         'post_types' => array( 'product'),
         'fields' => array(
+            array(
+                'name' => 'Heading',
+                'id' => $prefix . 'slider_heading',
+                'type' => 'text',
+            ),
             // Group
             array(
                 'name' => 'Single Slide', // Optional
