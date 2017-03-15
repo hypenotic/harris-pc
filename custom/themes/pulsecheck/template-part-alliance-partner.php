@@ -20,7 +20,7 @@
     $loop = new WP_Query( $args );
     if ($loop->have_posts()){
     ?>
-    <section class="client-list-section row">
+    <section class="alliance-list-section row">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
             $heading         = rwmb_meta( 'rw_cs_banner_heading' );
         ?>
@@ -54,7 +54,7 @@
     $loop = new WP_Query( $args );
     if ($loop->have_posts()){
     ?>
-    <section class="client-list-section row">
+    <section class="partner-list-section row">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
             $heading         = rwmb_meta( 'rw_cs_banner_heading' );
         ?>
@@ -91,7 +91,7 @@
             $loop = new WP_Query( $args );
             if ($loop->have_posts()){
             ?>
-            <section class="client-list-section row">
+            <section class="alliance-only-list-section row">
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); 
                     $heading         = rwmb_meta( 'rw_cs_banner_heading' );
                 ?>

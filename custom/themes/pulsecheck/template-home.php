@@ -51,8 +51,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <div class="col s6">
                     <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                     <p><?php echo $subheading;?></p>
-                    <a href="#" id="request-demo-trigger" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
                     <a href="<?php the_permalink();?>" class="underline display-block tell-me-more">Tell me more</a>
+                    <a href="#" id="request-demo-trigger" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?>
             <?php } ?>
@@ -60,11 +60,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </section>
 
-<section class="home-team base-padding">
+<section class="home-team base-padding no-top-padding">
     <div class="container">
-        <h3>Our team speaks your language</h3>
-        <p>Overview statement here. Multi-disciplinary care. Examples?consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum.</p>
-        <p>Speak to one of our physicians, nurses, medical admin or ED Directors on staff who help design the software to work how you work: </p>
+        <div class="inner-container">
+            <h3>Our team speaks your language</h3>
+            <p>Overview statement here. Multi-disciplinary care. Examples?consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum.</p>
+            <p>Speak to one of our physicians, nurses, medical admin or ED Directors on staff who help design the software to work how you work: </p>
+        </div>
     </div>
 </section>
 

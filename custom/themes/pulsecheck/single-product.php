@@ -157,6 +157,27 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         	</ul>
         </div>
 
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                	<a class="btn waves-effect pc-blue no-shadow">Convince your team</a>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+        </div>
+
         <div class="carousel carousel-slider center llblue-bg" data-indicators="true">
             <div class="carousel-fixed-item center">
               <a class="btn waves-effect pc-blue no-shadow">Convince your team</a>

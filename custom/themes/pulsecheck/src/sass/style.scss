@@ -7,10 +7,15 @@
 @import "custom/base/_layout";
 @import "custom/base/_grid";
 
+@import "custom/components/_header";
 @import "custom/components/_navigation";
 @import "custom/components/_buttons";
-@import "custom/components/_header";
+@import "custom/components/_slider";
 @import "custom/components/_footer";
+
+@import "custom/template-parts/_alliance-partner-list";
+@import "custom/template-parts/_client-list";
+@import "custom/template-parts/_newsletter";
 
 @import "custom/pages/_home";
 @import "custom/pages/_about";

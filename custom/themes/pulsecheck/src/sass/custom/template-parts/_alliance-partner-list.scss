@@ -1,0 +1,29 @@
+.product-alliances {
+	ul {
+		text-align: center;
+	}
+}
+
+.home-alliances {
+	ul {
+		li {
+			text-align: center;
+		}
+	}
+}
+
+.alliance-only-list-section {
+	margin-top: 50px;
+	margin-bottom: 0;
+	li {
+		@media #{$small-and-down} {
+			margin-bottom: 30px;
+		}
+	}
+	li:last-child {
+		@media #{$small-and-down} {
+			margin-bottom: 0px;
+		}
+	}
+}
+

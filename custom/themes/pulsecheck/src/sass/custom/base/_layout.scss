@@ -6,7 +6,9 @@
 }
 
 .inner-container {
-	
+	@media #{$large-and-up} {
+		padding: 0 10%;
+	}
 }
 
 .base-padding.no-tb-padding {
@@ -15,6 +17,14 @@
 		padding: 0;
 	}
 }
+
+.base-padding.no-top-padding {
+	padding: 0 10px 30px;
+	@media #{$large-and-up} {
+		padding: 0 0 50px;
+	}
+}
+
 
 .display-block {
 	display: block;
