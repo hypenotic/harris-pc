@@ -62,6 +62,35 @@ function pc_register_product( $meta_boxes ) {
         )
     );
     $meta_boxes[] = array(
+        'title'      => __( 'Slider', 'textdomain' ),
+        'post_types' => array( 'product'),
+        'fields' => array(
+            // Group
+            array(
+                'name' => 'Single Slide', // Optional
+                'id' => $prefix . 'slider_single',
+                'type' => 'group',
+                // Clone whole group?
+                'clone'  => true,
+                // Drag and drop clones to reorder them?
+                'sort_clone' => true,
+                // List of sub-fields
+                'fields' => array(
+                    array(
+                        'name' => 'Heading',
+                        'id' => $prefix . 'slide_heading',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Content',
+                        'id' => $prefix . 'slide_content',
+                        'type' => 'wysiwyg',
+                    )
+                ),
+            ),
+        )
+    );
+    $meta_boxes[] = array(
         'title'      => __( 'Recognitions', 'textdomain' ),
         'post_types' => array( 'product'),
         'fields' => array(
@@ -76,7 +105,7 @@ function pc_register_product( $meta_boxes ) {
                 // List of sub-fields
                 'fields' => array(
                     array(
-                        'name' => 'Award Name',
+                        'name' => 'Name',
                         'id' => $prefix . 'recog_name',
                         'type' => 'text',
                     ),

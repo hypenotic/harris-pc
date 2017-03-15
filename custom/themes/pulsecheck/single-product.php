@@ -157,7 +157,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         	</ul>
         </div>
 
-        <!-- Slider main container -->
+        <!-- Swiper Slider -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -177,7 +177,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="swiper-button-next"></div>
             
         </div>
-
+		<!-- Materialize CSS Slider -->
         <div class="carousel carousel-slider center llblue-bg" data-indicators="true">
             <div class="carousel-fixed-item center">
               <a class="btn waves-effect pc-blue no-shadow">Convince your team</a>
