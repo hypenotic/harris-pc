@@ -18,11 +18,11 @@ $subhead         = rwmb_meta( 'rw_banner_subheading' );
 <section class="contact-sidebar" id="skip-to-content">
     <div class="container wow fadeIn" data-wow-delay="0.2s">
 <div class="row">
-  <div class="col s12 m8">
+  <div class="col s12 m7">
       <h3><?php echo $subhead;?></h3>
       <?php gravity_form(1, false, false, false, '', true); ?>
   </div>
-  <div class="col s12 m3 offset-m1">
+  <div class="col s12 m4 offset-m1">
     <h3>Speak with a peer at pulse check</h3>
     <?php
      // Check if there are any case studies
