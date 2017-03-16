@@ -23,7 +23,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             if ( ! empty( $features ) ) {
               foreach ( $features as $feature ) {
                 ?>
-                <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i><?php echo $feature;?></li>
+                <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> <?php echo $feature;?></li>
               <?php }
             }?>
     	</ul>
