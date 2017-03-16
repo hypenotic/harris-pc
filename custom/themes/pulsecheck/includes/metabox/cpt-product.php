@@ -84,6 +84,16 @@ function pc_register_product( $meta_boxes ) {
                 'id' => $prefix . 'slider_heading',
                 'type' => 'text',
             ),
+            array(
+                'name' => 'Button Text',
+                'id' => $prefix . 'slider_btn_txt',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Button Link',
+                'id' => $prefix . 'slider_btn_link',
+                'type' => 'text',
+            ),
             // Group
             array(
                 'name' => 'Single Slide', // Optional
