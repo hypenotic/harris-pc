@@ -15,7 +15,7 @@ $subhead         = rwmb_meta( 'rw_banner_subheading' );
 	<h1><?php echo $heading;?></h1>
 </section>
 
-<section class="contact-sidebar" id="skip-to-content">
+<section class="contact-section base-padding" id="skip-to-content">
     <div class="container wow fadeIn" data-wow-delay="0.2s">
         <div class="row">
             <div class="col s12 m7">
@@ -76,5 +76,7 @@ $subhead         = rwmb_meta( 'rw_banner_subheading' );
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+
+<?php get_template_part('template-part-newsletter'); ?>
 
 <?php get_footer(); ?>
