@@ -23,3 +23,10 @@
 		margin: 0;
 	}
 }
+
+.team-member-single.col {
+	@media #{$large-and-up} {
+		min-height: 250px !important;
+		// margin-bottom: 30px;
+	}
+}

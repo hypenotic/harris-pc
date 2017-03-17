@@ -7,6 +7,8 @@ function openMobileNav() {
 }
 
 $(function() {
+    // $('.modal').modal();
+
     $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
 
     var mySwiper = new Swiper ('.swiper-container', {
@@ -218,11 +220,11 @@ $(function() {
       //    content: contentString
       // });
 
-      google.maps.event.addListener(marker, 'click', function() {
-         infowindow.open(mapC,marker);
-      });
+      // google.maps.event.addListener(marker, 'click', function() {
+      //    infowindow.open(mapC,marker);
+      // });
 
-      infowindow.open(mapC,marker);
+      // infowindow.open(mapC,marker);
 
       }
      

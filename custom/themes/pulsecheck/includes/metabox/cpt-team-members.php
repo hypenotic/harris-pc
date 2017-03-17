@@ -30,6 +30,11 @@ function pc_register_tm( $meta_boxes ) {
                'name' => __( 'Email', 'textdomain' ),
                'type' => 'text',
             ),
+            array(
+               'id'   => $prefix . 'tm_image',
+               'name' => __( 'Portrait', 'textdomain' ),
+               'type' => 'file_input',
+            ),
         ),
     );
     return $meta_boxes;
