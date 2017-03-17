@@ -153,5 +153,17 @@
 	text-align: center;
 }
 
+.product-recognitions {
+	@media #{$small-and-down} {
+		text-align: center;
+	}
+	.col {
+		text-align: center;
+		@media #{$small-and-down} {
+			margin: 10px 0 30px;
+		} 
+	}
+}
+
 
 
