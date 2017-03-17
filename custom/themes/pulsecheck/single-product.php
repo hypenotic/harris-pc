@@ -277,6 +277,51 @@ if ($loop->have_posts()){
 </section>
 <?php } ?>
 
+<?php 
+$recogs = rwmb_meta( 'rw_recognition_list' );
+// Group is cloneable
+if ( ! empty( $recogs ) ) { ?> 
+
+<section class="product-recognitions base-padding no-lr-padding lblue-bg">
+    <div class="container">
+        <h3>Recognitions</h3>
+        <div class="">
+        	<ul class="row">
+    		<?php 
+    		// Group is cloneable
+    		if ( ! empty( $recogs ) ) {
+    		  foreach ( $recogs as $recog ) {
+    		    $r_name  	= $recog['rw_recog_name'];
+    		    $r_image  	= $recog['rw_recog_image'];
+    		    ?>
+    		    <li class="col s6 m6 l3">
+    		    	<div class="recog__image">
+    		    		<svg width="45px" height="50px" viewBox="65 149 45 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    		    		    <defs></defs>
+    		    		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(65.000000, 149.000000)">
+    		    		        <polygon id="Fill-1" fill="#297FCA" points="37.9939926 8.33333333 31.2991676 12.1590438 31.2991676 19.8134461 37.9939926 23.6361753 44.6910785 19.8134461 44.6910785 12.1590438"></polygon>
+    		    		        <polygon id="Fill-2" fill="#297FCA" points="5.68434189e-14 12.1560626 5.68434189e-14 19.8104648 6.69708595 23.63543 13.3919109 19.8104648 13.3919109 12.1560626 6.69407128 8.33333333"></polygon>
+    		    		        <polygon id="Fill-3" fill="#297FCA" points="15.6495838 3.82272922 15.6495838 11.4793674 22.3474234 15.3020966 29.0422484 11.4793674 29.0422484 3.82272922 22.3474234 0"></polygon>
+    		    		        <polygon id="Fill-4" fill="#297FCA" points="15.6495838 21.6798721 15.6495838 29.3372556 22.3474234 33.1599848 29.0422484 29.3372556 29.0422484 21.6798721 22.3474234 17.8571429"></polygon>
+    		    		        <polygon id="Fill-5" fill="#297FCA" points="15.6495838 38.34952 15.6495838 46.0039223 22.3474234 49.8266515 29.0422484 46.0039223 29.0422484 38.34952 22.3474234 34.5238095"></polygon>
+    		    		        <polygon id="Fill-6" fill="#297FCA" points="31.2991676 30.0132054 31.2991676 37.6676077 37.9939926 41.4925728 44.6910785 37.6676077 44.6910785 30.0132054 37.9939926 26.1904762"></polygon>
+    		    		        <polygon id="Fill-7" fill="#297FCA" points="5.68434189e-14 30.0132054 5.68434189e-14 37.6705889 6.69708595 41.4925728 13.3919109 37.6676077 13.3919109 30.0132054 6.69407128 26.1904762"></polygon>
+    		    		    </g>
+    		    		</svg>
+    		    	</div>
+    		    	<div class="recog__name">
+    		    		<?php echo $r_name; ?>
+    		    	</div>
+    		    </li>
+    		  <?php }
+    		}?>
+    		</ul>
+    	</div>
+    </div>
+</section>
+
+<?php } ?>
+
 
 
 <section class="product-request base-padding">
