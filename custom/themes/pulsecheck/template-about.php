@@ -141,7 +141,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </section>
 
-<section class="about-clients base-padding">
+<section class="about-clients base-padding mblue-bg white-text">
     <div class="container">
         <div class="inner-container">
             <h3><?php echo $oc_heading; ?></h3>

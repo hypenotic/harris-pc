@@ -8,6 +8,10 @@ $black: 		rgba(0,0,0,1);
 
 $menu-lblue: $l-blue;
 
+.mblue-bg {
+	background-color: $m-blue !important;
+}
+
 .blue-bg {
 	background-color: $blue !important;
 }
@@ -19,4 +23,5 @@ $menu-lblue: $l-blue;
 .llblue-bg {
 	background-color: $ll-blue !important;
 }
+
 

@@ -60,3 +60,13 @@ h4 {
 .underline {
 	text-decoration: underline;
 }
+
+.white-text {
+	color: $white;
+	p {
+		color: white;
+	}
+	a {
+		color: $white;
+	}
+}
