@@ -28,7 +28,8 @@ if ($loop->have_posts()){
             <?php if ($logo) { ?>
                 <img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo">
             <?php } else { ?>
-                <p style="margin-bottom: 3px;">insert logo here</p>   
+                <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
+                <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>
                 <svg width="45px" height="50px" viewBox="65 149 45 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
                     <desc>Created with Sketch.</desc>
