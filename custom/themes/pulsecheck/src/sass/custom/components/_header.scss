@@ -2,6 +2,9 @@
 	text-align: center;
 	min-height: 30vh;
 	padding: 20% 0;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
 	@media #{$large-and-up} {
 		min-height: 50vh;
 		padding: 5%;
@@ -9,11 +12,13 @@
 	h1 {
 		font-size: 8vw;
 		font-weight: bold;
+		color:$white;
 		@media #{$large-and-up} {
 			font-size: 5vw;
 		}
 	}
 	h2 {
+		color:$white;
 		font-weight: 300;
 		font-size: 5vw;
 		line-height: 7vw;
@@ -21,6 +26,27 @@
 			font-size: 2vw;
 			line-height: 3vw;
 		}
+	}
+	.container {
+		position: relative;
+		z-index: 5;
+	}
+}
+
+.dark-overlay {
+	// position: relative;
+	@media #{$large-and-up} {
+	    z-index: 2;
+	    &:after {
+	        content: '';
+	        position: absolute;
+	        left: 0;
+	        right: 0;
+	        top: 0;
+	        height: 100%;
+	        background-color: rgba(0,0,0,0.4);
+	        z-index: 1;
+	    }
 	}
 }
 

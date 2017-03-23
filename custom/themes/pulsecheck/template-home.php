@@ -8,8 +8,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	$heading         = rwmb_meta( 'rw_banner_heading' );
 	$subhead         = rwmb_meta( 'rw_banner_subheading' );
 ?>
-<section class="hero-header" id="skip-to-content">
-	<div class="container">
+<section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
+	<div class="dark-overlay"></div>
+    <div class="container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
 	</div>
