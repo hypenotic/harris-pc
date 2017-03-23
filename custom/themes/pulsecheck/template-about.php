@@ -73,6 +73,74 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </section>
 
+<?php 
+    $args = array(
+        'post_type'=>'timeline',
+        'list' => $term->slug,
+        'posts_per_page' => 100,
+        'meta_key' => 'rw_timeline_date',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC'
+    );
+    $the_query = new WP_Query( $args ); ?>
+
+    <section id="cd-timeline" class="cd-container">
+
+    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+    // Get custom meta and assign to variables per post
+    $pubdate        = rwmb_meta( 'rw_timeline_date' ); 
+    $item_heading   = rwmb_meta( 'rw_timeline_heading' ); 
+    $item_stat      = rwmb_meta( 'rw_timeline_stat' );
+    $item_stat_cap  = rwmb_meta( 'rw_timeline_stat_cap' );
+    $item_imgs      = rwmb_meta( 'rw_timeline_image' );
+    $imgs           = rwmb_meta( 'rw_timeline_image');
+    $item_quote     = rwmb_meta( 'rw_timeline_quote' );  
+    $slug = $post->post_name;
+    // print_r($imgs);
+    ?>
+  
+        <div class="cd-timeline-block wow fadeIn" id="TL-<?php echo $slug; ?>">
+            <div class="cd-timeline-img cd-text" style="background: white">
+                <div class="timeline-icon">
+                <?php if($icon) : ?>
+                    <i class="fa <?php echo $icon; ?> fa-2x"></i>
+                <?php endif ?>
+                </div>
+            </div>
+            
+            <div class="cd-timeline-content">
+                <?php if($item_heading) : ?>
+                    <h3><?php echo $item_heading; ?></h3>
+                <?php endif ?>
+                <div><?php the_content();?></div>
+                <span class="cd-date"><?php echo $pubdate; ?></span>
+                <?php if($item_stat) : ?>
+                    <div class="timeline-stat">
+                        <p><?php echo $item_stat;?></p>
+                        <?php if($item_stat_cap) : ?>
+                            <p><?php echo $item_stat_cap; ?></p>
+                        <?php endif ?>
+                    </div>
+                <?php endif ?>
+                <?php if ( !empty( $imgs ) ) {
+                    foreach ( $imgs as $img ) { ?>
+                    <div class="timeline-image">
+                        <img src="<?php echo $img['full_url']; ?>" alt="">
+                    </div>
+                    <?php }
+                } ?>
+                <?php if($item_quote) : ?>
+                    <div class="timeline-quote">
+                        <p><?php echo $item_quote;?></p>
+                    </div>
+                <?php endif ?>
+            </div>
+        </div>
+ 
+    <?php endwhile; endif; ?>
+    </section> 
+
+
 <section class="about-team base-padding">
     <div class="container">
         <div class="inner-container">

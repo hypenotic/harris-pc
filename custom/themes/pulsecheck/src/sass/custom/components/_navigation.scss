@@ -37,10 +37,6 @@ a.skip-to:hover {
     overflow: hidden;
 }
 
-nav {
-
-}
-
 menu {
 	ul {
 		transition: all 0.5s;
@@ -101,14 +97,29 @@ a.brand-logo {
 	  	top: 10px;
 	  	left: 0;
 	}
+  #harris-logo-holder,
+  #pc-logo-holder {
+    display: inline-block;
+  }
 	#pc-logo {
 		width: 150px;
 		height: auto;
 		@media #{$large-and-up} {
-		  	width: 200px;
-		  	height: auto;
+		  	width: auto;
+		  	height: 40px;
+        position: relative;
+        top: -9px;
 		}
 	}
+  #harris-logo {
+    width: 150px;
+    height: auto;
+    @media #{$large-and-up} {
+        width: auto;
+        height: 50px;
+        margin-top: -3px;
+    }
+  }
 }
 
 @media #{$medium-and-down} {
@@ -254,4 +265,131 @@ a.brand-logo {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+// =======
+
+.menu-item-has-children {
+  @media #{$large-and-up} {
+    // position: relative;
+    // padding-right: 13px;
+    // &:after {
+    //   position: relative;
+    //   font-family: FontAwesome;
+    //   font-weight: normal;
+    //   font-style: normal;
+    //   display: inline-block;
+    //   content: '\f078';
+    //   margin-left: 1em;
+    //   color: rgba(255,255,255,0.5);
+    //   font-size: 10px;
+    //   top: -53px;
+    //   right: -65px
+    // }
+    i.fa {
+      display: none;
+    }
+    &:hover {
+      background: $blue;
+      > a {
+        color: $white;
+      }
+      > ul {
+        display: block;
+        // display: flex;
+        // flex-wrap: wrap;
+        position: absolute;
+        background: $l-blue;
+        // width: 10%;
+        // left: -15%;
+        border: 1px solid $ll-blue;
+        border-top: none;
+        // padding: 20px;
+        @media (min-width: 1300px) {
+          width: 120%;
+          left: -10%;
+        }
+        > li {
+          // width: 33.33%;
+          // min-height: 43vh;
+          // padding: 30px;
+          float: none;
+          transition: 0.4s all;
+          @media (min-width: 1300px) {
+            min-height: 42vh;
+            padding: 25px;
+          }
+          a {
+            color: $blue;
+          }
+          &:hover {
+            // padding: 20px;
+            // @media (min-width: 1300px) {
+            //   padding: 28px;
+            // }
+          }
+        }
+        >li:nth-child(1),
+        >li:nth-child(2),
+        >li:nth-child(3) {
+          border-bottom: 1px solid $ll-blue;
+        }
+        >li:nth-child(2),
+        >li:nth-child(5) {
+          border-left: 1px solid $ll-blue;
+          border-right: 1px solid $ll-blue;
+        }
+      }
+    }
+    > ul {
+      display: none;
+    }
+  }
+  @media #{$medium-and-down} {
+    position: relative;
+    > ul {
+      display: none;
+    }
+    i.fa {
+      position: absolute;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      margin-left: 1em;
+      color: rgba(255,255,255,0.3);
+      font-size: 20px;
+      top: 10px;
+      left: 18%;
+    }
+  }
+  @media #{$small-and-down} {
+    position: relative;
+    > ul {
+      display: none;
+    }
+    i.fa {
+      position: absolute;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      margin-left: 1em;
+      color: rgba(255,255,255,0.3);
+      font-size: 20px;
+      top: 28px;
+      left: 34%;
+    }
+    &:after {
+      // position: absolute;
+      // font-family: FontAwesome;
+      // font-weight: normal;
+      // font-style: normal;
+      // display: inline-block;
+      // content: '\f078';
+      // margin-left: 1em;
+      // color: rgba(255,255,255,0.3);
+      // font-size: 20px;
+      // top: 10px;
+      // left: 35%;
+    }
+  }
 }
