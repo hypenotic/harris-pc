@@ -38,14 +38,11 @@ function pc_register_product( $meta_boxes ) {
         'fields' => array(
             // Group
             array(
-                'name' => 'Single Feature', // Optional
+                'name' => 'Single Feature',
                 'id' => $prefix . 'feature_list',
                 'type' => 'group',
-                // Clone whole group?
                 'clone'  => true,
-                // Drag and drop clones to reorder them?
                 'sort_clone' => true,
-                // List of sub-fields
                 'fields' => array(
                     array(
                         'name' => 'Heading',
@@ -96,14 +93,11 @@ function pc_register_product( $meta_boxes ) {
             ),
             // Group
             array(
-                'name' => 'Single Slide', // Optional
+                'name' => 'Single Slide', 
                 'id' => $prefix . 'slider_single',
                 'type' => 'group',
-                // Clone whole group?
                 'clone'  => true,
-                // Drag and drop clones to reorder them?
                 'sort_clone' => true,
-                // List of sub-fields
                 'fields' => array(
                     array(
                         'name' => 'Heading',
@@ -127,11 +121,8 @@ function pc_register_product( $meta_boxes ) {
             array(
                 'id' => $prefix . 'recognition_list',
                 'type' => 'group',
-                // Clone whole group?
                 'clone'  => true,
-                // Drag and drop clones to reorder them?
                 'sort_clone' => true,
-                // List of sub-fields
                 'fields' => array(
                     array(
                         'name' => 'Name',

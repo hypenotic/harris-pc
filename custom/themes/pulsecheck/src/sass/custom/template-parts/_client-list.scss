@@ -1,8 +1,23 @@
-.client-list__single.col {
-	height: 150px;
-	text-align: center;
+.client-list-section {
+	>div {
+		text-align: center;
+	}
 	img {
-		width: 200px;
-		height: auto;
+		max-width: 200px;
+		// margin: 0 auto;
+	}
+	@media #{$medium-and-up} {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		> div {
+			width: 25%;
+			margin: 0 4%;
+			// flex: 1;
+			img {
+				max-width: 200px;
+				height: auto;
+			}
+		}
 	}
 }

@@ -99,7 +99,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     $role         = rwmb_meta( 'rw_tm_role' );
                     $email         = rwmb_meta( 'rw_tm_email' );
                     $count++;
-                    // print_r($count);
                 ?>
                     <div class="team-member-single col s12 m6">
                         <div class="display-inblock team__single__icon">       
@@ -124,7 +123,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             <p><?php the_title(); ?></p>
                             <p class="team__role"><?php echo $role;?></p>
                             <a href="mailto:<?php echo $email;?>" class="underline"><?php echo $email;?></a><br/>
-                            <a class="modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
+                            <a class="modal-trigger-general modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
                             <div id="modal<?php echo $count;?>" class="modal">
                                 <div class="modal-content">
                                   <?php the_content();?>

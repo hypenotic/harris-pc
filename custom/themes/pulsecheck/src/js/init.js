@@ -7,18 +7,10 @@ function openMobileNav() {
 }
 
 $(function() {
-    // $('.modal').modal();
-    $( ".modal-trigger1" ).click(function() {
-        $('#modal1').openModal()
-    });
-    $( ".modal-trigger2" ).click(function() {
-        $('#modal2').openModal()
-    });
-    $( ".modal-trigger3" ).click(function() {
-        $('#modal3').openModal()
-    });
-    $( ".modal-trigger4" ).click(function() {
-        $('#modal4').openModal()
+    // Materialize modal triggers
+    $('.modal-trigger-general').click(function() {
+      var address = $(this).attr("href");
+      $(address).openModal();
     });
 
     $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});

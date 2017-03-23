@@ -17,16 +17,16 @@ $args = array(
 $loop = new WP_Query( $args );
 if ($loop->have_posts()){
 ?>
-<section class="client-list-section row">
+<section class="client-list-section">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); 
         $heading         = rwmb_meta( 'rw_cs_banner_heading' );
         $logo         = rwmb_meta( 'rw_cp_logo' );
         // print_r($logo);
 
     ?>
-        <div class="client-list__single col s12 m4">
+        <div class="client-list__single">
             <?php if ($logo) { ?>
-                <img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo">
+                <img src="<?php echo $logo;?>" alt="<?php the_title(); ?> Logo">
             <?php } else { ?>
                 <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
                 <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>

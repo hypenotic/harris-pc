@@ -8,8 +8,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	global $post;
     $post_slug=$post->post_name;
 
-	$heading         = rwmb_meta( 'rw_p_banner_heading' );
-	$subhead         = rwmb_meta( 'rw_p_banner_subheading' );
+	$heading   = rwmb_meta( 'rw_p_banner_heading' );
+	$subhead   = rwmb_meta( 'rw_p_banner_subheading' );
 
 	if ( is_singular( 'product' ) && $post->post_parent ) {
 	    $is_child = true;

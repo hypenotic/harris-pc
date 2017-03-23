@@ -12,18 +12,33 @@
 	}
 }
 
-.alliance-only-list-section {
-	margin-top: 50px;
-	margin-bottom: 0;
-	li {
-		@media #{$small-and-down} {
-			margin-bottom: 30px;
-		}
-	}
-	li:last-child {
-		@media #{$small-and-down} {
-			margin-bottom: 0px;
+.alliance-only-list-section,
+.alliance-list-section,
+.partner-list-section {
+	@media #{$medium-and-up} {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		> div {
+			width: 25%;
+			margin: 0 4%
+			// flex: 1;
 		}
 	}
 }
+
+.alliance-list__single__content,
+.partner-list__single__content {
+	text-align: center;
+	@media #{$medium-and-up} {
+		p {
+			margin-top: 0;
+		}
+		img {
+			max-width: 200px;
+			height: auto;
+		}
+	}
+}
+
 
