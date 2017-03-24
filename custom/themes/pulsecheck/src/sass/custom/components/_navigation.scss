@@ -79,8 +79,9 @@ menu {
 			}
 		}
     li.current-menu-item {
+      background: lighten($blue, 40);
       a {
-        background: lighten($blue, 30);
+        background: lighten($blue, 40);
       }
     }
 	}
@@ -277,21 +278,6 @@ a.brand-logo {
 
 .menu-item-has-children {
   @media #{$large-and-up} {
-    // position: relative;
-    // padding-right: 13px;
-    // &:after {
-    //   position: relative;
-    //   font-family: FontAwesome;
-    //   font-weight: normal;
-    //   font-style: normal;
-    //   display: inline-block;
-    //   content: '\f078';
-    //   margin-left: 1em;
-    //   color: rgba(255,255,255,0.5);
-    //   font-size: 10px;
-    //   top: -53px;
-    //   right: -65px
-    // }
     i.fa {
       display: none;
     }
@@ -405,6 +391,7 @@ nav.blue-bg {
       padding-top: 17px;
       line-height: 20px !important;
       ul {
+        border-top: 1px solid $blue;
         margin-top: 10px;
         li {
           line-height: 56px;
