@@ -385,6 +385,12 @@ a.brand-logo {
   }
 }
 
+@media #{$large-and-up} {
+  .menu-description {
+    display: none;
+  }
+}
+
 nav.blue-bg {
   @media #{$medium-and-down} {
     li.has-sub {
