@@ -62,7 +62,7 @@ class Main_Menu_Walker extends Walker {
     $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
     
     if (!empty($children)) {
-      $output .= $indent . '<li' . $id . $value . $class_names .'><i class="fa fa-chevron-down" aria-hidden="true"></i>';
+      $output .= $indent . '<li' . $id . $value . $class_names .'>';
     } else {
       $output .= $indent . '<li' . $id . $value . $class_names .'>';
     }

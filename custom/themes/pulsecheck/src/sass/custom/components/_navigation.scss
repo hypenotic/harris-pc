@@ -90,8 +90,8 @@ nav.blue-bg {
 
 a.brand-logo {
 	position: absolute;
-	top: 7px;
-	left: 70px;
+	top: 4px;
+	left: 95px;
 	@media #{$large-and-up} {
 	  	position: relative;
 	  	top: 10px;
@@ -102,8 +102,10 @@ a.brand-logo {
     display: inline-block;
   }
 	#pc-logo {
-		width: 150px;
+		width: 110px;
 		height: auto;
+    position: relative;
+    top: -5px;
 		@media #{$large-and-up} {
 		  	width: auto;
 		  	height: 40px;
@@ -112,7 +114,7 @@ a.brand-logo {
 		}
 	}
   #harris-logo {
-    width: 150px;
+    width: 90px;
     height: auto;
     @media #{$large-and-up} {
         width: auto;
@@ -348,7 +350,19 @@ a.brand-logo {
   @media #{$medium-and-down} {
     position: relative;
     > ul {
-      display: none;
+      // display: none;
+      >li {
+        background: $ll-blue;
+        width: 50%;
+        float: left;
+        // display: inline-block;
+        a {
+          font-size: 12px;
+        }
+      }
+      li:nth-child(odd) {
+        border-right: 1px solid $blue;
+      }
     }
     i.fa {
       position: absolute;
@@ -365,7 +379,7 @@ a.brand-logo {
   @media #{$small-and-down} {
     position: relative;
     > ul {
-      display: none;
+      // display: none; 
     }
     i.fa {
       position: absolute;
