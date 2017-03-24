@@ -35,7 +35,7 @@
 
 .dark-overlay {
 	// position: relative;
-	@media #{$large-and-up} {
+	// @media #{$large-and-up} {
 	    z-index: 2;
 	    &:after {
 	        content: '';
@@ -47,7 +47,7 @@
 	        background-color: rgba(0,0,0,0.4);
 	        z-index: 1;
 	    }
-	}
+	// }
 }
 
 .about-header {

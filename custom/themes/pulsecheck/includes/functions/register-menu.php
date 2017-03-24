@@ -96,12 +96,18 @@ class Main_Menu_Walker extends Walker {
 	  	$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 	  	$item_output .= '</span></span><span class="menu-sub-item-blurb">'.$blurb[0].'</span></a>';
 	  	$item_output .= $args->after;
-    } else {
+    } else if (in_array('menu-item-has-children', $classes) && in_array('menu-item-object-product', $classes)) {
     	$item_output = $args->before;
     	$item_output .= '<a'. $attributes .'><span>';
     	$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-    	$item_output .= '</span></a>';
+    	$item_output .= '</span></a><span class="menu-description">' . $item->description . '</span>';
     	$item_output .= $args->after;
+    } else {
+      $item_output = $args->before;
+      $item_output .= '<a'. $attributes .'><span>';
+      $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+      $item_output .= '</span></a>';
+      $item_output .= $args->after;
     }
 
     

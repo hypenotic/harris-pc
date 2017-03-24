@@ -47,8 +47,12 @@ menu {
 	  	float: right;
 	  	> div {
 	  		display: inline-block;
-	  		ul {
+	  		> ul {
 	  			display: inline-block;
+          > li:last-child,
+          > li:nth-last-child(2) {
+            display: none;
+          }
 	  		}
 	  	}
 	}
@@ -392,18 +396,24 @@ a.brand-logo {
       top: 28px;
       left: 34%;
     }
-    &:after {
-      // position: absolute;
-      // font-family: FontAwesome;
-      // font-weight: normal;
-      // font-style: normal;
-      // display: inline-block;
-      // content: '\f078';
-      // margin-left: 1em;
-      // color: rgba(255,255,255,0.3);
-      // font-size: 20px;
-      // top: 10px;
-      // left: 35%;
+  }
+}
+
+nav.blue-bg {
+  @media #{$medium-and-down} {
+    li.has-sub {
+      padding-top: 17px;
+      line-height: 20px !important;
+      ul {
+        margin-top: 10px;
+        li {
+          line-height: 56px;
+        }
+      }
+      .menu-description {
+        line-height: 20px !important;
+        color: $blue !important;
+      }
     }
   }
 }
