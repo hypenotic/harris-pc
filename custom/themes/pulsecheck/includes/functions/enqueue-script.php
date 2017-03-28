@@ -1,7 +1,4 @@
 <?php
-/**
-* Enqueue scripts
-*/
 function my_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('swiper-jq', get_template_directory_uri() . '/dist/js/swiper.jquery.min.js', array('jquery'), '', true);
