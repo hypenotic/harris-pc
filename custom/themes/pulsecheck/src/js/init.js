@@ -10,8 +10,16 @@ $(function() {
     // Materialize modal triggers
     $('.modal-trigger-general').click(function() {
       var address = $(this).attr("href");
+      $(".fullscreen-modal-overlay").toggleClass( "open-fs-overlay" );
       $(address).openModal();
     });
+
+    $('.modal-close').click(function() {
+      $(".fullscreen-modal-overlay").removeClass( "open-fs-overlay" );
+    });
+
+    //Init WOW.js with animate.css
+    new WOW().init();
 
     $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
 

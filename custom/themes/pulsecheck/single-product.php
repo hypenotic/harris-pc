@@ -24,10 +24,18 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 		<?php if ($subhead) { ?>
 		<h3><?php echo $subhead;?></h3>
 		<?php } ?>
-		<a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+		<a href="#modal-demo" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a>
 		<?php if ($is_child == false) { ?>
 		<a href="#" class="underline display-block">Need training courses & user guides?</a>
 		<?php } ?>
+	</div>
+	<div id="modal-demo" class="modal">
+		<div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+	    </div>
+	    <div class="modal-content">
+	      <?php gravity_form(2, false, false, false, '', true); ?>
+	    </div>
 	</div>
 </section>
 

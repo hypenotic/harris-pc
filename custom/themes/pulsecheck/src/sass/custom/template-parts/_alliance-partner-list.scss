@@ -41,4 +41,19 @@
 	}
 }
 
+.alliance-only-list-section {
+	@media #{$small-and-down} {
+		.alliance-list__single__content {
+			width: 45%;
+			display: inline-block;
+			margin: 1.5%;
+			background-blend-mode: multiply;
+			img {
+				width: 100%;
+				height: autol
+			}
+		}
+	}
+}
+
 

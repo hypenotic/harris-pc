@@ -8,6 +8,7 @@
 <title><?php bloginfo( 'name' ); ?></title>
 </head>
 <body>
+  <div class="fullscreen-modal-overlay"></div>
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
     <div class="navbar-fixed">

@@ -1,14 +1,4 @@
-.timeline-page {
-	background: $blue;
-	color: $white;
-    @media #{$small-and-down} {
-        margin-top: 50px;
-    }
-}
 
-.blue-body {
-	background: $blue;
-}
 
 // =========
 
@@ -87,7 +77,7 @@ Main components
 
 @media only screen and (min-width: 800px) {
     .cd-timeline-block {
-        margin: 4em 0;
+        margin: 2em;
     }
     .cd-timeline-block:first-child {
         margin-top: 0;
@@ -124,11 +114,11 @@ Main components
     display: flex;
     justify-content:center;
     align-items:center;
-    // background: $white;
+    background: $l-blue;
 }
 
 .cd-timeline-img i {
-    color: white;
+    color: $blue;
 }
 
 .cd-timeline-img.cd-text {
@@ -248,7 +238,7 @@ Main components
     float: right;
     padding: .8em 1em;
     background: #acb7c0;
-    color: white;
+    color: $blue;
     border-radius: 0.25em;
 }
 
@@ -261,7 +251,7 @@ Main components
     padding: .8em 0;
     // opacity: .7;
     background: none;
-    color: $white;
+    color: $blue;
     h3 {
     	font-weight: 600;
     	font-size: 40px;
@@ -364,12 +354,12 @@ span#Mobilizing {
         // color: red;
     }
     .cd-timeline-block:nth-child(odd) .cd-timeline-content .cd-date {
-        left: calc(100% + 40px);
-        top: 18px;
+        left: calc(100% + 35px);
+        top: 15px;
     }
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-        left: calc(-75px);
-        top: 18px;
+        left: calc(-71px);
+        top: 15px;
         text-align: left;
     }
     .cd-timeline-block:nth-child(even) .cd-timeline-content {

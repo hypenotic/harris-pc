@@ -1,3 +1,7 @@
+body {
+	position: relative;
+}
+
 .base-padding {
 	padding: 30px 15px;
 	@media #{$large-and-up} {
