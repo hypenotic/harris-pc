@@ -70,3 +70,51 @@
 		}
 	}
 }
+
+// Coming Soon
+.coming-soon {
+	.cs-wrapper {
+		padding-top: 40%;
+		vertical-align: middle;
+		@media #{$medium-and-up} {
+			padding-top: 15%;
+		}
+	}
+	text-align: center;
+	min-height: 100vh;
+	background: $blue;
+	h1 {
+		margin: 0;
+		color: $white;
+		font-weight: 300;
+		font-size: 30px;
+	}
+	#cs-logo-holder {
+		padding-top: 20px;
+		svg, img {
+			max-width: 275px;
+			height: auto;
+		}
+		svg {
+			// margin-right: 30px;
+		}
+		img {
+			position: relative;
+			top: 10px;
+		}
+		@media #{$medium-and-up} {
+			svg, img {
+				max-width: 400px;
+				height: auto;
+			}
+			svg {
+				margin-right: 30px;
+			}
+			img {
+				position: relative;
+				top: -30px;
+			}
+		}
+		
+	}
+}
