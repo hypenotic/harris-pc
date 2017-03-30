@@ -113,7 +113,7 @@ a.brand-logo {
     top: -5px;
 		@media #{$large-and-up} {
 		  	width: auto;
-		  	height: 40px;
+		  	height: 30px;
         position: relative;
         top: -9px;
 		}
@@ -123,8 +123,8 @@ a.brand-logo {
     height: auto;
     @media #{$large-and-up} {
         width: auto;
-        height: 50px;
-        margin-top: -3px;
+        height: 40px;
+        margin-top: -7px;
     }
   }
 }
@@ -144,16 +144,16 @@ a.brand-logo {
     menu {
     	padding: 0;
     	margin: 0;
-		display:block;
-      	background-color: $menu-lblue;
-      	position : fixed;
-      	overflow-y: scroll;
-      	top: 56px; 
-      	left: 0;
-      	right: 0;
-      	bottom: 0;
-      	width: 100%;
-      	height: 100%;
+		  display:block;
+      background-color: $menu-lblue;
+      position : fixed;
+      overflow-y: scroll;
+      top: 56px; 
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
       	> li {
         	display: block;
         	width: 100%;
@@ -388,6 +388,9 @@ a.brand-logo {
 @media #{$large-and-up} {
   .menu-description {
     display: none;
+  }
+  nav ul a {
+    font-weight: 300;
   }
 }
 

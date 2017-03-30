@@ -26,15 +26,25 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 		<?php } ?>
 		<a href="#modal-demo" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a>
 		<?php if ($is_child == false) { ?>
-		<a href="#" class="underline display-block">Need training courses & user guides?</a>
+		<a href="#modal-courses" class="underline display-block modal-trigger-general modal-trigger-courses">Need training courses & user guides?</a>
 		<?php } ?>
 	</div>
 	<div id="modal-demo" class="modal">
 		<div class="modal-footer">
-	      <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+	      <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
 	    </div>
 	    <div class="modal-content">
+	    	<h3>Book a demo</h3>
 	      <?php gravity_form(2, false, false, false, '', true); ?>
+	    </div>
+	</div>
+	<div id="modal-courses" class="modal">
+		<div class="modal-footer">
+	      <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+	    </div>
+	    <div class="modal-content">
+	    <h3>Request training courses and/or user guides</h3>
+	      <?php gravity_form(3, false, false, false, '', true); ?>
 	    </div>
 	</div>
 </section>
@@ -335,7 +345,15 @@ if ( ! empty( $recogs ) ) { ?>
 <section class="product-request base-padding">
     <div class="container">
         <h3>See how it works</h3>
-        <a href="#" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+        <a href="#modal-demo-bottom" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a>
+    </div>
+    <div id="modal-demo-bottom" class="modal">
+    	<div class="modal-footer">
+          <a href="#" class="modal-close waves-effect btn-flat">Close</a>
+        </div>
+        <div class="modal-content">
+          <?php gravity_form(2, false, false, false, '', true); ?>
+        </div>
     </div>
 </section>
 

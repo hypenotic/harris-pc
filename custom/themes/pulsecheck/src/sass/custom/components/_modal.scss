@@ -17,10 +17,46 @@
 	border-radius: 0;
 }
 
+.modal .modal-content {
+	
+	@media #{$large-and-up} {
+		padding: 0px 40px 40px;
+	}
+}
+
+.modal .modal-footer {
+	padding: 10px 20px;
+}
+
+.modal .gform_wrapper form {
+	padding-bottom: 50px;
+	label {
+		font-weight: 300;
+	}
+	.gform_footer .gform_button {
+		font-weight: 300;
+		text-transform: none;
+	}
+}
+
+
+.team-modal .modal-content {
+	.modal-close {
+		line-height: 7vw;
+	}
+}
+
+.modal .modal-content {
+	h3 {
+		text-align: left;
+	}
+}
+
 .modal-close {
 	background-color: $blue;
 	font-size: 1.1vw;
-	line-height: 7vw;
+	line-height: 1.2vw;
 	color: $white;
-	padding-top: 10px;
+	font-weight: 300;
+	padding: 10px;
 }

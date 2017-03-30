@@ -114,7 +114,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             <p class="team__role"><?php echo $role;?></p>
                             <a href="mailto:<?php echo $email;?>" class="underline"><?php echo $email;?></a><br/>
                             <a class="modal-trigger-general modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
-                            <div id="modal<?php echo $count;?>" class="modal">
+                            <div id="modal<?php echo $count;?>" class="modal team-modal">
                                 <div class="modal-content">
                                   <?php the_content();?>
                                 </div>
