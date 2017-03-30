@@ -209,7 +209,7 @@ if ( ! empty( $slides ) ) { ?>
                     <div class="swiper-slide">
                     	<div class="swiper-content">
 							<?php if ($is_child == true) {?>
-							<p>Summary of why audience loves for product. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores maxime error inventore reprehenderit, saepe illo.</p>
+							<p>Summary of why audience will love the product. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores maxime error inventore reprehenderit, saepe illo.</p>
 							<ul>
 								<li>Reason 1</li>
 								<li>Reason 2</li>
