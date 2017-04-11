@@ -11,6 +11,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	$heading   = rwmb_meta( 'rw_p_banner_heading' );
 	$subhead   = rwmb_meta( 'rw_p_banner_subheading' );
 
+	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); 
+
 	if ( is_singular( 'product' ) && $post->post_parent ) {
 	    $is_child = true;
 	} else {
