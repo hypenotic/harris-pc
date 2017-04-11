@@ -20,7 +20,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	}
 ?>
 <section class="product-header <?php if ($is_child == true) { ?>product-child<?php } ?>" id="skip-to-content" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo get_template_directory_uri().'/src/images/background_default.svg'; } ?>);background-size:cover;">
-	<div class="grad-overlay green-grad"></div>
+	<div class="grad-overlay <?php if ($is_child == true) { echo 'red-grad'; } else { echo 'green-grad';} ?>"></div>
 	<div class="container">
 		<h1><?php echo $heading;?></h1>
 		<?php if ($subhead) { ?>
@@ -48,8 +48,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	</div>
 </section>
 
-
-<?php if ($is_child == false) { ?>
 <section class="product-why why-section">
     <div class="container">
     	<ul class="row">
@@ -67,7 +65,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     	</ul>
     </div>
 </section>
-<?php } ?>
 
 <?php if ($is_child == false) { ?>
 <?php get_template_part('template-part-alliance-partner'); ?>

@@ -27,6 +27,11 @@ function pc_register_default( $meta_boxes ) {
                'name' => __( 'Subheading', 'textdomain' ),
                'type' => 'textarea',
             ),
+            array(
+               'id'   => $prefix . 'banner_gradient',
+               'name' => __( 'Subheading', 'textdomain' ),
+               'type' => 'color',
+            ),
         ),
     );
     // HOME PAGE

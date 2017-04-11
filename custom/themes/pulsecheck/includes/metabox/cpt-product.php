@@ -30,6 +30,11 @@ function pc_register_product( $meta_boxes ) {
                'name' => __( 'Subheading', 'textdomain' ),
                'type' => 'textarea',
             ),
+            array(
+               'id'   => $prefix . 'banner_gradient',
+               'name' => __( 'Subheading', 'textdomain' ),
+               'type' => 'color',
+            ),
         ),
     );
     $meta_boxes[] = array(
