@@ -59,15 +59,6 @@ function pc_register_product( $meta_boxes ) {
                         'id' => $prefix . 'feature_desc',
                         'type' => 'wysiwyg',
                     ),
-                    // array(
-                    //     'name' => 'Points',
-                    //     'id' => $prefix . 'feature_points',
-                    //     'type' => 'text',
-                    //     // Clone whole group?
-                    //     'clone'  => true,
-                    //     // Drag and drop clones to reorder them?
-                    //     'sort_clone' => true,
-                    // ),
                     array(
                         'name' => 'Image',
                         'id' => $prefix . 'feature_image',

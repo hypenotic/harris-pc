@@ -1,5 +1,5 @@
 body {
-	color: $m-blue;
+	color: $black;
 	overflow-x: hidden;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 3vw;
@@ -44,9 +44,10 @@ h2 {
 h3 {
 	font-size: 5vw;
 	line-height: 7vw;
+	font-weight: 400;
 	@media #{$large-and-up} {
-		font-size: 25px;
-		line-height: 34px;
+		font-size: 22px;
+		line-height: 30px;
 	}
 }
 
@@ -59,12 +60,20 @@ h4 {
 	}
 }
 
+.ta-center {
+	text-align: center;
+}
+
 .bold {
 	font-weight: bold;
 }
 
 .underline {
 	text-decoration: underline;
+}
+
+.grey-text {
+	color: $grey;
 }
 
 .white-text {

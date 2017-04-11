@@ -104,8 +104,8 @@
     </section>
     <?php } ?>
 <?php } else { ?>
-<section class="home-alliances product-alliances lblue-bg base-padding">
-    <div class="container">
+<section class="home-alliances product-alliances base-padding ta-center">
+    <div class="wide-container">
         <h3>Industry Alliances</h3>
         <ul class="row">
             <?php

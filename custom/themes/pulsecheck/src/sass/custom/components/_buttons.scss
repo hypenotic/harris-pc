@@ -1,19 +1,39 @@
 .btn {
 	text-transform: none;
 	font-weight: 300;
-	font-size: 3vw;
-	// line-height: 10vw;
-	padding: 0 15px;
+	font-size: 3.5vw;
+	// line-height: 5vw;
+	padding: 7px 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 4px;
+	min-height: 50px;
+	background: $blue;
+	&:hover {
+		background: lighten($blue, 5);
+	}
 	@media #{$large-and-up} {
-		min-height: 50px;
-		padding: 15px 20px;
-		font-size: 1.5vw;
+		min-height: 39px;
+		padding: 10px 25px;
+		font-size: 1.1vw;
 		line-height: 1.5vw;
 	}
 }
 
 .btn.pc-blue {
 	background: $blue;
+	&:hover {
+		background: lighten($blue, 5);
+	}
+}
+
+.btn.ghost-btn {
+	background: transparent;
+	border: 1px solid $white;
+	&:hover {
+		background: $white;
+		color: $blue;
+	}
 }
 
 .btn.no-shadow {

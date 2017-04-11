@@ -7,6 +7,10 @@ function openMobileNav() {
 }
 
 $(function() {
+    $(document).scroll(function () {
+      var $nav = $(".navbar-fixed nav");
+      $nav.toggleClass('scrolling', $(this).scrollTop() > $nav.height());
+    });
     // Materialize modal triggers
     $('.modal-trigger-general').click(function() {
       var address = $(this).attr("href");

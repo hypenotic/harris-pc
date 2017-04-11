@@ -9,9 +9,33 @@ body {
 	}
 }
 
+.wide-container {
+	margin: 0 auto;
+	max-width: 1150px;
+}
+
+.non-matcss-container{
+	@media #{$large-and-up} {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
 .inner-container {
 	@media #{$large-and-up} {
 		padding: 0 10%;
+	}
+}
+
+.flex-container {
+	@media #{$large-and-up} {
+		display: flex;
+	}
+}
+
+.flex-space-between {
+	@media #{$large-and-up} {
+		justify-content: space-between;
 	}
 }
 

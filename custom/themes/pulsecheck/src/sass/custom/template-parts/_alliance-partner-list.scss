@@ -42,6 +42,10 @@
 }
 
 .alliance-only-list-section {
+	.alliance-list__single__content {
+			width: 25%;
+			margin: 0;
+		}
 	@media #{$small-and-down} {
 		.alliance-list__single__content {
 			width: 45%;
@@ -50,7 +54,7 @@
 			background-blend-mode: multiply;
 			img {
 				width: 100%;
-				height: autol
+				height: auto;
 			}
 		}
 	}
