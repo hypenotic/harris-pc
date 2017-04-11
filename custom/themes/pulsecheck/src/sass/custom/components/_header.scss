@@ -177,7 +177,7 @@
 	}
 	.grad-overlay.yellow-grad {
 	    &:after {
-	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
+	        background-image: linear-gradient(to top, transparent 0%, $yellow-trans 100%);
 	    }
 	}
 }

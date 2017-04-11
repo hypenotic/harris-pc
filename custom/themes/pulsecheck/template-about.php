@@ -23,7 +23,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     $ap_heading         = rwmb_meta( 'rw_about_ap_heading' );
     $ap_overview        = rwmb_meta( 'rw_about_ap_overview' );
 ?>
-<section class="about-header llblue-bg" id="skip-to-content" style="background-image: url(<?php echo get_template_directory_uri().'/src/images/background_default.svg'?>);">
+<section class="about-header llblue-bg" id="skip-to-content" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo get_template_directory_uri().'/src/images/background_default.svg'; } ?>);">
+    <div class="grad-overlay yellow-grad"></div>
 	<div class="container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
