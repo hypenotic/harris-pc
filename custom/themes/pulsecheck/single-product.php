@@ -17,7 +17,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 		$is_child = false;
 	}
 ?>
-<section class="product-header <?php if ($is_child == true) { ?>product-child<?php } ?>" id="skip-to-content" style="background-image: url(<?php if ($is_child == true) { ?><?php echo get_template_directory_uri().'/src/images/background_default.svg'?><?php } ?>);background-size:cover;">
+<section class="product-header <?php if ($is_child == true) { ?>product-child<?php } ?>" id="skip-to-content" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo get_template_directory_uri().'/src/images/background_default.svg'; } ?>);background-size:cover;">
 	<div class="grad-overlay green-grad"></div>
 	<div class="container">
 		<h1><?php echo $heading;?></h1>
