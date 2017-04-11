@@ -8,6 +8,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	// Banner
     $heading            = rwmb_meta( 'rw_banner_heading' );
 	$subhead            = rwmb_meta( 'rw_banner_subheading' );
+    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); 
     // Our Story
     $os_heading         = rwmb_meta( 'rw_about_os_heading' );
     $os_overview        = rwmb_meta( 'rw_about_os_overview' );
