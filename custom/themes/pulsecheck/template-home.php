@@ -7,6 +7,9 @@ get_header(); ?>
 if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 	$heading         = rwmb_meta( 'rw_banner_heading' );
 	$subhead         = rwmb_meta( 'rw_banner_subheading' );
+
+    $ot_heading         = rwmb_meta( 'rw_about_team_heading' );
+    $ot_overview        = rwmb_meta( 'rw_about_team_overview' );
 ?>
 <section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
 	<div class="dark-overlay"></div>
@@ -68,9 +71,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 <section class="home-team base-padding no-top-padding">
     <div class="container">
         <div class="inner-container">
-            <h3>Our team speaks your language</h3>
-            <p>Overview statement here. Multi-disciplinary care. Examples?consectetur adipiscing elit. Mauris cursus tortor sit amet justo rutrum.</p>
-            <p>Speak to one of our physicians, nurses, medical admin or ED Directors on staff who help design the software to work how you work: </p>
+            <h3><?php echo $ot_heading; ?></h3>
+            <div><?php echo $ot_overview; ?></div>
         </div>
     </div>
 </section>

@@ -119,7 +119,7 @@ function pc_register_default( $meta_boxes ) {
         'post_types' => array( 'page'),
         'show'   => array(
             // List of page templates (used for page only). Array. Optional.
-            'template'    => array( 'template-about.php' )
+            'template'    => array( 'template-about.php', 'template-home.php'  )
         ),
         'fields' => array(
             array(
