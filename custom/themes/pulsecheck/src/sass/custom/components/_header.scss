@@ -1,4 +1,5 @@
-.hero-header {
+.hero-header,
+.about-header {
 	text-align: center;
 	min-height: 30vh;
 	padding: 20% 0;
@@ -6,26 +7,39 @@
 	background-position: center center;
 	position: relative;
 	@media #{$large-and-up} {
-		min-height: 50vh;
-		padding: 5%;
+		min-height: 80vh;
+		padding: 10% 5%;
 	}
 	h1 {
-		font-size: 8vw;
-		font-weight: bold;
-		color:$white;
+		font-size: 10vw;
+		line-height: 10vw;
+		margin-top: 0;
+		font-weight: 400;
+		@media #{$small-and-down} {
+			margin-bottom: 10px;
+		}
 		@media #{$large-and-up} {
-			font-size: 5vw;
+			font-weight: 300;
+			font-size: 6vw;
+			line-height: 6vw;  
 		}
 	}
 	h2 {
-		color:$white;
-		font-weight: 300;
+		padding: 0 10% 0 0;
 		font-size: 5vw;
 		line-height: 7vw;
+		font-weight: 300;
+		@media #{$small-and-down} {
+			margin-top: 0px;
+		}
 		@media #{$large-and-up} {
+			padding: 0 10%;
 			font-size: 2vw;
 			line-height: 3vw;
 		}
+	}
+	h3 {
+		font-weight: 300;
 	}
 	.container {
 		position: relative;
@@ -50,46 +64,64 @@
 	// }
 }
 
-.about-header {
-	min-height: 30vh;
-	padding: 10% 0;
-	background-size: cover;
+.product-header {
+	padding: 20% 0 10%;
+	text-align: left;
+	position: relative;
 	background-position: center center;
 	@media #{$large-and-up} {
-		padding: 5% 0;
-		min-height: 50vh;
+		min-height: 80vh;
+		padding: 10% 5%;
 	}
-	h1 {
-		font-weight: 400;
-		font-size: 8vw;
-		line-height: 9vw;
-		// font-weight: bold;
+	.container {
+		padding: 5% 0;
+		z-index: 5;
+		position: relative;
+		color: $white;
+		text-align: center;
+	}
+	.header-button-container{
+		@media #{$small-and-down} {
+			padding-top: 10px;
+			a {
+				display: block;
+				margin-bottom: 20px;
+				width: 60%;
+			}
+		}
 		@media #{$large-and-up} {
-			font-size: 5vw;
-			line-height: 6vw;
+			padding-top: 20px;
+			a:first-of-type {
+				margin-right: 30px;
+			}
 		}
 	}
-}
-
-.product-header {
-	text-align: center;
-	padding: 10% 0 20%;
-	@media #{$large-and-up} {
-		padding: 2% 5%;
-	}
-	h1 {
+	.product-label {
 		font-size: 4vw;
 		line-height: 6vw;
+		margin-bottom: 0;
 		@media #{$large-and-up} {
 			font-size: 2vw;
 			line-height: 3vw;
 		}
 	}
+	h1 {
+		text-align: center;
+		font-size: 10vw;
+		line-height: 10vw;
+		margin-top: 0;
+		font-weight: 400;
+		@media #{$small-and-down} {
+			margin-bottom: 10px;
+		}
+		@media #{$large-and-up} {
+			font-weight: 300;
+			font-size: 6vw;
+			line-height: 6vw;  
+		}
+	}
 	h3 {
 		font-weight: 300;
-	}
-	.btn {
-		margin: 20px 0 30px;
 	}
 }
 
@@ -103,5 +135,49 @@
 			font-size: 5vw;
 			line-height: 6vw;
 		}
+	}
+}
+
+.hero-header,
+.about-header,
+.product-header {
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 5;
+		color: $white;
+	}
+	.grad-overlay {
+	    z-index: 2;
+	    &:after {
+	        content: '';
+	        position: absolute;
+	        left: 0;
+	        right: 0;
+	        top: 0;
+	        height: 100%;
+	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
+	        z-index: 1;
+	    }
+	}
+}
+
+.hero-header,
+.about-header,
+.product-header {
+	.grad-overlay.green-grad {
+	    &:after {
+	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
+	    }
+	}
+	.grad-overlay.red-grad {
+	    &:after {
+	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
+	    }
+	}
+	.grad-overlay.yellow-grad {
+	    &:after {
+	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
+	    }
 	}
 }

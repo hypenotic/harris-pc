@@ -12,7 +12,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     $ot_overview        = rwmb_meta( 'rw_about_team_overview' );
 ?>
 <section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
-	<div class="dark-overlay"></div>
+	<div class="grad-overlay green-grad"></div>
     <div class="container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
@@ -27,7 +27,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             if ( ! empty( $features ) ) {
               foreach ( $features as $feature ) {
                 ?>
-                <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> <?php echo $feature;?></li>
+                <li class="col s6 m6 l3"><?php echo $feature;?></li>
               <?php }
             }?>
     	</ul>

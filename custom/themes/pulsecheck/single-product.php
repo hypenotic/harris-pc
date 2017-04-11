@@ -18,16 +18,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	}
 ?>
 <section class="product-header <?php if ($is_child == true) { ?>product-child<?php } ?>" id="skip-to-content" style="background-image: url(<?php if ($is_child == true) { ?><?php echo get_template_directory_uri().'/src/images/background_default.svg'?><?php } ?>);background-size:cover;">
+	<div class="grad-overlay green-grad"></div>
 	<div class="container">
-		<h1><?php the_title();?></h1>
-		<h2><?php echo $heading;?></h2>
+		<h1><?php echo $heading;?></h1>
 		<?php if ($subhead) { ?>
-		<h3><?php echo $subhead;?></h3>
+		<h2><?php echo $subhead;?></h2>
 		<?php } ?>
-		<a href="#modal-demo" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a>
-		<?php if ($is_child == false) { ?>
-		<a href="#modal-courses" class="underline display-block modal-trigger-general modal-trigger-courses">Need training courses & user guides?</a>
-		<?php } ?>
+		<!-- <a href="#modal-demo" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a> -->
 	</div>
 	<div id="modal-demo" class="modal">
 		<div class="modal-footer">
@@ -62,7 +59,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     		  foreach ( $features as $feature ) {
     		    $heading  	= $feature['rw_feature_heading'];
     		    ?>
-    		    <li class="col s6 m6 l3"><i class="fa fa-check" aria-hidden="true"></i> <?php echo $heading;?></li>
+    		    <li class="col s6 m6 l3"><?php echo $heading;?></li>
     		  <?php }
     		}?>
     	</ul>

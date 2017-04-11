@@ -12,8 +12,8 @@
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
     <div class="navbar-fixed">
-      <nav class="blue-bg">
-        <div class="nav-wrapper blue-bg">
+      <nav>
+        <div class="nav-wrapper">
           <a href="<?php bloginfo( 'url' ); ?>" class="brand-logo">
             
             <div id="harris-logo-holder">

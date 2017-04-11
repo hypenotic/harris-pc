@@ -23,14 +23,36 @@ a.skip-to:hover {
     left: 0; 
     top: 0;
     // 
-    width: auto; 
+    width: auto;
     height: auto; 
     // 
     overflow: visible; 
 }
 
+.desktop-nav-wrapper {
+  max-width: 1300px;
+  // padding: 0 20px;
+}
+
 .navbar-fixed {
-	z-index: 100;
+  z-index: 100;
+  position: fixed;
+}
+
+nav {
+  background: transparent;
+  box-shadow: none;
+  transition: all 0.5s ease;
+  .nav-wrapper {
+    transition: all 0.5s ease;
+  }
+}
+
+nav.scrolling {
+  background: $blue;
+  .nav-wrapper {
+    background: $blue;
+  }
 }
 
 .no-scroll {
@@ -38,86 +60,93 @@ a.skip-to:hover {
 }
 
 menu {
-	ul {
-		transition: all 0.5s;
-	}
-	@media #{$large-and-up} {
-	  	margin: 0;
-	  	display: inline-block;
-	  	float: right;
-	  	> div {
-	  		display: inline-block;
-	  		> ul {
-	  			display: inline-block;
-          > li:last-child,
-          > li:nth-last-child(2) {
+  ul {
+    transition: all 0.5s;
+  }
+  @media #{$large-and-up} {
+      margin: 0;
+      padding: 0;
+      padding-right: 20px;
+      display: inline-block;
+      float: right;
+      > div {
+        display: inline-block;
+        > ul {
+          display: inline-block;
+          > li:last-child {
             display: none;
           }
-	  		}
-	  	}
-	}
-	@media #{$medium-and-down} {
-		display: none;
-	}
+          >li>a {
+            font-weight: 400;
+          }
+        }
+      }
+  }
+  @media #{$medium-and-down} {
+    display: none;
+  }
 }
 
 @media #{$medium-and-down} {
-	menu ul {
-		width: 100%;
-		height: 100%;
-		li {
-			display: block;
-			float: none;
-			text-align: center;
-			border-bottom: 1px solid lighten($blue, 20);
-			a {
-				color: $blue;
-				font-weight: 700;
-				&:hover {
-					background: $white;
-				}
-			}
-		}
+  menu ul {
+    width: 100%;
+    height: 100%;
+    li {
+      display: block;
+      float: none;
+      text-align: center;
+      border-bottom: 1px solid lighten($blue, 20);
+      a {
+        color: $blue;
+        font-weight: 700;
+        &:hover {
+          background: $white;
+        }
+      }
+    }
     li.current-menu-item {
       background: lighten($blue, 40);
       a {
         background: lighten($blue, 40);
       }
     }
-	}
+    >li >ul>li>ul {
+      display: none;
+    }
+  }
 }
 
 
 nav.blue-bg {
-	padding: 0 20px;
-	box-shadow: none;
+  padding: 0 20px;
+  box-shadow: none;
 }
 
 a.brand-logo {
-	position: absolute;
-	top: 4px;
-	left: 95px;
-	@media #{$large-and-up} {
-	  	position: relative;
-	  	top: 10px;
-	  	left: 0;
-	}
+  position: absolute;
+  top: 4px;
+  left: 70px;
+  @media #{$large-and-up} {
+      position: relative;
+      top: 10px;
+      left: 20px;
+  }
   #harris-logo-holder,
   #pc-logo-holder {
     display: inline-block;
   }
-	#pc-logo {
-		width: 110px;
-		height: auto;
+  #pc-logo {
+    width: 110px;
+    height: auto;
     position: relative;
     top: -5px;
-		@media #{$large-and-up} {
-		  	width: auto;
-		  	height: 30px;
+    @media #{$large-and-up} {
+        width: auto;
+        height: 30px;
         position: relative;
         top: -9px;
-		}
-	}
+    }
+  }
   #harris-logo {
     width: 90px;
     height: auto;
@@ -137,14 +166,14 @@ a.brand-logo {
     height: 100vh;
     width: 100%;
     .nav-wrapper.container {
-      	background-color: $blue;
-      	margin: 0;
-      	width: 100%;
+        background-color: $blue;
+        margin: 0;
+        width: 100%;
     }
     menu {
-    	padding: 0;
-    	margin: 0;
-		  display:block;
+      padding: 0;
+      margin: 0;
+      display:block;
       background-color: $menu-lblue;
       position : fixed;
       overflow-y: scroll;
@@ -154,16 +183,16 @@ a.brand-logo {
       bottom: 0;
       width: 100%;
       height: 100%;
-      	> li {
-        	display: block;
-        	width: 100%;
-        	a {
-          	font-size: 25px;
-          	padding: 10px 30px;
-          	border-bottom: 1px solid rgba(255,255,255,0.3);
-          	color: $white;
-        	}
-      	}
+        > li {
+          display: block;
+          width: 100%;
+          a {
+            font-size: 25px;
+            padding: 10px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: $white;
+          }
+        }
     }
   }
 }
@@ -204,12 +233,12 @@ a.brand-logo {
 }
 
 #nav-icon small {
-	color: $white;
-	position: absolute;
-	top: 35%;
-	left: 20%;
-	font-weight: bold;
-	font-size: 80%;
+  color: $white;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-weight: bold;
+  font-size: 80%;
   @media #{$medium-and-up} {
     left:0%;
     top: 25%;
@@ -217,23 +246,23 @@ a.brand-logo {
 }
 
 #nav-icon span {
-	display: block;
-	position: absolute;
-	margin: 0 auto;
-	height: 5px;
-	width: 31%;
-	background: $white;
-	border-radius: 9px;
-	opacity: 1;
-	right: 11%;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: .25s ease-in-out;
-	-moz-transition: .25s ease-in-out;
-	-o-transition: .25s ease-in-out;
-	transition: .25s ease-in-out;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  height: 5px;
+  width: 31%;
+  background: $white;
+  border-radius: 9px;
+  opacity: 1;
+  right: 11%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 #nav-icon span:nth-child(1) {
@@ -307,6 +336,13 @@ a.brand-logo {
           // padding: 30px;
           float: none;
           transition: 0.4s all;
+          position: relative;
+          >ul {
+            // background: red;
+            position: absolute;
+            right: calc(-100% + 42px );
+            top:0;
+          }
           @media (min-width: 1300px) {
             min-height: 42vh;
             padding: 25px;
@@ -315,10 +351,12 @@ a.brand-logo {
             color: $blue;
           }
           &:hover {
-            // padding: 20px;
-            // @media (min-width: 1300px) {
-            //   padding: 28px;
-            // }
+            a {
+              color: $white;
+            }
+            >ul >li a {
+              color: $blue;
+            }
           }
         }
         >li:nth-child(1),
@@ -343,9 +381,9 @@ a.brand-logo {
       // display: none;
       >li {
         background: $ll-blue;
-        width: 50%;
-        float: left;
-        // display: inline-block;
+        width: 49%;
+        float: none;
+        display: inline-block;
         a {
           font-size: 12px;
         }
