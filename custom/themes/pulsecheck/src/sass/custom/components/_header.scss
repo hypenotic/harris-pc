@@ -21,7 +21,7 @@
 		@media #{$large-and-up} {
 			font-weight: 300;
 			font-size: 6vw;
-			line-height: 6vw;  
+			line-height: 6.5vw;  
 		}
 	}
 	h2 {
@@ -41,6 +41,7 @@
 	h3 {
 		font-weight: 300;
 	}
+	.wide-container,
 	.container {
 		position: relative;
 		z-index: 5;
@@ -142,7 +143,8 @@
 .about-header,
 .product-header {
 	position: relative;
-	.container {
+	.container,
+	.wide-container {
 		position: relative;
 		z-index: 5;
 		color: $white;
@@ -165,6 +167,11 @@
 .hero-header,
 .about-header,
 .product-header {
+	.grad-overlay.blue-grad {
+	    &:after {
+	        background-image: linear-gradient(to top, transparent 0%, $blue-trans 100%);
+	    }
+	}
 	.grad-overlay.green-grad {
 	    &:after {
 	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);

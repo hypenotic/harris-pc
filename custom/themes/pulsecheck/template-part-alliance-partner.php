@@ -106,7 +106,7 @@
 <?php } else { ?>
 <section class="home-alliances product-alliances base-padding ta-center">
     <div class="wide-container">
-        <h3>Industry Alliances</h3>
+        <h3 class="grey-text">Industry alliances</h3>
         <ul class="row">
             <?php
              // Check if there are any alliances

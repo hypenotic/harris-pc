@@ -27,6 +27,13 @@
 	}
 }
 
+.btn.green-btn {
+	background: $green;
+	&:hover {
+		background: lighten($green, 5);
+	}
+}
+
 .btn.ghost-btn {
 	background: transparent;
 	border: 1px solid $white;

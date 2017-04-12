@@ -48,7 +48,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	</div>
 </section>
 
-<?php if ($is_child == false) { ?>
 <section class="product-why why-section">
     <div class="container">
     	<ul class="row">
@@ -66,21 +65,20 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     	</ul>
     </div>
 </section>
-<?php } ?>
 
 <?php if ($is_child == true) { ?>
 <?php 
-$slides = rwmb_meta( 'rw_slider_single' );
+$tslides = rwmb_meta( 'rw_slider_single' );
 // Group is cloneable
-if ( ! empty( $slides ) ) { ?> 
+if ( ! empty( $tslides ) ) { ?> 
 
 <section class="product-testimonial-slider base-padding no-lr-padding">
     <div class="container">
-    	<?php if (count($slides) === 1) { ?>
+    	<?php if (count($tslides) === 1) { ?>
 		
-		<?php foreach ( $slides as $slide ) {
-            $quote  	= $slide['rw_tslide_content'];
-		    $source  	= $slide['rw_tslide_source'];
+		<?php foreach ( $tslides as $tslide ) {
+            $quote  	= $tslide['rw_tslide_content'];
+		    $source  	= $tslide['rw_tslide_source'];
             ?>
             <div class="single-testimonial">
 				<div><span>

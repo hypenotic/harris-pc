@@ -12,8 +12,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     $ot_overview        = rwmb_meta( 'rw_about_team_overview' );
 ?>
 <section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
-	<div class="grad-overlay green-grad"></div>
-    <div class="container">
+	<div class="grad-overlay blue-grad"></div>
+    <div class="wide-container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
 	</div>
@@ -37,17 +37,16 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 <?php get_template_part('template-part-alliance-partner'); ?>
 
 <section class="home-products base-padding">
-    <div class="container">
-        <h3>PulseCheck Products</h3>
-        <div class="row">
+    <div class="wide-container">
+        <h3 class="ta-center grey-text">Our Products</h3>
+        <div class="product-container">
             <?php
              // Check if there are any Parent Products
             $args = array(
                 'post_type' => 'product',
                 'post_parent' => 0,
-                'posts_per_page'=> '10',
-                'orderby' => 'menu_order',
-                'order' => 'ASC'
+                'posts_per_page'=> '5',
+                'order' => 'DESC'
             );
 
             $loop = new WP_Query( $args );
@@ -56,11 +55,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); 
                     $subheading         = rwmb_meta( 'rw_p_banner_subheading' );
                 ?>
-                <div class="col s6">
+                <div class="single-home-product">
                     <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                    <p><?php echo $subheading;?></p>
-                    <a href="<?php the_permalink();?>" class="underline display-block tell-me-more">Tell me more</a>
-                    <a href="#" id="request-demo-trigger" class="btn waves-effect pc-blue no-shadow">Request a demo</a>
+                    <p><?php the_excerpt(); ?></p>
+                    <a href="<?php the_permalink();?>" class="btn ghost-btn no-shadow">See details</a>
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?>
             <?php } ?>
@@ -70,10 +68,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <section class="home-team base-padding no-top-padding">
     <div class="container">
-        <div class="inner-container">
-            <h3><?php echo $ot_heading; ?></h3>
-            <div><?php echo $ot_overview; ?></div>
-        </div>
+        <h3 class="ta-center grey-text">Our team</h3>
+        <p class="large-intro-type"><?php echo $ot_heading; ?></p>
+        <div><?php echo $ot_overview; ?></div>
     </div>
 </section>
 

@@ -1,0 +1,29 @@
+.newsletter-signup {
+	margin-bottom: 50px;
+	.inner-container {
+		padding: 50px;
+	}
+}
+
+#mc_embed_signup {
+	form {
+		input {
+			display: inline-block;
+		}
+		input[type="email"] {
+			width: 80%;
+			border-bottom: none;
+			margin-bottom: 0;
+			font-size: 25px;
+			line-height: 25px;
+			font-weight: 300;
+		}
+		input[type="submit"] {
+			width: 18%;
+		}
+	}
+	#mc_embed_signup_scroll {
+		padding: 5px 0px 10px 20px;
+		background: white;
+	}
+}

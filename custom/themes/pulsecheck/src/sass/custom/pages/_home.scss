@@ -2,8 +2,57 @@
 	
 }
 
+.home-products {
+	.product-container {
+		margin: 0 auto;
+		@media #{$medium-and-up} {
+			padding-top: 50px;
+			.single-home-product {
+				vertical-align: top;
+				width: 47.5%;
+				padding: 90px;
+				display: inline-block;
+			}
+			.single-home-product:first-child {
+				margin-right: 2%
+			}
+			.single-home-product:last-child {
+				margin-left:2%;
+			}
+		}
+	}
+	.single-home-product {
+		color: $white;
+		font-weight: 300;
+		background: $green;
+		h4 a {
+			color: $white;
+			font-size: 36px;
+			line-height: 45px;
+			font-weight: 300;
+		}
+		p {
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+}
+
 .home-products p {
 	margin-bottom: 10px;
+}
+
+.home-team {
+	p {
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.large-intro-type {
+		font-size: 36px;
+		line-height: 45px;
+		font-weight: 300;
+	}
 }
 
 .tell-me-more {

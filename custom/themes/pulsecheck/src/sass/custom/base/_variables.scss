@@ -5,13 +5,16 @@ $l-blue: 		rgba(228,241,253,1);
 $blue: 			rgba(44,151,207, 1);
 $d-blue:		rgba(0,86,112, 1);
 $m-blue: 		rgba(41,127,202, 1);
+$blue-trans: 	rgba(94,149,238, 0.7);
 $green: 		rgba(0,146,103, 1);
+$l-green: 		rgba(47,223,149, 1);
 $green-trans: 	rgba(3,136,74, 0.7);
 $yellow-trans: 	rgba(253,182,52, 0.7);
 $red-trans: 	rgba(254,0,38, 0.7);
 $white:	 		rgba(255,255,255,1);
 $black: 		rgba(0,0,0,1);
-$grey: 		rgba(155,155,155,1);
+$grey: 			rgba(155,155,155,1);
+$ll-grey: 		rgba(247,247,247,1);
 
 $menu-lblue: $l-blue;
 
@@ -29,6 +32,10 @@ $menu-lblue: $l-blue;
 
 .llblue-bg {
 	background-color: $ll-blue !important;
+}
+
+.llgrey-bg {
+	background-color: $ll-grey !important;
 }
 
 

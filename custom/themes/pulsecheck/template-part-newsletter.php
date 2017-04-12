@@ -1,19 +1,20 @@
-<section class="newsletter-signup base-padding llblue-bg">
+<section class="newsletter-signup base-padding">
     <div class="container">
-        <div class="inner-container">
-            <p class="bold">Stay up to date with latest industry 
+        <div class="inner-container llgrey-bg">
+            <p class="large-intro-type ta-center">Stay up to date with latest industry 
             and product info with our newsletter:</p>
-            <form action="">
-                <div class="row">
-                            <div class="input-field col s12" >
-                              <input id="email" type="email" class="validate">
-                              <label for="email">Email</label>
-                            </div>
-                          </div>
-                        <button class="btn pc-blue no-shadow waves-effect waves-light" type="submit" name="action">Sign Up
-                            <i class="material-icons right">send</i>
-                        </button>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="//felixswimschools.us5.list-manage.com/subscribe/post?u=efd4a26b199dee0a17b561ad3&amp;id=0a1a4aee10" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="you@youremail.com" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_efd4a26b199dee0a17b561ad3_0a1a4aee10" tabindex="-1" value=""></div>
+                    <input type="submit" value="stay savvy" name="subscribe" id="mc-embedded-subscribe" class="btn green-btn no-shadow">
+                </div>
             </form>
+            </div>
+            <!--End mc_embed_signup-->
         </div>
     </div>
 </section>

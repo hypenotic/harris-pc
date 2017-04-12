@@ -73,7 +73,7 @@ $(function() {
                {
                    "stylers": [
                        {
-                           "hue": "#2c3e50"
+                           "hue": "#FFCCA7"
                        },
                        {
                            "saturation": 250
@@ -133,9 +133,9 @@ $(function() {
        // }
 
        if(window.location.href.indexOf("hypelabs") > -1) {
-          var theicon = '/dev/harris/custom/themes/pulsecheck/dist/images/pin-mid.png';
+          var theicon = '/dev/harris/custom/themes/pulsecheck/dist/images/orange_pin.png';
         } else {
-          var theicon = '/custom/themes/pulsecheck/dist/images/pin-mid.png'
+          var theicon = '/custom/themes/pulsecheck/dist/images/orange_pin.png'
         }
 
       // var image = {
