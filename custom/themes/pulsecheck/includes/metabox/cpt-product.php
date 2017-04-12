@@ -38,6 +38,37 @@ function pc_register_product( $meta_boxes ) {
         ),
     );
     $meta_boxes[] = array(
+        'title'      => __( 'Testimonial Slider', 'textdomain' ),
+        'post_types' => array( 'product'),
+        'fields' => array(
+            // Group
+            array(
+                'name' => 'Single Slide', 
+                'id' => $prefix . 'slider_single',
+                'type' => 'group',
+                'clone'  => true,
+                'sort_clone' => true,
+                'fields' => array(
+                    array(
+                        'name' => 'Quotation',
+                        'id' => $prefix . 'tslide_content',
+                        'type' => 'textarea',
+                    ),
+                    array(
+                        'name' => 'Source',
+                        'id' => $prefix . 'tslide_source',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Image',
+                        'id' => $prefix . 'tslide_image',
+                        'type' => 'file_input',
+                    ),
+                ),
+            ),
+        )
+    );
+    $meta_boxes[] = array(
         'title'      => __( 'Features List', 'textdomain' ),
         'post_types' => array( 'product'),
         'fields' => array(

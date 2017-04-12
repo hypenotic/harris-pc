@@ -17,34 +17,44 @@
 	text-align: center;
 }
 
-// .swiper-button-next {
-// 	// position: relative;
-// 	// right: 0;
-// 	// top: -50%;
-// 	// z-index: 5;
-// 	&:after {
-// 		content:'';
-// 		width: 50px;
-// 		height: 50px;
-// 		background: $l-blue;
-// 		position: absolute;
-// 		top: 0;
-// 		left:0;
-// 		z-index: -1;
-// 		border-radius: 50%;
-// 	}
-// }
-
-// .swiper-button-prev {
-// 	&:after {
-// 		content:'';
-// 		width: 50px;
-// 		height: 50px;
-// 		background: $l-blue;
-// 		position: absolute;
-// 		top: 0;
-// 		left:0;
-// 		z-index: -1;
-// 		border-radius: 50%;
-// 	}
-// }
+.single-testimonial {
+	padding: 5%;
+	color: $black;
+	text-align: center;
+	@media #{$medium-and-up} {
+		padding: 2% 10%;
+	}
+	div {
+		font-size: 7vw;
+		line-height: 8vw;
+		font-weight: 300;
+		font-style: italic;
+		margin-bottom: 40px;
+		@media #{$medium-and-up} {
+			font-size: 36px;
+			line-height: 45px;
+			font-weight: 300;
+		}
+		span {
+			position: relative;
+			display: block;
+		}
+		#slider-QS {
+			position: relative;
+			top: -10px;
+			left: 0;
+		}
+		#slider-QE {
+			display: none;
+			@media #{$medium-and-up} {
+				display: inline-block;
+				position: relative;
+				top: -10px;
+			}
+		}
+	}
+	cite {
+		font-style: normal;
+		font-weight: 600;
+	}
+}
