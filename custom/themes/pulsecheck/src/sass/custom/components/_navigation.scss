@@ -37,9 +37,11 @@ a.skip-to:hover {
 .navbar-fixed {
   z-index: 100;
   position: fixed;
+  height: initial;
 }
 
 nav {
+  height: initial;
   position: relative;
   .nav-line {
     position: absolute;
@@ -48,6 +50,34 @@ nav {
     background: $white;
     bottom: 0;
     right: 30px;
+    transition: all 0.5s;
+  }
+}
+
+@media #{$large-and-up} {
+  .mini-nav {
+    transition: all 0.5s;
+    width: 100%;
+    text-align: right;
+    line-height: 0;
+    padding: 20px 5px 10px 0;
+    span {
+      vertical-align: middle;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      display:inline-block;
+      background-color: rgba(255,255,255,0.5);
+    }
+    a {
+      padding: 0 30px;
+      font-size: 15px;
+      line-height: 15px;
+      color: rgba(255,255,255,0.5);
+      &:hover {
+        color: $white;
+      }
+    } 
   }
 }
 
@@ -55,17 +85,38 @@ nav {
   background: transparent;
   box-shadow: none;
   transition: all 0.2s ease;
+  line-height: 40px;
+  @media #{$large-and-up} {
+    line-height: 40px;
+  }
   .nav-wrapper {
-    transition: all 0.2s ease;
   }
 }
 
-nav.scrolling {
-  background: $blue;
-  .nav-wrapper {
-    background: $blue;
+.navbar-fixed.scrolling {
+  .mini-nav {
+    display: none;
+  }
+  @media #{$large-and-up} {
+    line-height: 40px;
+    .brand-logo {
+      top: 20px;
+    }
+  }
+  nav {
+    background: #005670;
+    .nav-line {
+      display: none;
+    }
+    .nav-wrapper {
+    }
+  }
+  menu >div >ul {
+    margin-top: 13px;
   }
 }
+
+
 
 .no-scroll {
     overflow: hidden;
@@ -84,8 +135,11 @@ menu {
       > div {
         display: inline-block;
         > ul {
+          margin-top: 5px;
           display: inline-block;
-          > li:last-child {
+          > li:first-child,
+          > li:last-child,
+          > li:nth-last-child(2) {
             display: none;
           }
           >li>a {
@@ -474,3 +528,4 @@ nav.blue-bg {
     }
   }
 }
+

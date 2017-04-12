@@ -34,12 +34,34 @@
 	}
 }
 
+.btn.l-green-btn {
+	background: $l-green;
+	&:hover {
+		background: lighten($l-green, 5);
+	}
+}
+
+.btn.orange-btn {
+	background: $orange;
+	&:hover {
+		background: lighten($orange, 5);
+	}
+}
+
 .btn.ghost-btn {
 	background: transparent;
 	border: 1px solid $white;
 	&:hover {
 		background: $white;
 		color: $blue;
+	}
+}
+
+.fixed-cta-btn {
+	color: $black;
+	@media #{$large-and-up} {
+		width: 250px;
+		margin: 0 5px;
 	}
 }
 

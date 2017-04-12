@@ -8,7 +8,7 @@ function openMobileNav() {
 
 $(function() {
     $(document).scroll(function () {
-      var $nav = $(".navbar-fixed nav");
+      var $nav = $(".navbar-fixed");
       $nav.toggleClass('scrolling', $(this).scrollTop() > $nav.height());
     });
     // Materialize modal triggers
@@ -20,6 +20,8 @@ $(function() {
 
     $('.modal-close').click(function() {
       $(".fullscreen-modal-overlay").removeClass( "open-fs-overlay" );
+      $('.modal').removeClass('open').removeAttr('style');
+      $('body').removeAttr('style');
     });
 
     //Init WOW.js with animate.css

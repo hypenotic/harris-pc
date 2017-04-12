@@ -562,6 +562,10 @@
 			</div>
 		</div>
 	</footer>
+	<div class="fixed-cta-btns">
+		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn l-green-btn modal-trigger-general modal-trigger-courses">Training</a>
+		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn orange-btn modal-trigger-general modal-trigger-demo">Request a demo</a>
+	</div>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2vLY27PcE_ZpN7YZGzDWX6BSYTRuRHgY"></script>
 <?php } ?>
 <?php wp_footer(); ?>

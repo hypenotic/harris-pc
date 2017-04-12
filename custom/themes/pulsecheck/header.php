@@ -8,12 +8,35 @@
 <title><?php bloginfo( 'name' ); ?></title>
 </head>
 <body>
-  <div class="fullscreen-modal-overlay"></div>
+  <div class="fullscreen-modal-overlay modal-close" title="close"></div>
+  <div id="modal-demo" class="modal">
+    <div class="modal-footer">
+        <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+      </div>
+      <div class="modal-content">
+        <h3>Book a demo</h3>
+        <?php gravity_form(2, false, false, false, '', true); ?>
+      </div>
+  </div>
+  <div id="modal-courses" class="modal">
+    <div class="modal-footer">
+        <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+      </div>
+      <div class="modal-content">
+      <h3>Request training courses and/or user guides</h3>
+        <?php gravity_form(3, false, false, false, '', true); ?>
+      </div>
+  </div>
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
+        <div class="mini-nav">
+          <a href="#modal-courses">Customer Portal</a>
+          <span></span>
+          <a href="#modal-demo" class="modal-trigger-general modal-trigger-demo">Demo</a>
+        </div>
         <div class="nav-line"></div>
           <a href="<?php bloginfo( 'url' ); ?>" class="brand-logo">
             
