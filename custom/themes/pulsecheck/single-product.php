@@ -48,24 +48,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	</div>
 </section>
 
-<section class="product-why why-section">
-    <div class="container">
-    	<ul class="row">
-    		<?php 
-    		// Group is cloneable
-    		$features = rwmb_meta( 'rw_feature_list' );
-    		if ( ! empty( $features ) ) {
-    			$count = 1;
-    		  foreach ( $features as $feature ) {
-    		    $heading  	= $feature['rw_feature_heading'];
-    		    ?>
-    		    <li class="col s6 m6 l3"><?php echo $heading;?></li>
-    		  <?php }
-    		}?>
-    	</ul>
-    </div>
-</section>
-
 <?php if ($is_child == true) { ?>
 <?php 
 $tslides = rwmb_meta( 'rw_tslider_single' );

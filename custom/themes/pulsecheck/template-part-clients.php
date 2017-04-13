@@ -16,13 +16,19 @@ $args = array(
 
 $loop = new WP_Query( $args );
 if ($loop->have_posts()){
+    $count = 0;
 ?>
 <section class="client-list-section">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-        $heading         = rwmb_meta( 'rw_cs_banner_heading' );
-        $logo         = rwmb_meta( 'rw_cp_logo' );
-        // print_r($logo);
-
+        $heading    = rwmb_meta( 'rw_cs_banner_heading' );
+        $logo       = rwmb_meta( 'rw_cp_logo' );
+        $location   = rwmb_meta( 'rw_cp_location' );
+        $census     = rwmb_meta( 'rw_cp_census' );
+        $install    = rwmb_meta( 'rw_cp_install' );
+        $his        = rwmb_meta( 'rw_cp_his' );
+        $sites      = rwmb_meta( 'rw_cp_sites' );
+        $website    = rwmb_meta( 'rw_cp_website' );
+        $count++;
     ?>
         <div class="client-list__single">
             <?php if ($logo) { ?>
@@ -45,7 +51,21 @@ if ($loop->have_posts()){
                     </g>
                 </svg>
             <?php } ?>
-            <!-- <p><?php //the_title(); ?></p> -->
+            <div id="modal-client<?php echo $count;?>" class="modal client-modal">
+                <div class="modal-footer">
+                    <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="modal-content">
+                    <p><?php the_title(); ?></p>
+                    <p>Location: <?php echo $location; ?></p>
+                    <p>Census: <?php echo $census; ?></p>
+                    <p>Install Date: <?php echo $install; ?></p>
+                    <p>HIS: <?php echo $his; ?></p>
+                    <p># of Sites: <?php echo $sites; ?></p>
+                    <p><?php echo $website; ?></p> 
+                </div>
+            </div>
+            <a class="modal-trigger-general modal-trigger-client<?php echo $count;?> display-block" href="#modal-client<?php echo $count;?>">+</a>
         </div>
     <?php endwhile; wp_reset_postdata(); ?>
 </section>

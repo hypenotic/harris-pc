@@ -1,4 +1,5 @@
 .client-list-section {
+	padding-top: 40px;
 	>div {
 		text-align: center;
 	}
@@ -9,15 +10,28 @@
 	@media #{$medium-and-up} {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-between;
 		> div {
-			width: 25%;
-			margin: 0 4%;
-			// flex: 1;
+			margin-bottom: 50px;
+			width: 24%;
 			img {
-				max-width: 200px;
+				max-width: 150px;
 				height: auto;
 			}
 		}
+	}
+	.modal-content {
+		text-align: left;
+		p {
+			margin: 0;
+		}
+		p:first-child {
+			margin-bottom: 15px;
+		}
+	}
+	.modal-trigger-general {
+		color: $l-green;
+		font-weight: bold;
+		font-size: 25px;
 	}
 }

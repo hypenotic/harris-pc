@@ -1,6 +1,6 @@
 <?php if ( is_page_template( 'template-about.php' ) ) { ?>
     <!-- Partners -->
-    <h4>Partners</h4>
+    <h4 class="ta-center grey-text unbold pa-header">Partners</h4>
     <?php
      // Check if there are any Partners
     $args = array(
@@ -46,14 +46,13 @@
                     </g>
                 </svg>
             <?php } ?>
-           <!--  <p><a href="<?php //echo $website; ?>" title="<?php //the_title(); ?>" class="alliance-list__single display-inblock"><?php //the_title(); ?></a></p> -->
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
     </section>
     <?php } ?>
 
     <!-- Alliances -->
-    <h4>Alliances</h4>
+    <h4 class="ta-center grey-text unbold pa-header">Alliances</h4>
     <?php
      // Check if there are any alliances
     $args = array(

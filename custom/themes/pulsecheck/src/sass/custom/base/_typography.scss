@@ -65,8 +65,16 @@ h4 {
 	text-align: center;
 }
 
+.thin-text {
+	font-weight: 300;
+}
+
 .bold {
 	font-weight: bold;
+}
+
+.unbold {
+	font-weight: 400;
 }
 
 .underline {
@@ -92,4 +100,9 @@ h4 {
 	font-size: 36px;
 	line-height: 45px;
 	font-weight: 300;
+}
+
+.pa-header {
+	font-size: 22px;
+	line-height: 30px;
 }

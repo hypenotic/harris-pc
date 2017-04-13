@@ -113,7 +113,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <div class="team__single__content">
                         <p class="team__role"><?php echo $role;?></p>
                         <p class="team__title"><?php the_title(); ?></p>
-                        
                         <div id="modal<?php echo $count;?>" class="modal team-modal">
                             <div class="modal-footer">
                                 <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -126,7 +125,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             </div>
                         </div>
                     </div>
-                    
+                    <a class="modal-trigger-general modal-trigger<?php echo $count;?>" href="#modal<?php echo $count;?>">Bio <span class="team__plus">+</span></a>
                 </div>
             <?php endwhile; wp_reset_postdata(); ?>
             </div>

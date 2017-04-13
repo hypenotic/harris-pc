@@ -20,21 +20,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	</div>
 </section>
 
-<section class="home-why why-section">
-    <div class="container">
-    	<ul class="row">
-            <?php
-            $features = rwmb_meta( 'rw_home_points' );
-            if ( ! empty( $features ) ) {
-              foreach ( $features as $feature ) {
-                ?>
-                <li class="col s6 m6 l3"><?php echo $feature;?></li>
-              <?php }
-            }?>
-    	</ul>
-    </div>
-</section>
-
 <?php get_template_part('template-part-alliance-partner'); ?>
 
 <section class="home-products base-padding">
