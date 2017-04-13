@@ -16,9 +16,11 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
     <div class="grad-overlay green-grad"></div>
     <div class="wide-container">
         <h1><?php echo $heading;?></h1>
-        <div class="contact-form-container"><?php gravity_form(1, false, false, false, '', true); ?></div>
+        
     </div>
 </section>
+
+<div class="contact-form-container"><?php gravity_form(1, false, false, false, '', true); ?></div>
 
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

@@ -2,16 +2,21 @@
 	@media #{$large-and-up} {
 		padding: 10% 0% 10%;
 	}
+	z-index: 50;
 }
 
 .contact-form-container {
+	z-index: 55;
 	background: $white;
 	width: 60%;
-	height: 350px;
+	// height: 350px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0 auto;
-	padding: 30px 50px;
+	padding: 20px 40px;
+	position: relative;
+	margin-top: -250px;
+	margin-bottom: 50px;
 }
 
 #contact-map {
@@ -132,9 +137,9 @@
 	label.gfield_label {
 		font-size: 4.5vw !important;
 		font-weight: bold;
-		// text-transform: uppercase;
+		text-transform: uppercase;
 		margin: 0;
-		color: $blue;
+		color: $black;
 		@media #{$large-and-up} {
 			font-size: 1.5vw !important;
 		}

@@ -594,8 +594,9 @@
     ?>
     <div class="contact-team-container">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-            $role         = rwmb_meta( 'rw_tm_role' );
-            $email         = rwmb_meta( 'rw_tm_email' );
+            $role       = rwmb_meta( 'rw_tm_role' );
+            $email      = rwmb_meta( 'rw_tm_email' );
+            $image 		= rwmb_meta( 'rw_tm_image' );
             $count++;
         ?>
         <div class="team-member-single">
