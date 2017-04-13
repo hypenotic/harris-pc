@@ -111,19 +111,22 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         <img src="<?php echo $image;?>" alt="">
                     </div>
                     <div class="team__single__content">
-                        <p><?php the_title(); ?></p>
                         <p class="team__role"><?php echo $role;?></p>
-                        <a href="mailto:<?php echo $email;?>" class="underline"><?php echo $email;?></a><br/>
-                        <a class="modal-trigger-general modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
+                        <p class="team__title"><?php the_title(); ?></p>
+                        
                         <div id="modal<?php echo $count;?>" class="modal team-modal">
-                            <div class="modal-content">
-                              <?php the_content();?>
-                            </div>
                             <div class="modal-footer">
-                              <a href="#!" class=" modal-close waves-effect btn-flat">Close</a>
+                                <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="modal-content">
+                                <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
+                                <p class="team__role"><?php echo $role;?></p>
+                                <p class="team__title"><?php the_title(); ?></p>
+                                <?php the_content();?>
                             </div>
                         </div>
                     </div>
+                    <a class="modal-trigger-general modal-trigger<?php echo $count;?>" href="#modal<?php echo $count;?>" >Bio <span class="team__plus">+</span></a>
                 </div>
             <?php endwhile; wp_reset_postdata(); ?>
             </div>

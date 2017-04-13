@@ -21,11 +21,11 @@
   <div id="modal-courses" class="modal">
     <div class="modal-footer">
         <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
-      </div>
-      <div class="modal-content">
+    </div>
+    <div class="modal-content">
       <h3>Request training courses and/or user guides</h3>
-        <?php gravity_form(3, false, false, false, '', true); ?>
-      </div>
+      <?php gravity_form(3, false, false, false, '', true); ?>
+    </div>
   </div>
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
