@@ -158,11 +158,28 @@
 	@media #{$small-and-down} {
 		text-align: center;
 	}
+	.row {
+		text-align: center;
+	}
 	.col {
 		text-align: center;
 		@media #{$small-and-down} {
 			margin: 10px 0 30px;
 		} 
+	}
+	.recognition-container {
+		text-align: center;
+		> div {
+			width: 30%;
+			
+			@media #{$medium-and-up} {
+				display: inline-block;
+			} 
+			img {
+				width: auto;
+				height: 120px;
+			}
+		}
 	}
 }
 

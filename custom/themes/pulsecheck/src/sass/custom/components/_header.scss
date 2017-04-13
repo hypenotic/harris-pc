@@ -84,8 +84,8 @@
 	        right: 0;
 	        top: 0;
 	        height: 100%;
-	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
 	        z-index: 1;
+	        opacity: 0.7;
 	    }
 	}
 	.darken-overlay {
@@ -100,34 +100,7 @@
 		    background-color: rgba(0,0,0,0.4);
 		    z-index: 1;
 		}
-	}
-	
-}
-
-.hero-header,
-.about-header,
-.product-header,
-.contact-header {
-	.grad-overlay.blue-grad {
-	    &:after {
-	        background-image: linear-gradient(to top, transparent 0%, $blue-trans 100%);
-	    }
-	}
-	.grad-overlay.green-grad {
-	    &:after {
-	        background-image: linear-gradient(to top, transparent 0%, $green-trans 100%);
-	    }
-	}
-	.grad-overlay.red-grad {
-	    &:after {
-	        background-image: linear-gradient(to top, transparent 0%, $red-trans 100%);
-	    }
-	}
-	.grad-overlay.yellow-grad {
-	    &:after {
-	        background-image: linear-gradient(to top, transparent 0%, $yellow-trans 100%);
-	    }
-	}
+	}	
 }
 
 .dark-overlay {

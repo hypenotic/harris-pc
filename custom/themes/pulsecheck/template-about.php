@@ -8,7 +8,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	// Banner
     $heading            = rwmb_meta( 'rw_banner_heading' );
 	$subhead            = rwmb_meta( 'rw_banner_subheading' );
-    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); 
+    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' );
+    $gradient  = rwmb_meta( 'rw_banner_gradient' ); 
     // Our Story
     $os_heading         = rwmb_meta( 'rw_about_os_heading' );
     $os_overview        = rwmb_meta( 'rw_about_os_overview' );
@@ -25,7 +26,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     $ap_overview        = rwmb_meta( 'rw_about_ap_overview' );
 ?>
 <section class="about-header llblue-bg" id="skip-to-content" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo get_template_directory_uri().'/src/images/background_default.svg'; } ?>);">
-    <div class="grad-overlay yellow-grad"></div>
+    <style>
+        .grad-overlay::after {
+            background-image: linear-gradient(to top, transparent 0%, <?php if ($gradient) { echo $gradient; } else { echo 'black'; } ?> 100%);
+        }
+    </style>
+    <div class="grad-overlay"></div>
 	<div class="wide-container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>

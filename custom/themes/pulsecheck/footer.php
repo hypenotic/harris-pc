@@ -563,8 +563,8 @@
 		</div>
 	</footer>
 	<div class="fixed-cta-btns">
-		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn l-green-btn modal-trigger-general modal-trigger-courses">Training</a>
-		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn orange-btn modal-trigger-general modal-trigger-demo">Request a demo</a>
+		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn blue-btn white-text modal-trigger-general modal-trigger-courses">Training</a>
+		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn yellow-btn modal-trigger-general modal-trigger-demo">Request a demo</a>
 	</div>
 <?php } ?>
 

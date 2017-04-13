@@ -7,12 +7,18 @@ get_header(); ?>
 if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 	$heading         = rwmb_meta( 'rw_banner_heading' );
 	$subhead         = rwmb_meta( 'rw_banner_subheading' );
+    $gradient  = rwmb_meta( 'rw_banner_gradient' );
 
     $ot_heading         = rwmb_meta( 'rw_about_team_heading' );
     $ot_overview        = rwmb_meta( 'rw_about_team_overview' );
 ?>
 <section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
-	<div class="grad-overlay blue-grad"></div>
+    <style>
+        .grad-overlay::after {
+            background-image: linear-gradient(to top, transparent 0%, <?php if ($gradient) { echo $gradient; } else { echo 'black'; } ?> 100%);
+        }
+    </style>
+	<div class="grad-overlay"></div>
     <div class="darken-overlay"></div>
     <div class="wide-container">
 		<h1><?php echo $heading;?></h1>
