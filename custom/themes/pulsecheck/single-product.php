@@ -68,7 +68,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <?php if ($is_child == true) { ?>
 <?php 
-$tslides = rwmb_meta( 'rw_slider_single' );
+$tslides = rwmb_meta( 'rw_tslider_single' );
 // Group is cloneable
 if ( ! empty( $tslides ) ) { ?> 
 
