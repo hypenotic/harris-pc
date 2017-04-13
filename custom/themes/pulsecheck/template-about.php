@@ -32,6 +32,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         }
     </style>
     <div class="grad-overlay"></div>
+    <div class="darken-overlay"></div>
 	<div class="wide-container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
