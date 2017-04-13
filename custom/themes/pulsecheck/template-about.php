@@ -126,7 +126,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             </div>
                         </div>
                     </div>
-                    <a class="modal-trigger-general modal-trigger<?php echo $count;?>" href="#modal<?php echo $count;?>" >Bio <span class="team__plus">+</span></a>
+                    
                 </div>
             <?php endwhile; wp_reset_postdata(); ?>
             </div>

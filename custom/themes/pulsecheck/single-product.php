@@ -325,7 +325,7 @@ if ( ! empty( $recogs ) ) { ?>
 
 <section class="product-recognitions base-padding no-lr-padding">
     <div class="container">
-        <h3 class="grey-text ta-center">Recognitions</h3>
+        <h3 class="grey-text ta-center">Recognition</h3>
         <div class="">
         	<ul class="row">
     		<?php 

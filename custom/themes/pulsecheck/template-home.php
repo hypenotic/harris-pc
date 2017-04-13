@@ -13,6 +13,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 <section class="hero-header" id="skip-to-content" style="background-image: url(<?php the_post_thumbnail_url();?>)">
 	<div class="grad-overlay blue-grad"></div>
+    <div class="darken-overlay"></div>
     <div class="wide-container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
