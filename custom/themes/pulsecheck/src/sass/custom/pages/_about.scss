@@ -40,7 +40,8 @@
 	width: 78%;
 }
 
-.team-members-container {
+.team-members-container,
+.contact-team-container {
 	@media #{$medium-and-up} {
 		padding-top: 50px;
 		    display:flex;

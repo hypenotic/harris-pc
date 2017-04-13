@@ -89,6 +89,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
          // Check if there are any team members
         $args = array(
             'post_type' => 'team-member',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'page-location',
+                    'field'    => 'slug',
+                    'terms'    => 'about',
+                ),
+            ),
             'posts_per_page'=> '10',
             'orderby' => 'menu_order',
             'order' => 'ASC'
