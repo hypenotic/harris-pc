@@ -19,6 +19,7 @@
 
     $loop = new WP_Query( $args );
     if ($loop->have_posts()){
+        $count = 0;
     ?>
     <section class="partner-list-section">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -26,6 +27,7 @@
             $logo         = rwmb_meta( 'rw_cp_logo' );
             $website     = rwmb_meta( 'rw_cp_website' );
             // print_r($logo);
+            $count++;
         ?>
         <div class="display-inblock partner-list__single__content">
             <?php if ($logo) { ?>
@@ -46,6 +48,17 @@
                     </g>
                 </svg>
             <?php } ?>
+            <div id="modal-partner<?php echo $count;?>" class="modal partner-modal">
+                <div class="modal-footer">
+                    <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="modal-content">
+                    <p><?php the_title(); ?></p>
+                    <div><?php the_content();?></div>
+                    <p><?php echo $website; ?></p> 
+                </div>
+            </div>
+            <a class="modal-trigger-general modal-trigger-partner<?php echo $count;?> display-block" href="#modal-partner<?php echo $count;?>">+</a>
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
     </section>
@@ -71,6 +84,7 @@
 
     $loop = new WP_Query( $args );
     if ($loop->have_posts()){
+        $count = 0;
     ?>
     <section class="alliance-list-section">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -78,6 +92,7 @@
             $logo         = rwmb_meta( 'rw_cp_logo' );
             $website     = rwmb_meta( 'rw_cp_website' );
             // print_r($logo);
+            $count++;
         ?>
         <div class="display-inblock alliance-list__single__content">
             <?php if ($logo) { ?>
@@ -98,7 +113,17 @@
                     </g>
                 </svg>
             <?php } ?>
-            <!-- <p><a href="<?php //echo $website; ?>" title="<?php //the_title(); ?>" class="alliance-list__single display-inblock"><?php //the_title(); ?></a></p> -->
+            <div id="modal-alliance<?php echo $count;?>" class="modal alliance-modal">
+                <div class="modal-footer">
+                    <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="modal-content">
+                    <p><?php the_title(); ?></p>
+                    <div><?php the_content();?></div>
+                    <p><?php echo $website; ?></p> 
+                </div>
+            </div>
+            <a class="modal-trigger-general modal-trigger-alliance<?php echo $count;?> display-block" href="#modal-alliance<?php echo $count;?>">+</a>
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
     </section>

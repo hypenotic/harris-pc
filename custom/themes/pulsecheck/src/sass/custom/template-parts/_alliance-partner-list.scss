@@ -21,9 +21,20 @@
 		justify-content: center;
 		> div {
 			width: 25%;
-			margin: 0 4%
+			// margin: 0 4%
 			// flex: 1;
+			img {
+				max-width: 150px;
+				height: auto;
+			}
 		}
+	}
+}
+
+.alliance-list-section,
+.partner-list-section {
+	@media #{$medium-and-up} {
+		
 	}
 }
 
@@ -31,6 +42,7 @@
 .partner-list__single__content {
 	text-align: center;
 	@media #{$medium-and-up} {
+		margin-bottom: 50px;
 		p {
 			margin-top: 0;
 		}
@@ -38,6 +50,20 @@
 			max-width: 200px;
 			height: auto;
 		}
+	}
+	.modal-content {
+		text-align: left;
+		p {
+			margin: 0;
+		}
+		p:first-child {
+			margin-bottom: 15px;
+		}
+	}
+	.modal-trigger-general {
+		color: $l-green;
+		font-weight: bold;
+		font-size: 25px;
 	}
 }
 
