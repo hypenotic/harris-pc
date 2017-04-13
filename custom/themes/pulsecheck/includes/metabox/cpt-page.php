@@ -29,7 +29,7 @@ function pc_register_default( $meta_boxes ) {
             ),
             array(
                'id'   => $prefix . 'banner_gradient',
-               'name' => __( 'Subheading', 'textdomain' ),
+               'name' => __( 'Gradient Color', 'textdomain' ),
                'type' => 'color',
             ),
         ),

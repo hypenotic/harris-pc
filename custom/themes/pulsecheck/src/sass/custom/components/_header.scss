@@ -1,5 +1,6 @@
 .hero-header,
-.about-header {
+.about-header,
+.contact-header {
 	text-align: center;
 	min-height: 30vh;
 	padding: 20% 0;
@@ -142,7 +143,8 @@
 
 .hero-header,
 .about-header,
-.product-header {
+.product-heade,
+.contact-header {
 	position: relative;
 	.container,
 	.wide-container {
@@ -163,22 +165,26 @@
 	        z-index: 1;
 	    }
 	}
-	z-index: 2;
-	&:after {
-	    content: '';
-	    position: absolute;
-	    left: 0;
-	    right: 0;
-	    top: 0;
-	    height: 100%;
-	    background-color: rgba(0,0,0,0.4);
-	    z-index: 1;
+	.darken-overlay {
+		z-index: 2;
+		&:after {
+		    content: '';
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    height: 100%;
+		    background-color: rgba(0,0,0,0.4);
+		    z-index: 1;
+		}
 	}
+	
 }
 
 .hero-header,
 .about-header,
-.product-header {
+.product-header,
+.contact-header {
 	.grad-overlay.blue-grad {
 	    &:after {
 	        background-image: linear-gradient(to top, transparent 0%, $blue-trans 100%);
