@@ -15,6 +15,7 @@
 		@media #{$large-and-up} {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 	}
 	.feature-icon {
@@ -25,7 +26,7 @@
 	}
 	.single-product-feature {
 		@media #{$large-and-up} {
-			width: 50%;
+			width: 45%;
 			flex: 0 0 1;
 		}
 		h3 {
@@ -39,12 +40,24 @@
 		margin-left: 20px;
 		// list-style-type: disc;
         @media #{$large-and-up} {
-        	margin-left: 40px;
+        	margin-left: 20px;
         }
         li {
         	font-weight: 300;
             padding-left: 24px;
             // list-style-type: disc;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 15px;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: rgba(0,0,0,1);
+                z-index: 1;
+            }
             @media #{$large-and-up} {
             	margin-bottom: 10px;
             }
