@@ -1,3 +1,29 @@
+.about-overview,
+.about-story,
+.about-team,
+.about-clients,
+.about-alliances-partners {
+	p {
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 34px;
+	}
+}
+
+.about-overview,
+.about-clients,
+.about-alliances-partners {
+	p:first-of-type {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	
+}
+
+.about-story {
+
+}
+
 .about-timeline, .about-team {
 	.container .row {
 		@media #{$small-and-down} {
@@ -14,22 +40,36 @@
 	width: 78%;
 }
 
+.team-members-container {
+	@media #{$medium-and-up} {
+		padding-top: 50px;
+		    display:flex;
+		    justify-content: space-between;
+		    flex-wrap: wrap;
+		.team-member-single {
+			text-align: center;
+			width: 48%;
+			margin-bottom: 30px;
+		}
+	}
+}
+
 .team-member-single {
-	vertical-align: top;
+	background: $l-blue;
+	padding: 70px 50px;
 }
 
 .team__single__icon {
 	margin-right: 10px;
 	vertical-align: top;
-	width: 25%;
 	img {
-		width: 100%;
+		width: 86px;
 		height: auto;
+		border-radius: 50%;
 	}
 }
 
 .team__single__content {
-	width: 70%;
 	p {
 		margin: 0;
 	}
@@ -61,13 +101,5 @@
 			margin-top: 10px;
 			height: 30px;
 		}
-	}
-}
-
-.team-member-single.col {
-	margin-bottom: 30px;
-	@media #{$large-and-up} {
-		min-height: 200px !important;
-		margin-bottom: 0px;
 	}
 }

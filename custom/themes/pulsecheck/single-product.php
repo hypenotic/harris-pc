@@ -363,23 +363,6 @@ if ( ! empty( $recogs ) ) { ?>
 
 <?php } ?>
 
-
-
-<section class="product-request base-padding">
-    <div class="container">
-        <h3>See how it works</h3>
-        <a href="#modal-demo-bottom" class="btn waves-effect pc-blue no-shadow modal-trigger-general modal-trigger-demo">Request a demo</a>
-    </div>
-    <div id="modal-demo-bottom" class="modal">
-    	<div class="modal-footer">
-          <a href="#" class="modal-close waves-effect btn-flat">Close</a>
-        </div>
-        <div class="modal-content">
-          <?php gravity_form(2, false, false, false, '', true); ?>
-        </div>
-    </div>
-</section>
-
 <?php get_template_part('template-part-newsletter'); ?>
 
 

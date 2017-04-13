@@ -44,7 +44,7 @@ function pc_register_product( $meta_boxes ) {
             // Group
             array(
                 'name' => 'Single Slide', 
-                'id' => $prefix . 'slider_single',
+                'id' => $prefix . 'tslider_single',
                 'type' => 'group',
                 'clone'  => true,
                 'sort_clone' => true,

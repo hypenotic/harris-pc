@@ -26,7 +26,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 <section class="about-header llblue-bg" id="skip-to-content" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo get_template_directory_uri().'/src/images/background_default.svg'; } ?>);">
     <div class="grad-overlay yellow-grad"></div>
-	<div class="container">
+	<div class="wide-container">
 		<h1><?php echo $heading;?></h1>
 		<h2><?php echo $subhead;?></h2>
 	</div>
@@ -42,7 +42,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <section class="about-story base-padding">
     <div class="container">
-        <h3><?php echo $os_heading; ?></h3>
+        <h3 class="ta-center grey-text"><?php echo $os_heading; ?></h3>
         <div>
             <?php echo $os_overview; ?>
         </div>
@@ -81,79 +81,73 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <section class="about-team base-padding">
     <div class="container">
-        <div class="inner-container">
-            <h3><?php echo $ot_heading; ?></h3>
-            <div>
-                <?php echo $ot_overview; ?>
-            </div>
-            <?php
-             // Check if there are any team members
-            $args = array(
-                'post_type' => 'team-member',
-                'posts_per_page'=> '10',
-                'orderby' => 'menu_order',
-                'order' => 'ASC'
-            );
-            
-            $loop = new WP_Query( $args );
-            if ($loop->have_posts()){
-                $count = 0;
+        <h3 class="ta-center grey-text">Our team</h3>
+        <div>
+            <?php echo $ot_overview; ?>
+        </div>
+        <?php
+         // Check if there are any team members
+        $args = array(
+            'post_type' => 'team-member',
+            'posts_per_page'=> '10',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        );
+        
+        $loop = new WP_Query( $args );
+        if ($loop->have_posts()){
+            $count = 0;
 
+        ?>
+            <div class="team-members-container inner-container">
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); 
+                $role     = rwmb_meta( 'rw_tm_role' );
+                $email    = rwmb_meta( 'rw_tm_email' );
+                $image    = rwmb_meta( 'rw_tm_image' );
+                $count++;
             ?>
-                <div class="team-members-container row" class="wrapper">
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-                    $role     = rwmb_meta( 'rw_tm_role' );
-                    $email    = rwmb_meta( 'rw_tm_email' );
-                    $image    = rwmb_meta( 'rw_tm_image' );
-                    $count++;
-                ?>
-                    <div class="team-member-single col s12 m6">
-                        <div class="display-inblock team__single__icon">       
-                            <img src="<?php echo $image;?>" alt="">
-                        </div>
-                        <div class="display-inblock team__single__content">
-                            <p><?php the_title(); ?></p>
-                            <p class="team__role"><?php echo $role;?></p>
-                            <a href="mailto:<?php echo $email;?>" class="underline"><?php echo $email;?></a><br/>
-                            <a class="modal-trigger-general modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
-                            <div id="modal<?php echo $count;?>" class="modal team-modal">
-                                <div class="modal-content">
-                                  <?php the_content();?>
-                                </div>
-                                <div class="modal-footer">
-                                  <a href="#!" class=" modal-close waves-effect btn-flat">Close</a>
-                                </div>
+                <div class="team-member-single">
+                    <div class="team__single__icon">       
+                        <img src="<?php echo $image;?>" alt="">
+                    </div>
+                    <div class="team__single__content">
+                        <p><?php the_title(); ?></p>
+                        <p class="team__role"><?php echo $role;?></p>
+                        <a href="mailto:<?php echo $email;?>" class="underline"><?php echo $email;?></a><br/>
+                        <a class="modal-trigger-general modal-trigger<?php echo $count;?> btn pc-blue no-shadow" href="#modal<?php echo $count;?>" >Bio</a>
+                        <div id="modal<?php echo $count;?>" class="modal team-modal">
+                            <div class="modal-content">
+                              <?php the_content();?>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class=" modal-close waves-effect btn-flat">Close</a>
                             </div>
                         </div>
                     </div>
-                <?php endwhile; wp_reset_postdata(); ?>
                 </div>
-            <?php } ?>
-        </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+        <?php } ?>
     </div>
 </section>
 
-<section class="about-clients base-padding mblue-bg white-text">
+<section class="about-clients base-padding">
     <div class="container">
-        <div class="inner-container">
-            <h3><?php echo $oc_heading; ?></h3>
+            <h3 class="ta-center grey-text">Our clients</h3>
             <div class="about-clients-overview">
                 <?php echo $oc_overview; ?>
             </div>
             <?php get_template_part('template-part-clients'); ?>
-        </div>
     </div>
 </section>
 
 <section class="about-alliances-partners base-padding">
     <div class="container">
-        <div class="inner-container">
-            <h3><?php echo $ap_heading; ?></h3> 
+            <h3 class="ta-center grey-text">Our industry partners &amp; alliances</h3> 
             <div>
                 <?php echo $ap_overview; ?>
             </div>
             <?php get_template_part('template-part-alliance-partner'); ?>
-        </div>
     </div>
 </section>
 
