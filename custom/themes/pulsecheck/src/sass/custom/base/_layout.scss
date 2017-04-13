@@ -3,7 +3,7 @@ body {
 }
 
 .base-padding {
-	padding: 30px 15px;
+	padding: 30px 20px;
 	@media #{$large-and-up} {
 		padding: 50px 0;
 	}
@@ -12,6 +12,9 @@ body {
 .wide-container {
 	margin: 0 auto;
 	max-width: 1150px;
+	@media #{$small-and-down} {
+		padding: 0 20px;
+	}
 }
 
 .non-matcss-container{
@@ -40,7 +43,7 @@ body {
 }
 
 .base-padding.no-tb-padding {
-	padding: 0 10px;
+	padding: 0 20px;
 	@media #{$large-and-up} {
 		padding: 0;
 	}

@@ -54,8 +54,10 @@ nav {
   }
 }
 
-@media #{$large-and-up} {
-  .mini-nav {
+.mini-nav {
+  display: none;
+  @media #{$large-and-up} {
+    display: block;
     transition: all 0.5s;
     width: 100%;
     text-align: right;
@@ -210,8 +212,8 @@ nav.scrolling {
 
 a.brand-logo {
   position: absolute;
-  top: 4px;
-  left: 70px;
+  top: 15px;
+  left: 120px;
   @media #{$large-and-up} {
       position: relative;
       top: 10px;

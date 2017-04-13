@@ -25,7 +25,9 @@
 		height: auto;
 	}
 	.single-product-feature {
+		margin-bottom: 30px;
 		@media #{$large-and-up} {
+			margin-bottom: 50px;
 			width: 45%;
 			flex: 0 0 1;
 		}

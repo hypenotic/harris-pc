@@ -146,7 +146,7 @@ if ( ! empty( $tslides ) ) { ?>
 </section>
 <?php } ?>
 
-<section class="product-features base-padding no-tb-padding">
+<section class="product-features base-padding">
 	<div class="non-matcss-container">
 		<div class="single-product-container">
 			<?php 
@@ -195,7 +195,7 @@ if ( ! empty( $slides ) ) { ?>
         		  foreach ( $slides as $slide ) {
         		    $stitle  	= $slide['rw_slide_heading'];
         		    ?>
-        		    <li class="col s6 m6 l3"><?php echo $stitle;?></li>
+        		    <li class="ta-center col s6 m6 l3"><?php echo $stitle;?></li>
         		  <?php }
         		}?>
         	</ul>
