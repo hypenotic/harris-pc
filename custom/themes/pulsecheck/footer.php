@@ -6,7 +6,7 @@
 				    
 				</div>
 			</div>	
-			<div class="col s12 m6">
+			<div class="top-footer__info col s12 m6">
 				<div class="footer-contact-content">
 					<div class="footer-logos">
 						<div id="harris-logo-holder">

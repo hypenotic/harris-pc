@@ -11,7 +11,12 @@
 				vertical-align: top;
 				width: 47.7%;
 				padding: 90px;
+				margin: 0;
 				display: inline-block;
+				p {
+					font-size: 25px;
+					line-height: 30px;
+				}
 			}
 			.single-home-product:first-child {
 				margin-right: 2%
@@ -22,9 +27,11 @@
 		}
 	}
 	.single-home-product {
+		padding: 20px;
 		color: $white;
 		font-weight: 300;
 		background: #458C98;
+		margin-bottom: 30px;
 		h4 a {
 			color: $white;
 			font-size: 36px;
@@ -32,8 +39,8 @@
 			font-weight: 300;
 		}
 		p {
-			font-size: 25px;
-			line-height: 30px;
+			font-size: 16px;
+			line-height: 20px;
 		}
 	}
 }

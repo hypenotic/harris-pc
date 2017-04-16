@@ -258,6 +258,9 @@ a.brand-logo {
         margin: 0;
         width: 100%;
     }
+    ul a {
+      padding: 15px;
+    }
     menu {
       padding: 0;
       margin: 0;
@@ -293,12 +296,19 @@ a.brand-logo {
   }
 }
 
+nav {
+   @media #{$small-and-down} {
+     z-index: 1005;
+   }
+}
+
 #nav-icon {
   // padding: 15px;
-  min-width: 120px;
+  min-width: 100%;
+  background: $blue;
   min-height: 56px;
   position: fixed;
-  z-index: 1000000;
+  z-index: 1000;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -324,7 +334,7 @@ a.brand-logo {
   color: $white;
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 73%;
   font-weight: bold;
   font-size: 80%;
   @media #{$medium-and-up} {
@@ -338,11 +348,11 @@ a.brand-logo {
   position: absolute;
   margin: 0 auto;
   height: 5px;
-  width: 31%;
+  width: 11%;
   background: $white;
   border-radius: 9px;
   opacity: 1;
-  right: 11%;
+  right: 5%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -465,19 +475,25 @@ a.brand-logo {
   }
   @media #{$medium-and-down} {
     position: relative;
+    > a {
+      // padding-bottom: 3px !important;
+    }
     > ul {
       // display: none;
+      margin-top: 10px;
       >li {
         background: $ll-blue;
-        width: 49%;
+        width: 49.2%;
         float: none;
         display: inline-block;
+        border: none;
+        margin-top: 3px;
         a {
           font-size: 12px;
         }
       }
       li:nth-child(odd) {
-        border-right: 1px solid $blue;
+        // border-right: 1px solid $blue;
       }
     }
     i.fa {
@@ -511,32 +527,16 @@ a.brand-logo {
   }
 }
 
+.menu-description {
+  color: $blue;
+}
+
 @media #{$large-and-up} {
   .menu-description {
     display: none;
   }
   nav ul a {
     font-weight: 300;
-  }
-}
-
-nav.blue-bg {
-  @media #{$medium-and-down} {
-    li.has-sub {
-      padding-top: 17px;
-      line-height: 20px !important;
-      ul {
-        border-top: 1px solid $blue;
-        margin-top: 10px;
-        li {
-          line-height: 56px;
-        }
-      }
-      .menu-description {
-        line-height: 20px !important;
-        color: $blue !important;
-      }
-    }
   }
 }
 

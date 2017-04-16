@@ -59,6 +59,8 @@
 
 .fixed-cta-btn {
 	color: $d-blue;
+	width: 40%;
+	margin: 0 5px;
 	@media #{$large-and-up} {
 		width: 250px;
 		margin: 0 5px;

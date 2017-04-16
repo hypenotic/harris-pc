@@ -1,10 +1,14 @@
 .client-list-section {
 	padding-top: 40px;
+	text-align: center;
 	>div {
 		text-align: center;
+		display: inline-block;
+		width: 45%;
+		margin: 0 2.2% 25px;
 	}
 	img {
-		max-width: 200px;
+		max-width: 95%;
 		// margin: 0 auto;
 	}
 	@media #{$medium-and-up} {
@@ -12,6 +16,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		> div {
+			margin: 0;
 			margin-bottom: 50px;
 			width: 24%;
 			img {

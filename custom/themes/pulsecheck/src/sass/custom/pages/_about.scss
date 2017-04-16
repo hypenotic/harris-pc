@@ -48,7 +48,7 @@
 		    justify-content: space-between;
 		    flex-wrap: wrap;
 		.team-member-single {
-			text-align: center;
+			margin-bottom: 0px;
 			width: 48%;
 			margin-bottom: 30px;
 		}
@@ -56,18 +56,26 @@
 }
 
 .team-member-single {
+	text-align: center;
 	background: $l-blue;
 	padding: 100px 40px;
 	position: relative;
+	margin-bottom: 30px;
 	a.modal-trigger-general {
 		position: absolute;
-		bottom: 15px;
+		bottom: 20px;
 		right: 20px;
+		@media #{$large-and-up} {
+			bottom: 15px;
+			right: 20px;
+		}
 	}
 	.team__plus {
+		color: $l-green;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 20px;
 		@media #{$large-and-up} {
-			color: $l-green;
-			font-weight: bold;
 			font-size: 20px;
 			line-height: 25px;
 		}
