@@ -123,6 +123,10 @@
 			color: $blue;
 			border: 1px solid $blue;
 			border-radius: 26px;
+			&:hover {
+				background: $blue;
+				color: $white;
+			}
 		}
 	}
 	h4 {
