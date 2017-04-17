@@ -162,9 +162,8 @@
 	.recognition-container {
 		text-align: center;
 		> div {
-			width: 30%;
-			
 			@media #{$medium-and-up} {
+				width: 30%;
 				display: inline-block;
 			} 
 			img {
