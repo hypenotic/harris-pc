@@ -212,6 +212,7 @@ nav.scrolling {
 
 a.brand-logo {
   position: absolute;
+  // Won't show up on emulator, but shows up fine on hypelabs
   top: 15px;
   left: 120px;
   @media #{$large-and-up} {

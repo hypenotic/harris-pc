@@ -284,14 +284,18 @@ if ( ! empty( $recogs ) ) { ?>
 				<p>Flyer</p>
 				<h4>Perioperative Suite</h4>
 				<div class="resource_separator"></div>
-				<div class="resource_blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</div>
+				<div class="resource_blurb">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</p>
+				</div>
 				<a href="#" class="btn no-shadow">View</a>
 			</div>
 			<div>
 				<p>Case Study</p>
 				<h4>Streamlining Processes, Realizing Cost Savings</h4>
 				<div class="resource_separator"></div>
-				<div class="resource_blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</div>
+				<div class="resource_blurb">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</p>
+				</div>
 				<a href="#" class="btn no-shadow">View</a>
 			</div>
 		</div>

@@ -1,7 +1,7 @@
 <?php
 /*
-* CPT: Case Study
-* Slug: case-study
+* CPT: Resource
+* Slug: resource
 * Dependancies:
 * - MetaBox.io (https://metabox.io/) 
 * - MB Custom Post Type (https://metabox.io/plugins/custom-post-type/) -> also makes custom taxonimies
@@ -13,12 +13,12 @@
 * If your CPT needs custom meta fields, you will need:
 * - MB Term Meta (https://metabox.io/plugins/mb-term-meta/)
 */
-add_filter( 'rwmb_meta_boxes', 'pc_register_cs' );
-function pc_register_cs( $meta_boxes ) {
+add_filter( 'rwmb_meta_boxes', 'pc_register_res' );
+function pc_register_res( $meta_boxes ) {
     $prefix = 'rw_';
     $meta_boxes[] = array(
         'title'      => __( 'Banner', 'textdomain' ),
-        'post_types' => array( 'case-study'),
+        'post_types' => array( 'resource'),
         'fields' => array(
             array(
                'id'   => $prefix . 'cs_banner_heading',
@@ -29,6 +29,11 @@ function pc_register_cs( $meta_boxes ) {
                'id'   => $prefix . 'cs_banner_subheading',
                'name' => __( 'Subheading', 'textdomain' ),
                'type' => 'textarea',
+            ),
+            array(
+               'id'   => $prefix . 'cs_file',
+               'name' => __( 'File', 'textdomain' ),
+               'type' => 'file_input',
             ),
         ),
     );

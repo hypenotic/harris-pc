@@ -1,12 +1,23 @@
 .product-overview {
 	p {
-		font-size: 25px;
-		line-height: 34px;
+		font-size: 16px;
+		line-height: 23px;
 		font-weight: 300;
+		@media #{$medium-and-up} {
+			font-size: 25px;
+			line-height: 34px;
+		}
 	}
 	p:first-of-type {
-		font-size: 36px;
-		line-height: 45px;
+		font-size: 25px;
+		line-height: 35px;
+		@media #{$small-and-down} {
+			margin-top: 0;
+		}
+		@media #{$medium-and-up} {
+			font-size: 36px;
+			line-height: 45px;
+		}
 	}
 }
 
@@ -98,14 +109,19 @@
 }
 
 .support-resources-container {
-	padding: 40px 0;
+	padding: 20px 0;
 	@media #{$large-and-up} {
+		padding: 40px 0;
 		>div {
 			width: 30%;
 			margin-right: 30px;
 		}
 	}
 	>div {
+		margin-bottom: 40px;
+		@media #{$large-and-up} {
+			margin-bottom: 0;
+		}
 		>p:first-child {
 			font-weight: bold;
 		}
@@ -117,12 +133,21 @@
 		}
 		.resource_blurb {
 			margin-bottom: 15px;
+			// font-size: 6vw;
+			// line-height: 8vw;
+			// @media #{$large-and-up} {
+			// 	font-size: 1.5vw;
+			// 	line-height: 2.5vw;
+			// }
 		}
 		a.btn {
 			background: $white;
 			color: $blue;
 			border: 1px solid $blue;
 			border-radius: 26px;
+			@media #{$small-and-down} {
+				padding: 5px 30px;
+			}
 			&:hover {
 				background: $blue;
 				color: $white;
