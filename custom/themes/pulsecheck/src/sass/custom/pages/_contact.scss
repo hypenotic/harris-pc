@@ -1,7 +1,8 @@
 .contact-header {
 	background: $d-blue;
+	padding: 20% 0% 20%;
 	@media #{$large-and-up} {
-		padding: 10% 0% 10%;
+		padding: 13% 0% 10%;
 	}
 	z-index: 50;
 }
@@ -9,19 +10,23 @@
 .contact-form-container {
 	z-index: 55;
 	background: $white;
-	width: 60%;
+	width: 90%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0 auto;
 	padding: 20px 40px;
 	position: relative;
-	margin-top: -250px;
+	margin-top: -50px;
 	margin-bottom: 50px;
+	@media #{$medium-and-up} {
+		width: 60%;
+		margin-top: -200px;
+	}
 }
 
 #contact-map {
 	width: 100%;
-	min-height: 80vh;
+	min-height: 90vh;
 	@media #{$small-and-down} {
 		min-height: 60vh;
 	}
