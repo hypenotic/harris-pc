@@ -279,39 +279,20 @@ if ( ! empty( $recogs ) ) { ?>
 <section class="product-support-resources base-padding">
 	<div class="wide-container">
 		<h3 class="grey-text ta-center">Make the case to your team</h3>
-		<div class="support-resources-container flex-container flex-space-between">
+		<div class="support-resources-container flex-container">
 			<div>
-				<div class="resource__image" style="background-image: url(http://hypelabs.ca/dev/picis/custom/uploads/2017/04/placeholder_1.png);">
-				</div>
-				<div class="resource__content">
-					<div>
-						<h4>Perioperative Suite</h4>
-						<p>Brochure</p>
-					</div>
-					<a href="#" class="btn ghost-btn no-shadow">View PDF</a>
-				</div>
+				<p>Flyer</p>
+				<h4>Perioperative Suite</h4>
+				<div class="resource_separator"></div>
+				<div class="resource_blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</div>
+				<a href="#" class="btn no-shadow">View</a>
 			</div>
 			<div>
-				<div class="resource__image" style="background-image: url(http://hypelabs.ca/dev/picis/custom/uploads/2017/04/placeholder_2.png);">
-				</div>
-				<div class="resource__content">
-					<div>
-						<h4>Streamlining Processes, Realizing Cost Savings…</h4>
-						<p>Case Study</p>
-					</div>
-					<a href="#" class="btn ghost-btn no-shadow">View PDF</a>
-				</div>
-			</div>
-			<div>
-				<div class="resource__image" style="background-image: url(http://hypelabs.ca/dev/picis/custom/uploads/2017/04/placeholder_2.png);">
-				</div>
-				<div class="resource__content">
-					<div>
-						<h4>Streamlining Processes, Realizing Cost Savings…</h4>
-						<p>Case Study</p>
-					</div>
-					<a href="#" class="btn ghost-btn no-shadow">View PDF</a>
-				</div>
+				<p>Case Study</p>
+				<h4>Streamlining Processes, Realizing Cost Savings</h4>
+				<div class="resource_separator"></div>
+				<div class="resource_blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, iusto.</div>
+				<a href="#" class="btn no-shadow">View</a>
 			</div>
 		</div>
 	</div>
