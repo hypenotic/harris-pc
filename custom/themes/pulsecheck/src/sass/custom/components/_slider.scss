@@ -80,7 +80,8 @@
 		// 	padding-right: 40px;
 		// }
 	}
-	.slide__right.parent_slide {
+	.slide__right.parent_slide,
+	.slide__right.child_slide, {
 		// @media #{$medium-and-up} {
 		// 	padding-left: 40px;
 		// }
@@ -90,11 +91,13 @@
 			font-style: italic;
 		}
 		.btn {
-			min-height: 40px;
 			line-height: 10vw;
 			padding: 0px 40px;
+			@media #{$small-and-down} {
+				min-height: 40px;
+			}
 			@media #{$medium-and-up} {
-				line-height: 5vw;
+				line-height: 40px;
 				padding: 0px 40px;
 			}
 		}
