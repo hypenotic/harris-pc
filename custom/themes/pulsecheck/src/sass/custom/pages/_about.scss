@@ -40,25 +40,34 @@
 	width: 78%;
 }
 
+.about-team.base-padding {
+	padding-bottom: 0;
+}
+
+.about-clients.base-padding {
+	padding-top: 0;
+}
+
 .team-members-container,
 .contact-team-container {
 	@media #{$medium-and-up} {
 		padding-top: 100px;
 	    display:flex;
-	    justify-content: space-between;
+	    justify-content: center;
 	    flex-wrap: wrap;
 		.team-member-single {
 			margin-bottom: 0px;
-			width: 48%;
-			margin-bottom: 100px;
+			width: 40%;
+			margin: 0 5% 120px; 
 		}
 	}
 }
 
 .team-member-single {
 	text-align: center;
-	background: $l-blue;
-	padding: 0 40px 70px;
+	background: $white;
+	box-shadow: 0px 0px 25px 0px rgba(50,50,50,0.1);
+	padding: 0 40px 100px;
 	position: relative;
 	margin-bottom: 30px;
 	a.modal-trigger-general {
@@ -71,7 +80,7 @@
 		}
 	}
 	.team__plus {
-		color: $l-green;
+		color: $blue;
 		font-weight: bold;
 		font-size: 20px;
 		line-height: 20px;
@@ -90,6 +99,7 @@
 		width: 100px;
 		height: auto;
 		border-radius: 50%;
+		box-shadow: 0px 0px 25px 0px rgba(50,50,50,0.1);
 	}
 }
 
@@ -105,7 +115,7 @@
 		line-height: 5vw;
 		@media #{$large-and-up} {
 			font-size: 14px;
-			line-height: 14px;
+			line-height: 18px;
 			margin-bottom: 10px;
 		}
 	}
@@ -167,4 +177,8 @@
 			margin-bottom: 15px;
 		}
 	}
+}
+
+.about-pa-wrapper {
+	margin-top: 50px;
 }

@@ -113,7 +113,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             $count = 0;
 
         ?>
-            <div class="team-members-container inner-container">
+            <div class="team-members-container">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); 
                 $role     = rwmb_meta( 'rw_tm_role' );
                 $email    = rwmb_meta( 'rw_tm_email' );
@@ -163,7 +163,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div>
                 <?php echo $ap_overview; ?>
             </div>
-            <?php get_template_part('template-part-alliance-partner'); ?>
+            <div class="about-pa-wrapper">
+                <?php get_template_part('template-part-alliance-partner'); ?>    
+            </div>
     </div>
 </section>
 
