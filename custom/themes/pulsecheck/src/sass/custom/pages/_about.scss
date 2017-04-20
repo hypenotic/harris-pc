@@ -43,14 +43,14 @@
 .team-members-container,
 .contact-team-container {
 	@media #{$medium-and-up} {
-		padding-top: 50px;
-		    display:flex;
-		    justify-content: space-between;
-		    flex-wrap: wrap;
+		padding-top: 100px;
+	    display:flex;
+	    justify-content: space-between;
+	    flex-wrap: wrap;
 		.team-member-single {
 			margin-bottom: 0px;
 			width: 48%;
-			margin-bottom: 30px;
+			margin-bottom: 100px;
 		}
 	}
 }
@@ -58,7 +58,7 @@
 .team-member-single {
 	text-align: center;
 	background: $l-blue;
-	padding: 100px 40px;
+	padding: 0 40px 70px;
 	position: relative;
 	margin-bottom: 30px;
 	a.modal-trigger-general {
@@ -85,14 +85,16 @@
 .team__single__icon {
 	margin-right: 10px;
 	vertical-align: top;
+	margin-top: -50px;
 	img {
-		width: 86px;
+		width: 100px;
 		height: auto;
 		border-radius: 50%;
 	}
 }
 
 .team__single__content {
+	margin-top: 30px;
 	p {
 		margin: 0;
 	}
