@@ -188,15 +188,17 @@ if ( ! empty( $slides ) ) { ?>
     	?>
         <h3><?php echo $sheading; ?></h3>
         <div class="slider__headings">
-        	<ul class="row">
+        	<ul>
         		<?php 
         		// Group is cloneable
         		if ( ! empty( $slides ) ) {
+        			$count = 1;
         		  foreach ( $slides as $slide ) {
+        		  	// print_r($count);
         		    $stitle  	= $slide['rw_slide_heading'];
         		    ?>
-        		    <li class="ta-center col s6 m6 l3"><?php echo $stitle;?></li>
-        		  <?php }
+        		    <li class="product-slide-heading <?php if ($count==1) { echo'active-product-slide';}?>"><?php echo $stitle;?></li>
+        		  <?php $count++;}
         		}?>
         	</ul>
         </div>
@@ -214,6 +216,8 @@ if ( ! empty( $slides ) ) { ?>
                   foreach ( $slides as $slide ) {
                     $stitle  	= $slide['rw_slide_heading'];
                     $scontent  	= $slide['rw_slide_content'];
+                    $lower = strtolower($stitle);
+                    $url = preg_replace('/\s+/', '-', $lower);
                     ?>
                     <div class="swiper-slide">
                     	<div class="swiper-content">
@@ -222,7 +226,7 @@ if ( ! empty( $slides ) ) { ?>
 								<?php echo $scontent; ?>
 							</div><div class="slide__right child_slide">
 								<p>Speak to a team member who understands your workflow.</p>
-								<a href="" class="btn ghost-btn no-shadow">Book a chat</a>
+								<a href="#modal-demo" class="btn ghost-btn no-shadow modal-trigger-general modal-trigger-demo">Book a chat</a>
 							</div>
 
 							<?php } else { ?>
@@ -230,7 +234,7 @@ if ( ! empty( $slides ) ) { ?>
 								<?php echo $scontent; ?>
 							</div><div class="slide__right parent_slide">
 								<p>See why <?php the_title();?> is a good fit for <?php echo $stitle; ?></p>
-								<a href="" class="btn ghost-btn no-shadow">Show me</a>
+								<a href="<?php the_permalink();?><?php echo $url;?>" class="btn ghost-btn no-shadow">Show me</a>
 							</div>
 							<?php } ?>
                     	</div>
