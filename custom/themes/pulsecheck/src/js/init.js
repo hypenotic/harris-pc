@@ -72,38 +72,53 @@ $(function() {
            // This is where you would paste any style found on Snazzy Maps.
            styles: 
            [
-               {
-                   "stylers": [
-                       {
-                           "hue": "#FFCCA7"
-                       },
-                       {
-                           "saturation": 250
-                       }
-                   ]
-               },
-               {
-                   "featureType": "road",
-                   "elementType": "geometry",
-                   "stylers": [
-                       {
-                           "lightness": 50
-                       },
-                       {
-                           "visibility": "simplified"
-                       }
-                   ]
-               },
-               {
-                   "featureType": "road",
-                   "elementType": "labels",
-                   "stylers": [
-                       {
-                           "visibility": "off"
-                       }
-                   ]
-               }
-           ]
+             {
+                 "featureType": "all",
+                 "stylers": [
+                     {
+                         "saturation": 0
+                     },
+                     {
+                         "hue": "#e7ecf0"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road",
+                 "stylers": [
+                     {
+                         "saturation": -70
+                     }
+                 ]
+             },
+             {
+                 "featureType": "transit",
+                 "stylers": [
+                     {
+                         "visibility": "off"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "poi",
+                 "stylers": [
+                     {
+                         "visibility": "off"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "water",
+                 "stylers": [
+                     {
+                         "visibility": "simplified"
+                     },
+                     {
+                         "saturation": -60
+                     }
+                 ]
+             }
+         ]
        };
 
        // Determine zoon and pan amounts based on isDraggable (mobile)
@@ -135,9 +150,9 @@ $(function() {
        // }
 
        if(window.location.href.indexOf("hypelabs") > -1) {
-          var theicon = '/dev/harris/custom/themes/pulsecheck/dist/images/orange_pin.png';
+          var theicon = '/dev/harris/custom/themes/pulsecheck/dist/images/pin-mid.png';
         } else {
-          var theicon = '/custom/themes/pulsecheck/dist/images/orange_pin.png'
+          var theicon = '/custom/themes/pulsecheck/dist/images/pin-mid.png'
         }
 
       // var image = {

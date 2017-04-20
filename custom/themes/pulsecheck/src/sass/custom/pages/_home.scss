@@ -13,10 +13,6 @@
 				padding: 90px;
 				margin: 0;
 				display: inline-block;
-				p {
-					font-size: 25px;
-					line-height: 30px;
-				}
 			}
 			.single-home-product:first-child {
 				margin-right: 2%
@@ -38,9 +34,19 @@
 			line-height: 45px;
 			font-weight: 300;
 		}
+		>div {
+			margin-bottom: 30px;
+		}
 		p {
 			font-size: 16px;
 			line-height: 20px;
+			@media #{$medium-and-up} {
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
+		>a {
+			float: right;
 		}
 	}
 }

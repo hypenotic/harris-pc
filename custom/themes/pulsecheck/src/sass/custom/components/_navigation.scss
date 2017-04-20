@@ -85,9 +85,13 @@ nav {
       background: $yellow;
       color: $d-blue;
       padding: 10px 20px;
-      border-radius: 25px;
+      border-radius: 26px;
       text-transform: uppercase;
       font-weight: bold;
+      &:hover {
+        color: $d-blue;
+        background: lighten($yellow, 10);
+      }
     } 
   }
 }

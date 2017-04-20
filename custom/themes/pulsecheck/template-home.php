@@ -49,7 +49,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 ?>
                 <div class="single-home-product">
                     <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                    <p><?php the_excerpt(); ?></p>
+                    <div><?php the_excerpt(); ?></div>
                     <a href="<?php the_permalink();?>" class="btn ghost-btn no-shadow">See details</a>
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?>
