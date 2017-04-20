@@ -139,15 +139,40 @@
 }
 
 .gform_wrapper {
+	li.gfield {
+		margin-bottom: 30px !important;
+		vertical-align: top;
+		@media #{$medium-and-up} {
+			display: inline-block;
+			width: 50%;
+		}
+	}
+	li.gfield:first-child {
+		width: 100%;
+	}
+	li#field_3_5,
+	li#field_1_7 {
+		width: 100%;
+		textarea {
+			border: 1px solid $blue;
+			border-radius: 5px;
+		}
+	}
 	label.gfield_label {
 		font-size: 4.5vw !important;
-		font-weight: bold;
+		// font-weight: bold;
 		text-transform: uppercase;
 		margin: 0;
 		color: $black;
 		@media #{$large-and-up} {
 			font-size: 1.5vw !important;
 		}
+	}
+	input[type=text] {
+		border: 1px solid $blue;
+		border-radius: 26px;
+		margin-bottom: 5px;
+		min-width: 100%;
 	}
 	input[type="text"]:focus {
 		border-bottom: 2px solid $blue;
@@ -160,10 +185,11 @@
 	select.gfield_select {
 		display: block;
 		border: 1px solid $blue;
-		border-radius: none;
+		border-radius: 26px;
+		// border-radius: none;
 		width: 100% !important;
 		-webkit-appearance: none;
-		-webkit-border-radius: 0px;
+		// -webkit-border-radius: 0px;
 		background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
 		background-position: 98% 50%;
 		background-repeat: no-repeat;
@@ -182,14 +208,14 @@
 	input[type="submit"].gform_button {
 		color: $white;
 		background-color: $blue;
-		font-weight: 700;
-		height: 54px;
-		line-height: 54px;
+		font-weight: 600 !important;
+		height: 45px;
+		line-height: 45px;
 		padding: 0px 2rem;
 		border: none;
-		border-radius: 2px;
+		border-radius: 26px;
 		float: right;
-		text-transform: uppercase;
+		text-transform: uppercase !important;
 		margin-right: 0 !important;
 	}
 }

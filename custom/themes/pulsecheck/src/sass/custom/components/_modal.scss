@@ -31,11 +31,12 @@
 .modal .gform_wrapper form {
 	padding-bottom: 50px;
 	label {
-		font-weight: 300;
+		font-weight: 400;
+		color: $d-blue;
 	}
 	.gform_footer .gform_button {
-		font-weight: 300;
-		text-transform: none;
+		// font-weight: 300;
+		// text-transform: none;
 	}
 }
 
@@ -49,14 +50,24 @@
 .modal .modal-content {
 	h3 {
 		text-align: left;
+		font-size: 5vw;
+		line-height: 7vw;
+		font-weight: 300;
+		@media #{$large-and-up} {
+			font-size: 35px;
+			line-height: 45px;
+		}
 	}
 }
 
-.modal-close {
+.modal .modal-close {
 	background-color: $red;
 	font-size: 1.1vw;
 	line-height: 1.2vw;
 	color: $white;
 	font-weight: 300;
 	padding: 10px;
+	&:hover {
+		background: $red;
+	}
 }
