@@ -73,10 +73,12 @@ if ( ! empty( $slides ) ) { ?>
 
                     if ( is_singular( 'product' ) && $post->post_parent ) {
                         $is_child = true;
+                        $title = $post->post_parent;
                     } else {
                         $is_child = false; 
+                        $title = get_the_title($post->ID);
                     }
-                    
+
                     ?>
                     <div class="swiper-slide">
                         <div class="swiper-content">
@@ -92,7 +94,7 @@ if ( ! empty( $slides ) ) { ?>
                             <div class="slide__left parent_slide">
                                 <?php echo $scontent; ?>
                             </div><div class="slide__right parent_slide">
-                                <p>See why <?php the_title();?> is a good fit for <?php echo $stitle; ?></p>
+                                <p>See why <?php echo $title;?> is a good fit for <?php echo $stitle; ?></p>
                                 <a href="<?php the_permalink();?><?php echo $url;?>" class="btn ghost-btn no-shadow">Show me</a>
                             </div>
                             <?php } ?>

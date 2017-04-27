@@ -114,16 +114,19 @@
 		text-transform: uppercase;
 		font-size: 3.5vw;
 		line-height: 5vw;
+		font-family: 'Titillium Web', sans-serif;
 		@media #{$large-and-up} {
-			font-size: 14px;
+			font-size: 15px;
 			line-height: 18px;
 			margin-bottom: 10px;
 		}
 	}
 	.team__title {
+		font-weight: 300;
 		@media #{$large-and-up} {
 			font-size: 35px;
 			line-height: 45px;
+
 		}
 	}
 	a {
