@@ -39,18 +39,38 @@ get_header(); ?>
                 } else {
                     $the_title = get_the_title();
                 }
-                $res_type =  wp_get_post_terms($post->ID, 'resource-type');
+                
                 $res_title     = rwmb_meta( 'rw_cs_banner_heading' );
                 $res_file    = rwmb_meta( 'rw_cs_file' );
+                $res_type =  wp_get_post_terms($post->ID, 'resource-type'); 
+
+                if (! empty($res_title)) {
+                    $title = $res_title;
+                } else {
+                    $title = get_the_title($post->ID);
+                }
+
+                if (! empty($res_file)) {
+                    $link = $res_file;
+                } else {
+                    $link = get_the_permalink($post->ID);
+                }
+
+                if (! empty($res_type)) {
+                    $type = $res_type[0]->name;
+                } else {
+                    $type = 'Article';
+                }
+                
             ?>
                 <div>
-                    <p><?php echo $res_type[0]->name;?></p>
-                    <h4><?php echo $res_title;?></h4>
+                    <p><?php echo $type; ?></p>
+                    <h4><?php echo $title;?></h4>
                     <div class="resource_separator"></div>
                     <div class="resource_blurb">
                         <p><?php the_excerpt();?></p>
                     </div>
-                    <a href="<?php echo $res_file;?>" target="_blank" class="btn no-shadow">View</a>
+                    <a href="<?php echo $link;?>" target="_blank" class="btn no-shadow">View</a>
                 </div>
 
             <?php endwhile; ?>

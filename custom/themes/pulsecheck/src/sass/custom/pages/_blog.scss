@@ -9,11 +9,11 @@
 .resources-container {
 	padding: 20px 0;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	@media #{$large-and-up} {
 		padding: 40px 0;
 		>div {
 			width: 30%;
-			margin-right: 30px;
 		}
 	}
 	>div {
@@ -30,8 +30,13 @@
 			background: $d-blue;
 			margin: 20px 0;
 		}
-		.resource_blurb {
-			margin-bottom: 15px;
+		.resource_blurb p {
+			font-size: 4vw;
+			line-height: 5.5vw;
+			@media #{$large-and-up} {
+				font-size: 1.3vw;
+				line-height: 2.2vw;
+			}
 		}
 		a.btn {
 			background: $white;
