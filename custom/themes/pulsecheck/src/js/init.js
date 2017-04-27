@@ -68,7 +68,7 @@ $(function() {
         // Navigation arrows
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-     });  
+     }); 
 
     // GOOGLE MAPS ============================================
 
