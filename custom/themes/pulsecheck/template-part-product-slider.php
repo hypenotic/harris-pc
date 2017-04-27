@@ -70,6 +70,13 @@ if ( ! empty( $slides ) ) { ?>
                     $scontent   = $slide['rw_slide_content'];
                     $lower = strtolower($stitle);
                     $url = preg_replace('/\s+/', '-', $lower);
+
+                    if ( is_singular( 'product' ) && $post->post_parent ) {
+                        $is_child = true;
+                    } else {
+                        $is_child = false; 
+                    }
+                    
                     ?>
                     <div class="swiper-slide">
                         <div class="swiper-content">

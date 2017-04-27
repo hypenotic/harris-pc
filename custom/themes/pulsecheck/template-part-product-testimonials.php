@@ -1,4 +1,12 @@
-<?php if ($is_child == true) { ?>
+<?php 
+
+if ( is_singular( 'product' ) && $post->post_parent ) {
+    $is_child = true;
+} else {
+    $is_child = false; 
+}
+
+if ($is_child == true) { ?>
 <?php 
 $tslides = rwmb_meta( 'rw_tslider_single' );
 // Group is cloneable
