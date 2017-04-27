@@ -19,7 +19,7 @@
 	>div {
 		margin-bottom: 40px;
 		@media #{$large-and-up} {
-			margin-bottom: 0;
+			margin-bottom: 50px;
 		}
 		>p:first-child {
 			font-weight: bold;
