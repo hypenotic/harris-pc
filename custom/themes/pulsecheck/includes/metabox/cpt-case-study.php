@@ -17,7 +17,7 @@ add_filter( 'rwmb_meta_boxes', 'pc_register_res' );
 function pc_register_res( $meta_boxes ) {
     $prefix = 'rw_';
     $meta_boxes[] = array(
-        'title'      => __( 'Banner', 'textdomain' ),
+        'title'      => __( 'Details', 'textdomain' ),
         'post_types' => array( 'resource'),
         'fields' => array(
             array(

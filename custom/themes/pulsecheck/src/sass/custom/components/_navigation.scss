@@ -54,6 +54,23 @@ nav {
   }
 }
 
+nav.dark-nav {
+  background: $blue;
+  padding-bottom: 20px;
+  .nav-line {
+    // background: $black;
+  }
+  ul a {
+    // color: $black;
+  }
+}
+
+.scrolling{
+  nav.dark-nav {
+    padding-bottom: 0px;
+  }
+}
+
 .mini-nav {
   display: none;
   @media #{$large-and-up} {

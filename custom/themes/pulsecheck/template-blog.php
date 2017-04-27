@@ -9,17 +9,18 @@ get_header(); ?>
 ?>
 <section class="blog-header" id="skip-to-content">
 	<div class="container">
-		<h1>The Pulse</h1>
+		<h1><?php echo $heading;?></h1>
+        <h2><?php echo $subhead;?></h2>
 	</div>
 </section>
 
 <section class="blog-posts">
-    <div class="container">
-    	<div class="row">
+    <div class="wide-container">
+    	<div class="resources-container flex-container">
         <?php 
         // the query
         $args = array(
-            'post_type' => array( 'post', 'case-study', 'article' ),
+            'post_type' => array( 'post', 'resource', 'article' ),
             'posts_per_page'=> '10',
             'order' => 'DESC'
         );
@@ -38,10 +39,18 @@ get_header(); ?>
                 } else {
                     $the_title = get_the_title();
                 }
+                $res_type =  wp_get_post_terms($post->ID, 'resource-type');
+                $res_title     = rwmb_meta( 'rw_cs_banner_heading' );
+                $res_file    = rwmb_meta( 'rw_cs_file' );
             ?>
-                <div class="single-post-card col s12 m4 l3">
-                    <a href="<?php the_permalink();?>"><h2><?php echo $the_title; ?></h2></a>
-                    <div><?php the_excerpt();?></div>
+                <div>
+                    <p><?php echo $res_type[0]->name;?></p>
+                    <h4><?php echo $res_title;?></h4>
+                    <div class="resource_separator"></div>
+                    <div class="resource_blurb">
+                        <p><?php the_excerpt();?></p>
+                    </div>
+                    <a href="<?php echo $res_file;?>" target="_blank" class="btn no-shadow">View</a>
                 </div>
 
             <?php endwhile; ?>

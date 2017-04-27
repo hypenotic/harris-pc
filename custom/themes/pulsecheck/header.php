@@ -30,7 +30,7 @@
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
     <div class="navbar-fixed">
-      <nav>
+      <nav <?php if (is_page_template( 'template-blog.php' )) { echo 'class="dark-nav"';}?> >
         <div class="nav-wrapper">
         <div class="mini-nav">
           <a href="http://customerportal.quadramed.com/" target="_blank">Customer Portal</a>
