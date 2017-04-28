@@ -33,10 +33,12 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
 			    
 			</div>
 
+			<h3>Harris PulseCheck Head Office</h3>
 			<p>
 			10275 West Higgins Road, Suite 250<br/>
 			Rosemont, IL. 60018</p>
 		</div><div class="right-panel">
+			<p>Leave a message with as much detail as you'd like and we'll have the right person respond within 48 hours.</p>
 		    <?php gravity_form(1, false, false, false, '', true); ?>
 		</div>
 	</div>

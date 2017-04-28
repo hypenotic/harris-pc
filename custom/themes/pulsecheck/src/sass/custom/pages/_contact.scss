@@ -8,6 +8,8 @@
 	z-index: 50;
 	h1, h2 {
 		color: $black;
+		text-align: left;
+		padding: 0 20px;
 	}
 }
 
@@ -186,6 +188,10 @@
 			background: $ll-grey;
 			border-radius: 5px;
 			border: none;
+			&:focus {
+				border: 1px solid $blue;
+				background: #d0e6e8;
+			}
 		}
 	}
 	label.gfield_label {
@@ -207,7 +213,8 @@
 		min-width: 100%;
 	}
 	input[type="text"]:focus {
-		border-bottom: 2px solid $blue;
+		border: 1px solid $blue;
+		background: #d0e6e8;
 		box-shadow: none;
 	}
 	input#input_1_2,
