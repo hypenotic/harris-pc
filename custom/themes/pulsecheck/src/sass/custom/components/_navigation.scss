@@ -55,19 +55,22 @@ nav {
 }
 
 nav.dark-nav {
-  background: $d-blue;
+  // background: $d-blue;
   padding-bottom: 20px;
   .nav-line {
-    // background: $black;
+    background: $black;
   }
   ul a {
-    // color: $black;
+    color: $black;
   }
 }
 
 .scrolling{
   nav.dark-nav {
     padding-bottom: 0px;
+    ul a {
+      color: $white;
+    }
   }
 }
 

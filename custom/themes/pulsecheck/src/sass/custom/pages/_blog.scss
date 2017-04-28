@@ -4,6 +4,22 @@
 		min-height: 300px;
 		padding: 15% 0% 0%;
 	}
+	h1 {
+		font-size: 10vw;
+		line-height: 10vw;
+		margin-top: 0;
+		font-weight: 400;
+		@media #{$small-and-down} {
+			margin-bottom: 10px;
+		}
+		@media #{$large-and-up} {
+			padding: 0 10%;
+			font-weight: 300;
+			font-size: 6vw;
+			line-height: 6.5vw;
+			letter-spacing: 0.78px;  
+		}
+	}
 }
 
 .resources-container {

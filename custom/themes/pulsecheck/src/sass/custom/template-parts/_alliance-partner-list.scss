@@ -66,12 +66,36 @@
 		p {
 			margin: 0;
 		}
+		h3 {
+			font-weight: 600;
+		}
 		p:first-child {
 			margin-bottom: 15px;
+			font-size: 5vw;
+			line-height: 7vw;
+			font-weight: 300;
+			@media #{$large-and-up} {
+				font-size: 22px;
+				line-height: 30px;
+			}
+		}
+		.pa_website {
+			margin-bottom: 15px;
+			font-size: 5vw;
+			line-height: 7vw;
+			font-weight: 300;
+			@media #{$large-and-up} {
+				font-size: 22px;
+				line-height: 30px;
+			}
+			a {
+				color: $blue;
+			}
 		}
 	}
 	.modal-trigger-general {
 		color: $blue;
+		opacity: 0.5;
 		font-weight: bold;
 		font-size: 25px;
 	}

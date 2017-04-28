@@ -119,6 +119,13 @@
 	margin-bottom: 20px;
 }
 
+.modal-content {
+	.team__title {
+		font-weight: 400;
+	}
+}
+
+
 .contact-team-list-section {
 	.team__single__icon {
 		@media #{$large-and-up} {
@@ -138,6 +145,8 @@
 		}
 	}
 }
+
+
 
 .gform_wrapper {
 	li.gfield {

@@ -32,10 +32,12 @@
 		}
 		p:first-child {
 			margin-bottom: 15px;
+			font-weight: 600;
 		}
 	}
 	.modal-trigger-general {
 		color: $blue;
+		opacity: 0.5;
 		font-weight: bold;
 		font-size: 25px;
 	}

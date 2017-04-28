@@ -57,11 +57,11 @@ if ($loop->have_posts()){
                 </div>
                 <div class="modal-content">
                     <p><?php the_title(); ?></p>
-                    <p>Location: <?php echo $location; ?></p>
-                    <p>Census: <?php echo $census; ?></p>
-                    <p>Install Date: <?php echo $install; ?></p>
-                    <p>HIS: <?php echo $his; ?></p>
-                    <p># of Sites: <?php echo $sites; ?></p>
+                    <p><strong>Location</strong>: <?php echo $location; ?></p>
+                    <p><strong>Census</strong>: <?php echo $census; ?></p>
+                    <p><strong>Install Date</strong>: <?php echo $install; ?></p>
+                    <p><strong>HIS</strong>: <?php echo $his; ?></p>
+                    <p><strong># of Sites</strong>: <?php echo $sites; ?></p>
                     <p><?php echo $website; ?></p> 
                 </div>
             </div>

@@ -53,9 +53,9 @@
                     <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
                 <div class="modal-content">
-                    <p><?php the_title(); ?></p>
+                    <h3><?php the_title(); ?></h3>
                     <div><?php the_content();?></div>
-                    <p><?php echo $website; ?></p> 
+                    <p class="pa_website"><a href="<?php echo $website; ?>" target="_blank">Website</a></p> 
                 </div>
             </div>
             <a class="modal-trigger-general modal-trigger-partner<?php echo $count;?> display-block" href="#modal-partner<?php echo $count;?>">+</a>
@@ -118,9 +118,9 @@
                     <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
                 <div class="modal-content">
-                    <p><?php the_title(); ?></p>
+                    <h3><?php the_title(); ?></h3>
                     <div><?php the_content();?></div>
-                    <p><?php echo $website; ?></p> 
+                    <p class="pa_website"><a href="<?php echo $website; ?>" target="_blank">Website</a></p> 
                 </div>
             </div>
             <a class="modal-trigger-general modal-trigger-alliance<?php echo $count;?> display-block" href="#modal-alliance<?php echo $count;?>">+</a>
