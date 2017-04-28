@@ -63,6 +63,16 @@ nav.dark-nav {
   ul a {
     color: $black;
   }
+  .brand-logo {
+    #pc-logo-black,
+    #harris-logo-black {
+      display: inline-block;
+    }
+    #pc-logo,
+    #harris-logo {
+      display: none;
+    }
+  }
 }
 
 .scrolling{
@@ -70,6 +80,16 @@ nav.dark-nav {
     padding-bottom: 0px;
     ul a {
       color: $white;
+    }
+    .brand-logo {
+      #pc-logo-black,
+      #harris-logo-black {
+        display: none;
+      }
+      #pc-logo,
+      #harris-logo {
+        display: inline-block;
+      }
     }
   }
 }
@@ -248,7 +268,8 @@ a.brand-logo {
   #pc-logo-holder {
     display: inline-block;
   }
-  #pc-logo {
+  #pc-logo,
+  #pc-logo-black {
     width: 110px;
     height: auto;
     position: relative;
@@ -260,7 +281,8 @@ a.brand-logo {
         top: -9px;
     }
   }
-  #harris-logo {
+  #harris-logo,
+  #harris-logo-black {
     width: 90px;
     height: auto;
     @media #{$large-and-up} {
@@ -268,6 +290,10 @@ a.brand-logo {
         height: 40px;
         margin-top: -7px;
     }
+  }
+  #pc-logo-black,
+  #harris-logo-black {
+    display: none;
   }
 }
 
