@@ -73,6 +73,17 @@ nav.dark-nav {
       display: none;
     }
   }
+  .mini-nav {
+    span {
+      background-color: rgba(0,0,0,0.5);
+    }
+    a.mini-nav-portal {
+      color: rgba(0,0,0,0.5);
+      &:hover {
+        color: $black;
+      }
+    }
+  }
 }
 
 .scrolling{

@@ -33,7 +33,7 @@
       <nav <?php if (is_page_template( 'template-blog.php' )) { echo 'class="dark-nav"';}?> >
         <div class="nav-wrapper">
         <div class="mini-nav">
-          <a href="http://customerportal.quadramed.com/" target="_blank">Customer Portal</a>
+          <a class="mini-nav-portal" href="http://customerportal.quadramed.com/" target="_blank">Customer Portal</a>
           <span></span>
           <a href="#modal-demo" class="modal-trigger-general modal-trigger-demo">Demo</a>
         </div>
