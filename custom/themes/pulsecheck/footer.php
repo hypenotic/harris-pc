@@ -1,4 +1,4 @@
-<?php if (!is_page_template( 'template-cs.php' )) {?>
+<?php if (!is_page_template( array( 'template-cs.php', 'template-contact.php') )) {?>
 	<footer class="top-footer base-padding no-lr-padding no-tb-padding">
 		<div class="row">
 			<div class="col s12 m6">
@@ -568,67 +568,6 @@
 	</div>
 <?php } ?>
 
-<?php if (is_page_template( 'template-contact.php' )) {?>
-<section class="contact-team base-padding">
-<div class="container">
-    <h3 class="ta-center grey-text">Speak to a team member who understands your workflow</h3>
-    <?php
-     // Check if there are any case studies
-    $args = array(
-        'post_type' => 'team-member',
-        'posts_per_page'=> '10',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'page-location',
-                'field'    => 'slug',
-                'terms'    => 'contact',
-            ),
-        ),
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
-    );
-
-    $loop = new WP_Query( $args );
-    if ($loop->have_posts()){
-    	$count = 0;
-    ?>
-    <div class="contact-team-container">
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-            $role       = rwmb_meta( 'rw_tm_role' );
-            $email      = rwmb_meta( 'rw_tm_email' );
-            $image 		= rwmb_meta( 'rw_tm_image' );
-            $count++;
-        ?>
-        <div class="team-member-single">
-            <div class="team__single__icon">       
-                <img src="<?php echo $image;?>" alt="">
-            </div>
-            <div class="team__single__content">
-                <p class="team__role"><?php echo $role;?></p>
-                <p class="team__title"><?php the_title(); ?></p>
-                <div id="modal<?php echo $count;?>" class="modal team-modal">
-                    <div class="modal-footer">
-                        <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="modal-content">
-                        <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
-                        <p class="team__role"><?php echo $role;?></p>
-                        <p class="team__title"><?php the_title(); ?></p>
-                        <?php the_content();?>
-                    </div>
-                </div>
-            </div>
-            <a class="modal-trigger-general modal-trigger<?php echo $count;?>" href="#modal<?php echo $count;?>">Bio <span class="team__plus">+</span></a>
-        </div>
-        <?php endwhile; wp_reset_postdata(); ?>
-    </div>
-    <?php } ?>
-</div>
-</section>
-
-<?php get_template_part('template-part-newsletter'); ?>
-
-<?php } ?>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2vLY27PcE_ZpN7YZGzDWX6BSYTRuRHgY"></script>
 <?php wp_footer(); ?>
 </body>
