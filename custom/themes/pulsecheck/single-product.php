@@ -68,6 +68,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 </section>
 <?php } ?>
 
+<?php get_template_part('template-part-product-features'); ?>
+
 <?php get_template_part('template-part-product-slider'); ?>
 
 <?php get_template_part('template-part-recognition'); ?>
