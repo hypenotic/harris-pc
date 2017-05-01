@@ -404,3 +404,57 @@
 		border: 1px solid $blue;
 	}
 }
+
+.contact-single-email-form {
+	#gform_4 {
+		text-align: center;
+	}
+	.gform_wrapper {
+		.gfield_label {
+			display: none !important;
+		}
+		.gform_footer, .gform_body, .gform_fields {
+			display: inline-block;
+		}
+		.gform_footer {
+			width: 17%;
+			padding-top: 0 !important;
+			margin-top: 0 !important;
+			padding-top: 8px !important; 
+		}
+		.gform_body {
+			width: 50% !important;
+			vertical-align: top;
+			// text-align: center;
+		}
+		.gform_fields {
+			width: 100% !important;
+			vertical-align: top;
+		}
+		#field_4_1 {
+			margin-top: 0;
+		}
+
+		input {
+			display: inline-block;
+		}
+		input[type=text] {
+			background: $ll-grey;
+			// border: 1px solid $blue;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5px;
+			width: 70%;
+			padding: 0 20px !important;
+		}
+		input[type="submit"] {
+			width: 100%;
+			vertical-align: top;
+			@media #{$large-and-up} {
+				width: 18%;
+				height: 45px;
+				// padding: 5px 0;
+			}
+		}
+	}
+}

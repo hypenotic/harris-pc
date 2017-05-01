@@ -52,6 +52,9 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
     <div class="contact-team__blurb">
     	<?php the_content();?>
     </div>
+    <div class="contact-single-email-form">
+    	<?php gravity_form(4, false, false, false, '', true); ?>
+    </div>
     <?php
      // Check if there are any case studies
     $args = array(
