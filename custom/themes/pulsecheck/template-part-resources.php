@@ -1,5 +1,14 @@
 <?php
 
+global $post;
+$post_slug=$post->post_name;
+
+if ( is_singular( 'product' ) && $post->post_parent ) {
+    $is_child = true;
+} else {
+    $is_child = false;
+}
+
 if ($is_child == false) {
     $the_terms = $post_slug;
 } else {
