@@ -50,9 +50,13 @@
 			line-height: 14px;
 			font-weight: bold;
 			padding: 0;
+			width: 47%;
+			display: inline-block;
 			transition: all 0.2 ease;
+			padding: 0 0 10px;
 			@media #{$small-and-down} {
-				margin: 10px 0;
+				margin: 10px 1% 10px 0;
+				text-align: center;
 			}
 			@media #{$medium-and-up} {
 				width: 20%;
@@ -81,6 +85,7 @@
 	.slide__right {
 		text-align: left;
 		vertical-align: top;
+		margin: 20px 0;
 		@media #{$medium-and-up} {
 			width: 45%;
 			display: inline-block;
@@ -110,6 +115,9 @@
 		// @media #{$medium-and-up} {
 		// 	padding-left: 40px;
 		// }
+		@media #{$small-and-down} {
+			text-align: center;
+		}
 		p:first-of-type{
 			margin-top: 0;
 			font-weight: 300;

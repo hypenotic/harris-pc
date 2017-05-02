@@ -425,22 +425,30 @@
 			display: inline-block;
 		}
 		.gform_footer {
-			width: 17%;
 			padding-top: 0 !important;
 			margin-top: 0 !important;
 			padding-top: 8px !important; 
+			@media #{$medium-and-up} {
+				width: 17%;
+			}
 		}
 		.gform_body {
-			width: 50% !important;
 			vertical-align: top;
-			// text-align: center;
+			@media #{$medium-and-up} {
+				width: 50% !important;
+			}
 		}
 		.gform_fields {
-			width: 100% !important;
 			vertical-align: top;
+			@media #{$medium-and-up} {
+				width: 100% !important; 
+			}
 		}
 		#field_4_1 {
 			margin-top: 0;
+			@media #{$small-and-down} {
+				margin-bottom: 0 !important;
+			}
 		}
 
 		input {
