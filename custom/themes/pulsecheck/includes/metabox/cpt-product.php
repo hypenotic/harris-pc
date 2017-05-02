@@ -72,6 +72,11 @@ function pc_register_product( $meta_boxes ) {
         'title'      => __( 'Features List', 'textdomain' ),
         'post_types' => array( 'product'),
         'fields' => array(
+            array(
+                'name' => 'Canadian Content?',
+                'id' => $prefix . 'canadian_content',
+                'type' => 'checkbox',
+            ),
             // Group
             array(
                 'name' => 'Single Feature',
@@ -84,6 +89,12 @@ function pc_register_product( $meta_boxes ) {
                         'name' => 'Heading',
                         'id' => $prefix . 'feature_heading',
                         'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Canadian Points',
+                        'id' => $prefix . 'can_desc',
+                        'type' => 'wysiwyg',
+                        'visible' => ['rw_canadian_content', true] 
                     ),
                     array(
                         'name' => 'Description',

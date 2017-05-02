@@ -1,0 +1,75 @@
+.product-features {
+	.single-product-container {
+		@media #{$large-and-up} {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	.feature-icon {
+		display: block;
+		margin: 0 auto;
+		width: 100px;
+		height: auto;
+	}
+	.single-product-feature {
+		margin-bottom: 30px;
+		@media #{$large-and-up} {
+			margin-bottom: 50px;
+			width: 45%;
+			flex: 0 0 1;
+		}
+		h3 {
+			font-size: 25px;
+			line-height: 35px;
+			font-weight: 300;
+			// text-align: center;
+		}
+	}
+    ul {
+		margin-left: 20px;
+		// list-style-type: disc;
+        @media #{$large-and-up} {
+        	margin-left: 20px;
+        }
+        li {
+        	font-weight: 300;
+        	font-size: 16px;
+        	line-height: 22px;
+            padding-left: 24px;
+            // list-style-type: disc;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 15px;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: rgba(0,0,0,1);
+                z-index: 1;
+            }
+            @media #{$large-and-up} {
+            	margin-bottom: 10px;
+            }
+        }
+    }
+    .canadian-points {
+    	ul li {
+    		&:before {
+    		  content: '';
+    		  display:block;
+    		  position: absolute;
+    		  left: -8px;
+    		  top: 2px;
+    		  height:20px;
+    		  width:20px;
+    		  background-size: 20px 20px;
+    		  background-image: url(../../src/images/maple_leaf.png);
+    		  background-repeat: no-repeat;
+    		  background-color: transparent;
+    		}
+    	}
+    }
+}

@@ -469,6 +469,7 @@ nav {
     i.fa {
       display: none;
     }
+
     &:hover {
       background: $blue;
       > a {
@@ -476,47 +477,17 @@ nav {
       }
       > ul {
         display: block;
-        // display: flex;
-        // flex-wrap: wrap;
         position: absolute;
         background: $l-blue;
-        // width: 10%;
-        // left: -15%;
         border: 1px solid $ll-blue;
         border-top: none;
-        // padding: 20px;
-        // @media (min-width: 1300px) {
-        //   width: 120%;
-        //   left: -10%;
-        // }
         > li {
-          // width: 33.33%;
-          // min-height: 43vh;
-          // padding: 30px;
           float: none;
           transition: 0.4s all;
           position: relative;
-          >ul {
-            // background: red;
-            position: absolute;
-            right: calc(-100% + 42px );
-            top:0;
+          a {
+            color: $blue;
           }
-          // @media (min-width: 1300px) {
-          //   min-height: 42vh;
-          //   padding: 25px;
-          // }
-          // a {
-          //   color: $blue;
-          // }
-          // &:hover {
-          //   a {
-          //     color: $white;
-          //   }
-          //   >ul >li a {
-          //     color: $blue;
-          //   }
-          // }
         }
         >li:nth-child(1),
         >li:nth-child(2),
