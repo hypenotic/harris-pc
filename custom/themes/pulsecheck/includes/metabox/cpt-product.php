@@ -90,12 +90,12 @@ function pc_register_product( $meta_boxes ) {
                         'id' => $prefix . 'feature_heading',
                         'type' => 'text',
                     ),
-                    // array(
-                    //     'name' => 'Canadian Points',
-                    //     'id' => $prefix . 'can_desc',
-                    //     'type' => 'wysiwyg',
-                    //     'visible' => ['rw_canadian_content', true] 
-                    // ),
+                    array(
+                        'name' => 'Canadian Points',
+                        'id' => $prefix . 'can_desc',
+                        'type' => 'wysiwyg',
+                        'visible' => ['rw_canadian_content', true] 
+                    ),
                     array(
                         'name' => 'Description',
                         'id' => $prefix . 'feature_desc',
