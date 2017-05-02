@@ -94,7 +94,7 @@ function pc_register_product( $meta_boxes ) {
                         'name' => 'Canadian Points',
                         'id' => $prefix . 'can_desc',
                         'type' => 'wysiwyg',
-                        'visible' => ['rw_canadian_content', true] 
+                        'visible' => array('rw_canadian_content', true) 
                     ),
                     array(
                         'name' => 'Description',
