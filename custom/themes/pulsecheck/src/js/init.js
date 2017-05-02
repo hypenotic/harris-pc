@@ -25,31 +25,31 @@ $(function() {
     });
 
     // Slider indications
-    $('.swiper-button-next').click(function() {
-      var order = $('.swiper-slide-active').data( "swiperSlideIndex" ); 
+    $('.product-who .swiper-button-next').click(function() {
+      var order = $('.product-who .swiper-slide-active').data( "swiperSlideIndex" ); 
       console.log(order);
       var theNum = order + 2;
       console.log('Slide ' + theNum);
       if (theNum == 5) {
-        $('.product-slide-heading').removeClass('active-product-slide');
-        $('.product-slide-heading:first-child').addClass('active-product-slide');
+        $('.product-who .product-slide-heading').removeClass('active-product-slide');
+        $('.product-who .product-slide-heading:first-child').addClass('active-product-slide');
       } else {
-        $('.product-slide-heading').removeClass('active-product-slide');
-        $('.product-slide-heading:nth-child('+ theNum +')').addClass('active-product-slide');
+        $('.product-who .product-slide-heading').removeClass('active-product-slide');
+        $('.product-who .product-slide-heading:nth-child('+ theNum +')').addClass('active-product-slide');
       }
     });
 
-    $('.swiper-button-prev').click(function() {
-      var order = $('.swiper-slide-active').data( "swiperSlideIndex" ); 
+    $('.product-who .swiper-button-prev').click(function() {
+      var order = $('.product-who .swiper-slide-active').data( "swiperSlideIndex" ); 
       console.log(order);
       var theNum = order;
       console.log('Slide ' + theNum);
       if (theNum == 0) {
-        $('.product-slide-heading').removeClass('active-product-slide');
-        $('.product-slide-heading:last-child').addClass('active-product-slide');
+        $('.product-who .product-slide-heading').removeClass('active-product-slide');
+        $('.product-who .product-slide-heading:last-child').addClass('active-product-slide');
       } else {
-        $('.product-slide-heading').removeClass('active-product-slide');
-        $('.product-slide-heading:nth-child('+ theNum +')').addClass('active-product-slide');
+        $('.product-who .product-slide-heading').removeClass('active-product-slide');
+        $('.product-who .product-slide-heading:nth-child('+ theNum +')').addClass('active-product-slide');
       }
     });
 
