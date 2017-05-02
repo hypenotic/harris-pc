@@ -102,16 +102,32 @@
 }
 
 .alliance-only-list-section {
-	.alliance-list__single__content {
-			width: 25%;
-			margin: 0;
-		}
 	@media #{$small-and-down} {
 		.alliance-list__single__content {
 			width: 45%;
 			display: inline-block;
 			margin: 1.5%;
 			background-blend-mode: multiply;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	@media #{$medium-and-up} {
+		.alliance-list__single__content {
+			width: 50%;
+			margin: 0;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	@media #{$large-and-up} {
+		.alliance-list__single__content {
+			width: 25%;
+			margin: 0;
 			img {
 				width: 100%;
 				height: auto;

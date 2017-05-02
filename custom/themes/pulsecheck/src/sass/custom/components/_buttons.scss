@@ -12,6 +12,12 @@
 	&:hover {
 		background: lighten($blue, 5);
 	}
+	@media #{$medium-and-up} {
+		min-height: 39px;
+		padding: 10px 25px;
+		font-size: 16px;
+		line-height: 20px;
+	}
 	@media #{$large-and-up} {
 		min-height: 39px;
 		padding: 10px 25px;
@@ -63,7 +69,7 @@
 	color: $d-blue;
 	width: 40%;
 	margin: 0 5px;
-	@media #{$large-and-up} {
+	@media #{$medium-and-up} {
 		width: 250px;
 		margin: 0 5px;
 	}

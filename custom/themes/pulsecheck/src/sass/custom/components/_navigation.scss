@@ -67,10 +67,16 @@ nav.dark-nav {
     #pc-logo-black,
     #harris-logo-black {
       display: inline-block;
+      @media #{$medium-and-down} {
+        display: none;
+      }
     }
     #pc-logo,
     #harris-logo {
       display: none;
+      @media #{$medium-and-down} {
+        display: inline-block;
+      }
     }
   }
   .mini-nav {
@@ -249,6 +255,7 @@ menu {
 }
 
 nav {
+  z-index: 1000000;
   background: transparent;
   box-shadow: none;
   transition: all 0.5s ease;
@@ -399,6 +406,12 @@ nav {
   font-weight: bold;
   font-size: 80%;
   @media #{$medium-and-up} {
+    left:auto;
+    right: 100px;
+    top: 20%;
+    font-size: 50%;
+  }
+  @media #{$large-and-up} {
     left:0%;
     top: 25%;
   }

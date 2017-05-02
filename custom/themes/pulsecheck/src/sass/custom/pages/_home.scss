@@ -9,6 +9,22 @@
 			padding-top: 50px;
 			.single-home-product {
 				vertical-align: top;
+				width: 100%;
+				padding: 50px;
+				margin: 0 0 20px 0;
+				display: inline-block;
+			}
+			.single-home-product:first-child {
+				margin-right: 0%
+			}
+			.single-home-product:last-child {
+				margin-left:0%;
+			}
+		}
+		@media #{$large-and-up} {
+			padding-top: 50px;
+			.single-home-product {
+				vertical-align: top;
 				width: 47.7%;
 				padding: 90px;
 				margin: 0;

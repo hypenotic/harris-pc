@@ -9,7 +9,7 @@
 	background-size: cover;
 	background-position: center center;
 	position: relative;
-	@media #{$large-and-up} {
+	@media #{$medium-and-up} {
 		min-height: 500px;
 		padding: 15% 0% 5%;
 	}
@@ -21,7 +21,7 @@
 		@media #{$small-and-down} {
 			margin-bottom: 10px;
 		}
-		@media #{$large-and-up} {
+		@media #{$medium-and-up} {
 			padding: 0 10%;
 			font-weight: 300;
 			font-size: 55px;
@@ -36,7 +36,7 @@
 		@media #{$small-and-down} {
 			margin-top: 0px;
 		}
-		@media #{$large-and-up} {
+		@media #{$medium-and-up} {
 			// padding: 0 10% 0 0;
 			padding: 0 10%;
 			font-size: 25px;
