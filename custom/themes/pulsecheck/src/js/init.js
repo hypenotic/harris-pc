@@ -10,7 +10,19 @@ $(function() {
     $(document).scroll(function () {
       var $nav = $(".navbar-fixed");
       $nav.toggleClass('scrolling', $(this).scrollTop() > $nav.height());
+
+      $('.fixed-cta-btns').toggleClass('hiding-ctas', $(this).scrollTop() > $nav.height());
+
+      // Show and hide CTA fixed buttons
+      clearTimeout($.data(this, 'scrollTimer'));
+      $.data(this, 'scrollTimer', setTimeout(function() {
+          // do something
+          $('.fixed-cta-btns').toggleClass('hiding-ctas');
+          console.log("Haven't scrolled in 200ms!");
+      }, 200));
     });
+
+
     // Materialize modal triggers
     $('.modal-trigger-general').click(function() {
       var address = $(this).attr("href");
@@ -195,7 +207,7 @@ $(function() {
       //   };
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(41.9957846, -87.8857467),
+        position: new google.maps.LatLng(41.997447, -87.883521),
         map: mapC,
         icon: theicon
       });

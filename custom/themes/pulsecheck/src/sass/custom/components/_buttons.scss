@@ -64,6 +64,15 @@
 	}
 }
 
+.fixed-cta-btns {
+	transition: all 1s ease;
+}
+
+.fixed-cta-btns.hiding-ctas {
+	transform: translateY(60px);
+}
+
+
 .btn.fixed-cta-btn {
 	border-radius: 4px;
 	color: $d-blue;

@@ -31,7 +31,7 @@
         ?>
         <div class="display-inblock partner-list__single__content">
             <?php if ($logo) { ?>
-                <a href="<?php echo $website; ?>" title="<?php the_title(); ?>" class="partner-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
+                <a href="<?php echo $website; ?>" target="_blank" title="<?php the_title(); ?>" class="partner-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
             <?php } else { ?>
                 <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
                 <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>
@@ -96,7 +96,7 @@
         ?>
         <div class="display-inblock alliance-list__single__content">
             <?php if ($logo) { ?>
-                <a href="<?php echo $website; ?>" title="<?php the_title(); ?>" class="alliance-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
+                <a href="<?php echo $website; ?>" target="_blank" title="<?php the_title(); ?>" class="alliance-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
             <?php } else { ?>
                 <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
                 <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>
@@ -161,7 +161,7 @@
                 ?>
                     <div class="display-inblock alliance-list__single__content">
                         <?php if ($logo) { ?>
-                            <a href="<?php echo $website; ?>" title="<?php the_title(); ?>" class="alliance-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
+                            <a href="<?php echo $website; ?>" title="<?php the_title(); ?>" target="_blank" class="alliance-list__single display-inblock"><img src="<?php echo $logo;?>" class="display-block" alt="<?php the_title(); ?> Logo"></a>
                         <?php } else { ?>
                             <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
                             <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>

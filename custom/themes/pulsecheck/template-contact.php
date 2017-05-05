@@ -21,14 +21,14 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
 <div class="contact-body">
 	<div class="inner-wrapper">
 		<div class="left-panel">
-			<h3>For sales and inquiries:</h3>
+			<h3>For all inquiries:</h3>
 
 			<div class="contact__phone">
                 <p>Call: <a href="tel:8442409554" class="underline">844-240-9554</a>*</p>
                 
-                <p>*press 3 for sales, 1 for inquiries</p>
+                <p>*press 1 for support, 3 for sales</p>
                 
-                <p>Email: <a href="#" class="underline">info@picis.com</a></p>
+                <p>Email: <a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
             </div>
 
 			<div id="contact-map">

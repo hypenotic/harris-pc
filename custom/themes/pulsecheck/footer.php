@@ -555,13 +555,18 @@
 					<p>
 					10275 West Higgins Road, Suite 250<br/>
 					Rosemont, IL. 60018</p>
-					<p><a href="tel:8442409554" class="underline">844-240-9554</a>* | <a href="#" class="underline">info@picis.com</a></p>
-					<p>Find us on <a href="#" class="underline">Linkedin </a></p>
-					<p>*press 1 for inquiries, 3 for sales</p>
+					<p><a href="tel:8442409554" class="underline">844-240-9554</a>* | <a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
+					<p>Find us on <a href="https://www.linkedin.com/company-beta/13524" target="_blank" class="underline">Linkedin </a></p>
+					<p>*press 1 for support, 3 for sales</p>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<div class="fixed-cta-btns">
+		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn blue-btn white-text modal-trigger-general modal-trigger-courses">Training</a>
+		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn yellow-btn modal-trigger-general modal-trigger-demo">Request a demo</a>
+	</div>
+<?php }  else if (is_page_template( array('template-contact.php'))) { ?>
 	<div class="fixed-cta-btns">
 		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn blue-btn white-text modal-trigger-general modal-trigger-courses">Training</a>
 		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn yellow-btn modal-trigger-general modal-trigger-demo">Request a demo</a>

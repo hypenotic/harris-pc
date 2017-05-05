@@ -35,7 +35,7 @@
         <div class="mini-nav">
           <a class="mini-nav-portal" href="https://picispulsecheck.quadramed.com/" target="_blank">Customer Portal</a>
           <span></span>
-          <a href="#modal-demo" class="modal-trigger-general modal-trigger-demo">Demo</a>
+          <a href="#modal-demo" class="modal-trigger-general modal-trigger-demo">Request a demo</a>
         </div>
         <div class="nav-line"></div>
           <a href="<?php bloginfo( 'url' ); ?>" class="brand-logo">
