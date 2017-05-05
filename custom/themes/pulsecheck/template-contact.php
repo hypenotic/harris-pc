@@ -23,11 +23,13 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
 		<div class="left-panel">
 			<h3>For sales and inquiries:</h3>
 
-			<p>Call: <a href="tel:8442409554" class="underline">844-240-9554</a>*</p>
-
-			<p>*press 3 for sales, 1 for inquiries</p>
-
-			<p><a href="#" class="underline">info@picis.com</a></p>
+			<div class="contact__phone">
+                <p>Call: <a href="tel:8442409554" class="underline">844-240-9554</a>*</p>
+                
+                <p>*press 3 for sales, 1 for inquiries</p>
+                
+                <p>Email: <a href="#" class="underline">info@picis.com</a></p>
+            </div>
 
 			<div id="contact-map">
 			    

@@ -557,7 +557,7 @@
 					Rosemont, IL. 60018</p>
 					<p><a href="tel:8442409554" class="underline">844-240-9554</a>* | <a href="#" class="underline">info@picis.com</a></p>
 					<p>Find us on <a href="#" class="underline">Linkedin </a></p>
-					<p>*press 1 for support, 3 for sales</p>
+					<p>*press 1 for inquiries, 3 for sales</p>
 				</div>
 			</div>
 		</div>
@@ -570,5 +570,6 @@
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2vLY27PcE_ZpN7YZGzDWX6BSYTRuRHgY"></script>
 <?php wp_footer(); ?>
+<script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="58dbb4150e2f016718c7e8ae"></script>
 </body>
 </html>

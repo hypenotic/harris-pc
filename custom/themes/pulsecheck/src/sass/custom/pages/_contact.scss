@@ -26,8 +26,17 @@
 			}
 		}
 		.left-panel {
+			h3 {
+				font-weight: bold;
+			}
 			@media #{$large-and-up} {
 				width: 30%;
+			}
+			.contact__phone {
+				margin-bottom: 30px;
+				p {
+					margin: 0;
+				}
 			}
 			#contact-map {
 				width: 100%;
@@ -473,4 +482,14 @@
 			}
 		}
 	}
+}
+
+.gforms_confirmation_message {
+	 font-size: 5vw;
+	 line-height: 7vw;
+	 font-weight: 300;
+	 @media #{$large-and-up} {
+	 	font-size: 25px;
+	 	line-height: 34px;
+	 }
 }
