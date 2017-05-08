@@ -54,11 +54,11 @@
 	padding: 20px 0;
 	@media #{$large-and-up} {
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 40px 0;
 		>div {
 			width: 30%;
-			// margin-right: 50px;
+			margin: 0px 25px 30px;
 		}
 	}
 	>div {
