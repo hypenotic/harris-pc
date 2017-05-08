@@ -158,39 +158,7 @@
 	}
 }
 
-.team-modal.modal {
-	padding: 20px;
-	background: $l-blue;
-	width: 90%;
-	@media #{$large-and-up} {
-		width: 70%;
-		padding: 50px;
-	}
-	.modal-footer {
-		background: transparent;
-		position: fixed;
-		top: 0px;
-		right: 0px;
-		@media #{$large-and-up} {
-			top: 20px;
-			right: 20px;
-		}
-	}
-	.modal-content {
-		text-align: left;
-		img {
-			width: 169px;
-			height: auto;
-			border-radius: 50%;
-		}
-		p {
-			margin-bottom: 15px;
-		}
-	}
-	.team__title {
-		font-weight: 400;
-	}
-}
+
 
 .about-pa-wrapper {
 	margin-top: 50px;

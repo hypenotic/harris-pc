@@ -3,19 +3,22 @@
 	padding: 20% 0% 20%;
 	@media #{$large-and-up} {
 		min-height: 200px;
-		padding: 13% 0% 20px;
+		padding: 13% 0 0;
+		.wide-container {
+			max-width: 1000px;
+		}
 	}
 	z-index: 50;
 	h1, h2 {
 		color: $black;
 		text-align: left;
-		padding: 0 20px;
+		padding: 0;
 	}
 }
 
 .contact-body {
 	.inner-wrapper {
-		max-width: 1100px;
+		max-width: 1000px;
 		margin: 0 auto;
 		@media #{$small-and-down} {
 			padding: 20px;
@@ -26,16 +29,33 @@
 			}
 		}
 		.left-panel {
+			p {
+				margin-top: 0px;
+				font-weight: 300;
+				font-size: 16px;
+			}
 			h3 {
-				font-weight: bold;
+				font-weight: 300;
+				font-size: 14px;
+				font-family: $title-font;
+				margin-bottom: 0;
 			}
 			@media #{$large-and-up} {
 				width: 30%;
 			}
+			.contact_headings {
+				font-size: 14px;
+				font-family: $title-font;
+			}
 			.contact__phone {
 				margin-bottom: 30px;
+				font-weight: 300;
+				small {
+					font-size: 12px;
+				}
 				p {
 					margin: 0;
+					font-size: 16px;
 				}
 			}
 			#contact-map {
@@ -47,6 +67,11 @@
 		}
 		.right-panel {
 			vertical-align: top;
+			p {
+				font-size: 16px;
+				font-weight: 300;
+				font-family: $title-font;
+			}
 			@media #{$large-and-up} {
 				width: 70%;
 			}
@@ -201,10 +226,10 @@
 	li#field_1_7 {
 		width: 100%;
 		textarea {
-			border: 1px solid $blue;
+			// border: 1px solid $blue;
 			background: $ll-grey;
 			border-radius: 5px;
-			// border: none;
+			border: none;
 			&:focus {
 				border: 1px solid $blue;
 				background: #d0e6e8;
@@ -212,19 +237,20 @@
 		}
 	}
 	label.gfield_label {
-		font-size: 4.5vw !important;
-		font-weight: normal !important;
+		font-size: 16px !important;
+		font-weight: 300 !important;
 		// text-transform: uppercase;
+		font-family: $title-font;
 		margin: 0;
 		color: $black;
 		@media #{$large-and-up} {
-			font-size: 1.5vw !important;
+			// font-size: 1.5vw !important;
 		}
 	}
 	input[type=text] {
 		background: $ll-grey;
-		border: 1px solid $blue;
-		// border: none;
+		// border: 1px solid $blue;
+		border: none;
 		border-radius: 5px;
 		margin-bottom: 5px;
 		min-width: 100%;
@@ -264,15 +290,17 @@
 	input[type="submit"].gform_button {
 		color: $blue;
 		background-color: $white;
-		font-weight: 600 !important;
+		font-weight: 400 !important;
+		font-family: $title-font;
 		height: 45px;
+		font-size: 14px !important;
 		line-height: 40px;
 		padding: 0px 2rem;
 		border: none;
 		border-radius: 26px;
 		border: 2px solid $blue;
 		float: right;
-		text-transform: uppercase !important;
+		// text-transform: uppercase !important;
 		margin-right: 0 !important;
 		&:hover {
 			color: $white;
@@ -370,6 +398,7 @@
 		background-color: $white;
 		font-weight: 600 !important;
 		height: 45px;
+		font-size: 14px !important;
 		line-height: 40px;
 		padding: 0px 2rem;
 		border: none;

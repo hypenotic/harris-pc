@@ -24,11 +24,11 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
 			<h3>For all inquiries:</h3>
 
 			<div class="contact__phone">
-                <p>Call: <a href="tel:8442409554" class="underline">844-240-9554</a>*</p>
+                <p><span class="contact_headings">Call:</span> <br/><a href="tel:8442409554" class="underline">844-240-9554</a>*</p>
                 
-                <p>*press 1 for support, 3 for sales</p>
+                <small>*press 1 for support, 3 for sales</small><br/><br/>
                 
-                <p>Email: <a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
+                <p><span class="contact_headings">Email:</span><br/><a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
             </div>
 
 			<div id="contact-map">
@@ -96,10 +96,11 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
                         <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
                     </div>
                     <div class="modal-content">
-                        <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
-                        <p class="team__role"><?php echo $role;?></p>
-                        <p class="team__title"><?php the_title(); ?></p>
-                        <?php the_content();?>
+                        <div class="modal-content__icon">
+                            <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
+                        </div><div class="modal-content__content"><p class="team__role"><?php echo $role;?></p>
+                            <p class="team__title"><?php the_title(); ?></p>
+                            <?php the_content();?></div>
                     </div>
                 </div>
             </div>

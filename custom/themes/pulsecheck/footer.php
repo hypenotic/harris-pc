@@ -556,7 +556,7 @@
 					10275 West Higgins Road, Suite 250<br/>
 					Rosemont, IL. 60018</p>
 					<p><a href="tel:8442409554" class="underline">844-240-9554</a>* | <a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
-					<p>Find us on <a href="https://www.linkedin.com/company-beta/13524" target="_blank" class="underline">Linkedin </a></p>
+					<p>Find us on <a href="https://www.linkedin.com/company/harris-computer" target="_blank" class="underline">Linkedin </a></p>
 					<p>*press 1 for support, 3 for sales</p>
 				</div>
 			</div>

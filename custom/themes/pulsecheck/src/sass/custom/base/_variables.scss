@@ -1,6 +1,6 @@
 // Colours
 $ll-blue:		rgba(247,252,254,1);
-$l-blue: 		rgba(232,251,255,1);
+$l-blue: 		rgba(234,241,242,1);
 // $blue: 			rgba(63,162,247, 1);
 $blue: 			rgba(34,142,154, 1);
 $d-blue:		rgba(0,86,112, 1);
@@ -16,10 +16,13 @@ $red: 			rgba(254,0,38, 1);
 $red-trans: 	rgba(254,0,38, 0.7);
 $white:	 		rgba(255,255,255,1);
 $black: 		rgba(0,0,0,1);
+$alt-black: 		rgba(0,0,0,0.7);
 $grey: 			rgba(155,155,155,1);
 $ll-grey: 		rgba(247,247,247,1);
 
 $menu-lblue: $l-blue;
+
+$title-font: 'Titillium Web', sans-serif;
 
 .mblue-bg {
 	background-color: $m-blue !important;

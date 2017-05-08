@@ -40,14 +40,17 @@
             // list-style-type: disc;
             position: relative;
             &:before {
-                content: '';
+                // content: '';
                 position: absolute;
-                left: 0;
-                top: 10px;
-                width: 3px;
-                height: 3px;
-                border-radius: 50%;
-                background-color: rgba(0,0,0,1);
+                left: -3px;
+                top: 0px;
+                color: $alt-black;
+                // width: 3px;
+                // height: 3px;
+                // border-radius: 50%;
+                // background-color: rgba(0,0,0,1);
+                content: "\f00c";
+                font-family: FontAwesome;
                 z-index: 1;
             }
             @media #{$large-and-up} {

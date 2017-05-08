@@ -123,8 +123,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <div class="team-member-single">
                     <div class="team__single__icon">       
                         <img src="<?php echo $image;?>" alt="">
-                    </div>
-                    <div class="team__single__content">
+                    </div><div class="team__single__content">
                         <p class="team__role"><?php echo $role;?></p>
                         <p class="team__title"><?php the_title(); ?></p>
                         <div id="modal<?php echo $count;?>" class="modal team-modal">
@@ -132,10 +131,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                                 <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
                             </div>
                             <div class="modal-content">
-                                <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
-                                <p class="team__role"><?php echo $role;?></p>
-                                <p class="team__title"><?php the_title(); ?></p>
-                                <?php the_content();?>
+                                <div class="modal-content__icon">
+                                    <img src="<?php echo $image;?>" alt="<?php the_title(); ?>">
+                                </div><div class="modal-content__content"><p class="team__role"><?php echo $role;?></p>
+                                    <p class="team__title"><?php the_title(); ?></p>
+                                    <?php the_content();?></div>
                             </div>
                         </div>
                     </div>
