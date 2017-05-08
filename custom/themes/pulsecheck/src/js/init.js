@@ -18,7 +18,7 @@ $(function() {
       $.data(this, 'scrollTimer', setTimeout(function() {
           // do something
           $('.fixed-cta-btns').toggleClass('hiding-ctas');
-          console.log("Haven't scrolled in 200ms!");
+          // console.log("Haven't scrolled in 200ms!");
       }, 200));
     });
 
