@@ -72,6 +72,9 @@
 }
 
 .home-team {
+	a {
+		border-bottom: 1px solid $blue;
+	}
 	p {
 		font-weight: 300;
 		font-size: 25px;

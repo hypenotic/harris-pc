@@ -27,6 +27,9 @@
 
 .alliance-list-section,
 .partner-list-section {
+	img {
+		opacity: 0.5;
+	}
 	@media #{$small-and-down} {
 		text-align: center;
 		>div {

@@ -53,10 +53,12 @@
 .support-resources-container {
 	padding: 20px 0;
 	@media #{$large-and-up} {
+		flex-wrap: wrap;
+		justify-content: space-between;
 		padding: 40px 0;
 		>div {
 			width: 30%;
-			margin-right: 30px;
+			// margin-right: 50px;
 		}
 	}
 	>div {
@@ -65,21 +67,26 @@
 			margin-bottom: 0;
 		}
 		>p:first-child {
-			font-weight: bold;
+			// font-weight: bold;
+			font-size: 14px;
+			font-family: $title-font;
 		}
 		.resource_separator {
 			width: 150px;
-			height: 4px;
+			height: 2px;
 			background: $d-blue;
 			margin: 20px 0;
 		}
-		.resource_blurb {
-			margin-bottom: 15px;
+		.resource_blurb p {
+			margin-bottom: 20px;
+			font-size: 16px;
+			line-height: 25px;
+			font-weight: 300;
 		}
 		a.btn {
 			background: $white;
 			color: $blue;
-			border: 1px solid $blue;
+			border: 2px solid $blue;
 			border-radius: 26px;
 			@media #{$small-and-down} {
 				padding: 5px 30px;
@@ -92,12 +99,13 @@
 	}
 	h4 {
 		color: rgba(79,140,152,1);
+		font-family: $title-font;
 		font-weight: 300;
 		font-size: 5vw;
 		line-height: 7vw;
 		@media #{$large-and-up} {
-			font-size: 2.5vw;
-			line-height: 3vw;
+			font-size: 25px;
+			line-height: 35px;
 			margin-bottom: 0;
 		}
 	}

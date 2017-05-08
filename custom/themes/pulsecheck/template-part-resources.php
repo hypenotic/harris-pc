@@ -54,7 +54,7 @@ if ($loop->have_posts()){
                 <h4><?php echo $res_title;?></h4>
                 <div class="resource_separator"></div>
                 <div class="resource_blurb">
-                    <p><?php the_excerpt();?></p>
+                    <?php the_excerpt();?>
                 </div>
                 <a href="<?php echo $res_file;?>" target="_blank" class="btn no-shadow">View</a>
             </div>
