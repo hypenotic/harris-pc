@@ -292,6 +292,11 @@ a.brand-logo {
   #pc-logo-holder {
     display: inline-block;
   }
+  #harris-logo-holder {
+    @media #{$large-and-up} {
+      max-width: 180px;
+    }
+  }
   #pc-logo,
   #pc-logo-black {
     width: 110px;
