@@ -11,7 +11,7 @@
 	position: relative;
 	@media #{$medium-and-up} {
 		min-height: 500px;
-		padding: 15% 0% 5%;
+		padding: 150px 0% 50px;
 	}
 	h1 {
 		font-size: 10vw;
@@ -55,7 +55,7 @@
 
 .product-header {
 	@media #{$large-and-up} {
-		padding: 12% 0% 10%;
+		// padding: 12% 0% 10%;
 	}
 }
 
