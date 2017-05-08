@@ -163,6 +163,9 @@ nav {
     line-height: 40px;
   }
   .nav-wrapper {
+    @media #{$large-and-up} {
+      height: 105px;
+    }
   }
 }
 
@@ -182,6 +185,9 @@ nav {
       display: none;
     }
     .nav-wrapper {
+      @media #{$large-and-up} {
+        height: 100%;
+      }
     }
   }
   menu >div >ul {
@@ -305,6 +311,7 @@ a.brand-logo {
     height: auto;
     @media #{$large-and-up} {
         width: auto;
+        max-width: 180px;
         height: 40px;
         margin-top: -7px;
     }
