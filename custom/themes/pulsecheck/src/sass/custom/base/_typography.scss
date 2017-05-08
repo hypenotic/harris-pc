@@ -1,5 +1,5 @@
 body {
-	color: $black;
+	color: $alt-black;
 	overflow-x: hidden;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 3vw;
@@ -20,7 +20,7 @@ p, li {
 }
 
 a {
-	color: $black;
+	color: $alt-black;
 	// border-bottom: 1px solid $l-green;
 }
 
@@ -47,6 +47,7 @@ h3 {
 	font-size: 5vw;
 	line-height: 7vw;
 	font-weight: 400;
+	font-family: $title-font;
 	@media #{$medium-and-up} {
 		font-size: 22px;
 		line-height: 30px;
@@ -84,7 +85,8 @@ h4 {
 }
 
 .grey-text {
-	color: $grey;
+	// color: $grey;
+	color: $alt-black !important;
 }
 
 .white-text {
