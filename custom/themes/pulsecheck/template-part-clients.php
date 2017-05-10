@@ -37,8 +37,6 @@ if ($loop->have_posts()){
                 <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
                 <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>
                 <svg width="45px" height="50px" viewBox="65 149 45 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-                    <desc>Created with Sketch.</desc>
                     <defs></defs>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(65.000000, 149.000000)">
                         <polygon id="Fill-1" fill="#FFFFFF" points="37.9939926 8.33333333 31.2991676 12.1590438 31.2991676 19.8134461 37.9939926 23.6361753 44.6910785 19.8134461 44.6910785 12.1590438"></polygon>
