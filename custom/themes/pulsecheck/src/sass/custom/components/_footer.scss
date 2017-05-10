@@ -19,7 +19,8 @@
 	#pc-logo-holder {
 		display: inline-block;
 	}
-	#harris-logo-holder {
+	#harris-logo-holder,
+	#pc-logo-holder {
 	  @media #{$large-and-up} {
 	    max-width: 180px;
 	  }

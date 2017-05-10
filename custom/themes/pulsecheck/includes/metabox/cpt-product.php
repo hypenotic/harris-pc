@@ -97,7 +97,7 @@ function pc_register_product( $meta_boxes ) {
                         'visible' => array('rw_canadian_content', true)  
                     ),
                     array(
-                        'name' => 'Description',
+                        'name' => 'Regular Points',
                         'id' => $prefix . 'feature_desc',
                         'type' => 'wysiwyg',
                     ),
