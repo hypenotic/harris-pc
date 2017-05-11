@@ -184,7 +184,7 @@
             </section>
             <?php } ?>
         </ul>
-        <p><a class="see-all-list" href="<?php echo get_permalink(14); ?>/#client-list">See all Alliances, Partners, and Clients</a></p>
+        <p><a class="see-all-list" href="<?php echo get_permalink(14); ?>/#client-partner-alliance-list">See all Alliances, Partners, and Clients</a></p>
     </div>
 </section>
 <?php } ?>
