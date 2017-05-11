@@ -564,7 +564,7 @@
 		</div>
 	</footer>
 	<div class="fixed-cta-btns">
-		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn blue-btn white-text modal-trigger-general modal-trigger-courses">Training</a>
+		<a href="#modal-courses" class="btn no-shadow fixed-cta-btn dark-blue-btn white-text modal-trigger-general modal-trigger-courses">Training</a>
 		<a href="#modal-demo" class="btn no-shadow fixed-cta-btn yellow-btn modal-trigger-general modal-trigger-demo">Request a demo</a>
 	</div>
 <?php }  else if (is_page_template( array('template-contact.php'))) { ?>

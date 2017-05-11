@@ -34,6 +34,13 @@
 	}
 }
 
+.btn.dark-blue-btn {
+	background: $d-blue;
+	&:hover {
+		background: lighten($d-blue, 5);
+	}
+}
+
 .btn.green-btn {
 	background: $green;
 	&:hover {
