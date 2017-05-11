@@ -1,8 +1,13 @@
 .blog-header {
-	text-align: center;
+	text-align: left;
 	@media #{$large-and-up} {
 		min-height: 300px;
 		padding: 15% 0% 0%;
+	}
+	.blog-header-container {
+		max-width: 970px;
+		margin: 0 auto;
+		border-radius: 5px;
 	}
 	h1 {
 		font-size: 10vw;
@@ -13,7 +18,7 @@
 			margin-bottom: 10px;
 		}
 		@media #{$large-and-up} {
-			padding: 0 10%;
+			padding: 0; 
 			font-weight: 300;
 			font-size: 6vw;
 			line-height: 6.5vw;
@@ -24,40 +29,41 @@
 
 .resources-container {
 	padding: 20px 0;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	@media #{$large-and-up} {
+		flex-wrap: wrap;
+		justify-content: center;
 		padding: 40px 0;
 		>div {
-			width: 30%;
+			width: 25%;
+			margin: 0px 25px 50px;
 		}
 	}
 	>div {
 		margin-bottom: 40px;
 		@media #{$large-and-up} {
-			margin-bottom: 50px;
+			margin: 0px 25px 50px;
 		}
 		>p:first-child {
 			font-weight: bold;
+			font-size: 14px;
+			font-family: $title-font;
 		}
 		.resource_separator {
 			width: 150px;
-			height: 4px;
+			height: 2px;
 			background: $d-blue;
 			margin: 20px 0;
 		}
 		.resource_blurb p {
-			font-size: 4vw;
-			line-height: 5.5vw;
-			@media #{$large-and-up} {
-				font-size: 1.3vw;
-				line-height: 2.2vw;
-			}
+			margin-bottom: 20px;
+			font-size: 16px;
+			line-height: 25px;
+			font-weight: 300;
 		}
 		a.btn {
 			background: $white;
 			color: $blue;
-			border: 1px solid $blue;
+			border: 2px solid $blue;
 			border-radius: 26px;
 			@media #{$small-and-down} {
 				padding: 5px 30px;
@@ -70,12 +76,13 @@
 	}
 	h4 {
 		color: rgba(79,140,152,1);
+		font-family: $title-font;
 		font-weight: 300;
 		font-size: 5vw;
 		line-height: 7vw;
 		@media #{$large-and-up} {
-			font-size: 2.5vw;
-			line-height: 3vw;
+			font-size: 25px;
+			line-height: 35px;
 			margin-bottom: 0;
 		}
 	}
@@ -102,4 +109,49 @@
 		margin-top: 0;
 
 	}
+}
+
+.control-container {
+	max-width: 970px;
+	margin: 0 auto;
+	background: $ll-grey;
+	padding: 5px 25px 15px;
+	border-radius: 5px;
+}
+
+.controls {
+    button {
+        background-color: transparent;
+        &:focus {
+            background-color: transparent;
+        }
+    }
+}
+.control {
+    vertical-align: top;
+    display: inline-block;
+    background: white;
+    border: 0;
+    font-size: 16px;
+    color: $blue;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 20px 10px 0;
+    text-align: center;
+}
+
+.resources-container .fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mixitup-control-active {
+    border-bottom: 3px solid rgba(155,155,155,0.4);
 }

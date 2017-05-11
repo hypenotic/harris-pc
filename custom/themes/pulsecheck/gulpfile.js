@@ -35,6 +35,7 @@ gulp.task('sass', function() {
 var scriptList = [
     'src/js/materialize.js',
     'src/js/wow.js',
+    'src/js/mixitup.js',
     'src/js/init.js',
 ];
 
