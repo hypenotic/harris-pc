@@ -147,7 +147,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </section>
 
-<section class="about-clients base-padding">
+<section class="about-clients base-padding" id="client-list">
     <div class="container">
             <h3 class="ta-center grey-text">Our clients</h3>
             <div class="about-clients-overview">

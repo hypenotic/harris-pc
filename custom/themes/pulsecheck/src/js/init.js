@@ -68,18 +68,6 @@ $(function() {
     //Init WOW.js with animate.css
     new WOW().init();
 
-    // Mixitup
-    var mixer = mixitup('.resources-container');
-    $( ".single-filter" ).click(function() {
-      $('.the-reset-button').removeClass('mixitup-control-active');
-    });
-
-    $( ".the-reset-button" ).click(function() {
-      $(this).addClass('mixitup-control-active');
-      $('.single-filter').removeClass('mixitup-control-active');
-    });
-
-
     $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
 
     var mySwiper = new Swiper ('.swiper-container', {
@@ -244,6 +232,19 @@ $(function() {
 
       }
      
+    }
+
+    // Mixitup
+    if ( $( ".resources-container" ).length ) {
+      var mixer = mixitup('.resources-container');
+      $( ".single-filter" ).click(function() {
+        $('.the-reset-button').removeClass('mixitup-control-active');
+      });
+
+      $( ".the-reset-button" ).click(function() {
+        $(this).addClass('mixitup-control-active');
+        $('.single-filter').removeClass('mixitup-control-active');
+      });
     }
     
 });
