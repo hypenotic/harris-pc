@@ -146,4 +146,23 @@
 	border-bottom: 1px solid $blue;
 }
 
+#alliance-partner-marquee {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 30px;
+			img {
+				max-width: 200px;
+			}
+		}
+	}
+	.bx-wrapper,
+	.bx-window {
+		margin: 0 auto;
+		@media #{$large-and-up} {
+		  width: 1000px !important;
+		}
+	}
+}
+
 
