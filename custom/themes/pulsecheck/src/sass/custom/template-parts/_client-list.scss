@@ -43,3 +43,22 @@
 		font-size: 25px;
 	}
 }
+
+// TESTIMONIAL SLIDER
+.client-test-section {
+	.single-testimonial {
+		padding: 5% 0% 0;
+	}
+	.single-testimonial div {
+		font-size: 7vw;
+		line-height: 8vw;
+		font-weight: 300;
+		font-style: italic;
+		margin-bottom: 40px;
+		@media #{$medium-and-up} {
+			font-size: 30px;
+			line-height: 35px;
+			font-weight: 300;
+		}
+	}
+}
