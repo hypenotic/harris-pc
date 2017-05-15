@@ -36,7 +36,7 @@ get_header(); ?>
         // the query
         $args = array(
             'post_type' => array( 'post', 'resource', 'article' ),
-            'posts_per_page'=> ,
+            'posts_per_page'=> -1,
             'order' => 'DESC'
         );
         $the_query = new WP_Query( $args ); ?>
