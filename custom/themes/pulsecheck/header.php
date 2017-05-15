@@ -6,6 +6,16 @@
 <?php wp_head(); ?>
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/favicon.ico" type="image/x-icon">
 <title><?php bloginfo( 'name' ); ?></title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99083733-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
   <div class="fullscreen-modal-overlay modal-close" title="close"></div>
