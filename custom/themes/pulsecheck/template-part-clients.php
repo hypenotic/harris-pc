@@ -1,12 +1,12 @@
 <?php
  // Check if there are any CAPs
 $args = array(
-    'post_type' => 'client-partner',
+    'post_type' => 'testimonial',
     'tax_query' => array(
         array(
-            'taxonomy' => 'type',
+            'taxonomy' => 'page-location',
             'field'    => 'slug',
-            'terms'    => 'client',
+            'terms'    => 'about',
         ),
     ),
     'posts_per_page'=> '10',
@@ -18,53 +18,56 @@ $loop = new WP_Query( $args );
 if ($loop->have_posts()){
     $count = 0;
 ?>
-<section class="client-list-section">
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); 
-        $heading    = rwmb_meta( 'rw_cs_banner_heading' );
-        $logo       = rwmb_meta( 'rw_cp_logo' );
-        $location   = rwmb_meta( 'rw_cp_location' );
-        $census     = rwmb_meta( 'rw_cp_census' );
-        $install    = rwmb_meta( 'rw_cp_install' );
-        $his        = rwmb_meta( 'rw_cp_his' );
-        $sites      = rwmb_meta( 'rw_cp_sites' );
-        $website    = rwmb_meta( 'rw_cp_website' );
+<section class="clien-test-section">
+    <!-- Swiper Slider -->
+    <div class="swiper-container testimonial-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); 
+        $quote    = rwmb_meta( 'rw_quote_body' );
+        $source    = rwmb_meta( 'rw_quote_source' );
         $count++;
-    ?>
-        <div class="client-list__single">
-            <?php if ($logo) { ?>
-                <img src="<?php echo $logo;?>" alt="<?php the_title(); ?> Logo">
-            <?php } else { ?>
-                <p style="margin-bottom: 0px;font-size: 10px;line-height: 10px;">Insert logo for:</p>   
-                <p style="margin-top: 4px;margin-bottom: 15px;font-size: 10px;line-height: 10px;font-weight:bold;"><?php the_title();?></p>
-                <svg width="45px" height="50px" viewBox="65 149 45 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(65.000000, 149.000000)">
-                        <polygon id="Fill-1" fill="#FFFFFF" points="37.9939926 8.33333333 31.2991676 12.1590438 31.2991676 19.8134461 37.9939926 23.6361753 44.6910785 19.8134461 44.6910785 12.1590438"></polygon>
-                        <polygon id="Fill-2" fill="#FFFFFF" points="0 12.1560626 0 19.8104648 6.69708595 23.63543 13.3919109 19.8104648 13.3919109 12.1560626 6.69407128 8.33333333"></polygon>
-                        <polygon id="Fill-3" fill="#FFFFFF" points="15.6495838 3.82272922 15.6495838 11.4793674 22.3474234 15.3020966 29.0422484 11.4793674 29.0422484 3.82272922 22.3474234 0"></polygon>
-                        <polygon id="Fill-4" fill="#FFFFFF" points="15.6495838 21.6798721 15.6495838 29.3372556 22.3474234 33.1599848 29.0422484 29.3372556 29.0422484 21.6798721 22.3474234 17.8571429"></polygon>
-                        <polygon id="Fill-5" fill="#FFFFFF" points="15.6495838 38.34952 15.6495838 46.0039223 22.3474234 49.8266515 29.0422484 46.0039223 29.0422484 38.34952 22.3474234 34.5238095"></polygon>
-                        <polygon id="Fill-6" fill="#FFFFFF" points="31.2991676 30.0132054 31.2991676 37.6676077 37.9939926 41.4925728 44.6910785 37.6676077 44.6910785 30.0132054 37.9939926 26.1904762"></polygon>
-                        <polygon id="Fill-7" fill="#FFFFFF" points="0 30.0132054 0 37.6705889 6.69708595 41.4925728 13.3919109 37.6676077 13.3919109 30.0132054 6.69407128 26.1904762"></polygon>
-                    </g>
-                </svg>
-            <?php } ?>
-            <div id="modal-client<?php echo $count;?>" class="modal client-modal">
-                <div class="modal-footer">
-                    <a title="close" href="#!" class="modal-close waves-effect btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
-                </div>
-                <div class="modal-content">
-                    <p><?php the_title(); ?></p>
-                    <p><strong>Location</strong>: <?php echo $location; ?></p>
-                    <p><strong>Census</strong>: <?php echo $census; ?></p>
-                    <p><strong>Install Date</strong>: <?php echo $install; ?></p>
-                    <p><strong>HIS</strong>: <?php echo $his; ?></p>
-                    <p><strong># of Sites</strong>: <?php echo $sites; ?></p>
-                    <p><?php echo $website; ?></p> 
+        ?>  
+            
+            <div class="swiper-slide">
+                <div class="swiper-content">
+                    <div class="single-testimonial"><div><span>
+                        
+                        <svg id="slider-QS" width="28px" height="24px" viewBox="0 0 28 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+                                <g id="Component" transform="translate(-59.000000, -771.000000)" fill="#458C98">
+                                    <path d="M59.4286103,771 C59.1715173,771 59,771.171152 59,771.428245 L59,782.571016 C59,782.828109 59.1715173,782.999627 59.4286103,782.999627 L66.7142547,782.999627 C66.7142547,787.346803 63.3471767,790.713881 59,790.713881 L59,794.999253 C65.6240777,794.999253 70.9996267,789.623704 70.9996267,782.999627 L70.9996267,771.428245 C70.9996267,771.171152 70.8284751,771 70.571382,771 L59.4286103,771 Z M74.856754,771 C74.599661,771 74.4285094,771.171152 74.4285094,771.428245 L74.4285094,782.571016 C74.4285094,782.828109 74.599661,782.999627 74.856754,782.999627 L82.1423984,782.999627 C82.1423984,787.346803 78.7753204,790.713881 74.4285094,790.713881 L74.4285094,794.999253 C81.0525871,794.999253 86.428136,789.623704 86.428136,782.999627 L86.428136,771.428245 C86.428136,771.171152 86.2566188,771 85.9995257,771 L74.856754,771 Z" id="Page-1" transform="translate(72.714068, 782.999627) scale(-1, -1) translate(-72.714068, -782.999627) "></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <?php echo $quote;?>
+
+                        
+                        <svg id="slider-QE" width="28px" height="24px" viewBox="0 0 28 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+                                <g id="Component" transform="translate(-832.000000, -864.000000)" fill="#458C98">
+                                    <path d="M832.42861,864 C832.171517,864 832,864.171152 832,864.428245 L832,875.571016 C832,875.828109 832.171517,875.999627 832.42861,875.999627 L839.714255,875.999627 C839.714255,880.346803 836.347177,883.713881 832,883.713881 L832,887.999253 C838.624078,887.999253 843.999627,882.623704 843.999627,875.999627 L843.999627,864.428245 C843.999627,864.171152 843.828475,864 843.571382,864 L832.42861,864 Z M847.856754,864 C847.599661,864 847.428509,864.171152 847.428509,864.428245 L847.428509,875.571016 C847.428509,875.828109 847.599661,875.999627 847.856754,875.999627 L855.142398,875.999627 C855.142398,880.346803 851.77532,883.713881 847.428509,883.713881 L847.428509,887.999253 C854.052587,887.999253 859.428136,882.623704 859.428136,875.999627 L859.428136,864.428245 C859.428136,864.171152 859.256619,864 858.999526,864 L847.856754,864 Z" id="Page-1"></path>
+                                </g>
+                            </g>
+                        </svg>  
+
+                    </span></div></div>
+                    <cite><?php echo $source;?></cite>
                 </div>
             </div>
-            <a class="modal-trigger-general modal-trigger-client<?php echo $count;?> display-block" href="#modal-client<?php echo $count;?>">+</a>
+
+        <?php endwhile; wp_reset_postdata(); ?>
         </div>
-    <?php endwhile; wp_reset_postdata(); ?>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
 </section>
 <?php } ?>

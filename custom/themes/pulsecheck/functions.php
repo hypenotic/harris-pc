@@ -10,6 +10,7 @@ require_once('includes/metabox/cpt-product.php');
 require_once('includes/metabox/cpt-case-study.php');
 require_once('includes/metabox/cpt-team-members.php');
 require_once('includes/metabox/cpt-client-partner.php');
+require_once('includes/metabox/cpt-testimonial.php');
 // Direct
 function my_styles() {
 	wp_enqueue_style( 'material', 'https://fonts.googleapis.com/icon?family=Material+Icons', false);
