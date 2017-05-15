@@ -28,7 +28,7 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ban
                 
                 <small>*press 1 for support, 3 for sales</small><br/><br/>
                 
-                <p><span class="contact_headings">Email:</span><br/><a href="pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
+                <p><span class="contact_headings">Email:</span><br/><a href="mailto:pulsecheck@harriscomputer.com" class="underline">pulsecheck@harriscomputer.com</a></p>
             </div>
 
 			<div id="contact-map">
