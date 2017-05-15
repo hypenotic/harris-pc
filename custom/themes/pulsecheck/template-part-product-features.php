@@ -11,9 +11,9 @@
               foreach ( $features as $feature ) {
                 $heading    = $feature['rw_feature_heading'];
                 $desc       = $feature['rw_feature_desc'];
+                if (! empty( $canadian )) {
                 $cans       = $feature['rw_can_desc'];
-                // $points      = $feature['rw_feature_points'];
-                // print_r($points);
+                }
                 $img        = $feature['rw_feature_image'];
                 ?>
                 <div class="single-product-feature">
