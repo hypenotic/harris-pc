@@ -150,9 +150,13 @@
 	ul {
 		li {
 			display: inline-block;
-			margin: 0 30px;
+			margin: 0 0px;
+			width: 130px !important;
+			@media #{$large-and-up} {
+			  margin: 0 30px;
+			}
 			img {
-				max-width: 100px;
+				max-width: 120px;
 				opacity: 0.7;
 				@media #{$large-and-up} {
 				  max-width: 200px;
