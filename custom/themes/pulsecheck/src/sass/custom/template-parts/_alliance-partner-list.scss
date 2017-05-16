@@ -147,6 +147,7 @@
 }
 
 #alliance-partner-marquee {
+	overflow-x: hidden;
 	ul {
 		li {
 			display: inline-block;
@@ -168,7 +169,9 @@
 	.bx-wrapper,
 	.bx-window {
 		margin: 0 auto;
-		width: 250px !important;
+		@media #{$small-and-down} {
+		  width: 250px !important;
+		}
 		@media #{$large-and-up} {
 		  width: 1000px !important;
 		}
