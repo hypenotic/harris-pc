@@ -152,14 +152,18 @@
 			display: inline-block;
 			margin: 0 30px;
 			img {
-				max-width: 200px;
+				max-width: 100px;
 				opacity: 0.7;
+				@media #{$large-and-up} {
+				  max-width: 200px;
+				}
 			}
 		}
 	}
 	.bx-wrapper,
 	.bx-window {
 		margin: 0 auto;
+		width: 250px !important;
 		@media #{$large-and-up} {
 		  width: 1000px !important;
 		}
