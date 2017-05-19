@@ -245,11 +245,14 @@ menu {
         > ul {
           margin-top: 5px;
           display: inline-block;
-          > li:first-child,
-          > li:last-child,
-          > li:nth-last-child(2) {
+          > li:first-child {
             display: none;
           }
+          // > li:first-child,
+          // > li:last-child,
+          // > li:nth-last-child(2) {
+          //   display: none;
+          // }
           >li>a {
             font-weight: 400;
           }
