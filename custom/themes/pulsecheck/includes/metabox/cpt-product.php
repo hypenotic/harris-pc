@@ -48,6 +48,9 @@ function pc_register_product( $meta_boxes ) {
                 'type' => 'group',
                 'clone'  => true,
                 'sort_clone' => true,
+                'collapsible' => true,
+                'group_title' => array( 'field' => $prefix . 'tslide_source'), // ID of the subfield
+                'save_state' => true,
                 'fields' => array(
                     array(
                         'name' => 'Quotation',
@@ -84,6 +87,9 @@ function pc_register_product( $meta_boxes ) {
                 'type' => 'group',
                 'clone'  => true,
                 'sort_clone' => true,
+                'collapsible' => true,
+                'group_title' => array( 'field' => $prefix . 'feature_heading'), // ID of the subfield
+                'save_state' => true,
                 'fields' => array(
                     array(
                         'name' => 'Heading',
@@ -136,6 +142,9 @@ function pc_register_product( $meta_boxes ) {
                 'type' => 'group',
                 'clone'  => true,
                 'sort_clone' => true,
+                'collapsible' => true,
+                'group_title' => array( 'field' => $prefix . 'slide_heading'), // ID of the subfield
+                'save_state' => true,
                 'fields' => array(
                     array(
                         'name' => 'Heading',

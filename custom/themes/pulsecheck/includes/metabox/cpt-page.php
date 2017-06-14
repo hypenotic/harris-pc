@@ -98,12 +98,12 @@ function pc_register_default( $meta_boxes ) {
             array(
                 'name' => 'Timeline Points', // Optional
                 'id' => $prefix . 'TL_points',
-                'type' => 'group',
-                // Clone whole group?
+                'type'   => 'group',
                 'clone'  => true,
-                // Drag and drop clones to reorder them?
                 'sort_clone' => true,
-                // List of sub-fields
+                'collapsible' => true,
+                'group_title' => array( 'field' => $prefix . 'TL_date'), // ID of the subfield
+                'save_state' => true,
                 'fields' => array(
                     array(
                         'name' => 'Date',
