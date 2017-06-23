@@ -13,9 +13,14 @@ if ( ! empty( $recogs ) ) { ?>
               foreach ( $recogs as $recog ) {
                 $r_name     = $recog['rw_recog_name'];
                 $r_image    = $recog['rw_recog_image'];
+                $r_link     = $recog['rw_recog_link'];
                 ?>
                 <div class="recog__image">
-                    <img src="<?php echo $r_image; ?>" alt="<?php echo $r_name; ?>">
+                    <?php if ($r_link) { ?>
+                        <a href="<?php echo $r_link;?>" target="_blank"><img src="<?php echo $r_image; ?>" alt="<?php echo $r_name; ?>"></a>
+                    <?php } else { ?>
+                        <img src="<?php echo $r_image; ?>" alt="<?php echo $r_name; ?>">
+                    <?php } ?>
                 </div>
               <?php }
             }?>

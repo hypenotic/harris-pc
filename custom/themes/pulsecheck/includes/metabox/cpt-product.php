@@ -181,6 +181,11 @@ function pc_register_product( $meta_boxes ) {
                         'id' => $prefix . 'recog_image',
                         'type' => 'file_input',
                     ),
+                    array(
+                        'name' => 'Link',
+                        'id' => $prefix . 'recog_link',
+                        'type' => 'text',
+                    ),
                 ),
             ),
         )

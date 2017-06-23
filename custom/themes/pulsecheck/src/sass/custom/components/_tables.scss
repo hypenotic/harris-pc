@@ -1,0 +1,25 @@
+div.table-wrapper {
+	@media #{$small-and-down} {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	overflow-x: scroll;
+}
+
+.MsoNormalTable {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 auto !important;
+	// width: 300px !important;
+	overflow: scroll !important;
+	td {
+		padding: 10px !important;
+	}
+	td.mso-td {
+		padding: 10px !important;
+	}
+}
+.MsoNormal {
+	margin: 0 !important;
+	font-size: 16px !important;
+	line-height: 18px !important;
+}

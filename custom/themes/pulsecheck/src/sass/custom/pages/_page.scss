@@ -1,0 +1,24 @@
+.page-header {
+	padding: 150px 0 40px;
+	.wide-container {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 30px;
+		@media #{$large-and-up} {
+			padding: 0 5%;
+		}
+	}
+}
+
+.page-content {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 30px;
+	@media #{$large-and-up} {
+		padding: 0 10% 50px;
+	}
+	table {
+		max-width: 100%;
+		overflow-x: scroll;
+	}
+}

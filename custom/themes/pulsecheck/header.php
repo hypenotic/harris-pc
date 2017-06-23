@@ -40,7 +40,7 @@
   <?php if (!is_page_template( 'template-cs.php' )) {?>
     <a href="#skip-to-content" class="skip-to">Skip to content</a>
     <div class="navbar-fixed">
-      <nav <?php if (is_page_template(  array( 'template-blog.php', 'template-contact.php') )) { echo 'class="dark-nav"';}?> >
+      <nav <?php if (is_page_template(  array( 'template-blog.php', 'template-contact.php') ) || ( is_page() && !is_page_template(  array( 'template-about.php', 'template-home.php') )) ) { echo 'class="dark-nav"';}?> >
         <div class="nav-wrapper">
         <div class="mini-nav">
           <a class="mini-nav-portal" href="https://picispulsecheck.quadramed.com/" target="_blank">Customer Portal</a>
