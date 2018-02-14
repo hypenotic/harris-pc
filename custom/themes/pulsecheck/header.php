@@ -5,7 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 <?php wp_head(); ?>
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/favicon.ico" type="image/x-icon">
-<title><?php bloginfo( 'name' ); ?></title>
+<?php if (!is_page_template('template-home.php')) { ?>
+  <title><?php wp_title(''); ?></title>
+<?php } else { ?>
+  <title><?php bloginfo( 'name' ); ?></title>
+<?php } ?>
+<?php if (!is_page_template('template-home.php')) { ?>
+  <meta name="description" content="<?php echo wp_strip_all_tags( get_the_excerpt(get_the_ID()), true ); ?>" />
+<?php } else { ?>
+  <meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>">
+<?php } ?>
+<?php if (!is_page_template('template-home.php')) { ?>
+  <title><?php wp_title(''); ?></title>
+<?php } else { ?>
+  <title><?php bloginfo( 'name' ); ?></title>
+<?php } ?>
+  <meta name="keywords" content="software, emergency care"/>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
